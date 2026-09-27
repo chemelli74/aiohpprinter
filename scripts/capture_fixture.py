@@ -81,7 +81,8 @@ SENSITIVE_NAMES = re.compile(
     r"\w*UserID|\w*UserName|\w*JobName|"
     r"\w*EmailAddress|Email|(?!Show)\w*Passphrase|\w*Password|PreSharedKey|PIN|"
     r"FriendlyName|\w*Contact\w*|Location|DeviceLocation|AssetNumber|CompanyName|"
-    r"Latitude|Longitude|\w*RequesterID|\w*DeviceInfoDeviceID"
+    r"Latitude|Longitude|\w*RequesterID|\w*DeviceInfoDeviceID|"
+    r"\w*PhoneNumber|FaxForwardingNumber"
     r")$"
 )
 #: IP-literal hosts in URLs (e.g. the EWS `ResourceURI` entries).
@@ -385,7 +386,12 @@ def main() -> None:
         print("Could not detect the printer model, pass it with --model")
         sys.exit(1)
 
-    fixture_dir = FIXTURES_DIR / model_slug(model)
+    slug = model_slug(model)
+    if not slug:
+        print(f"Could not derive a fixture directory name from model {model!r}")
+        sys.exit(1)
+
+    fixture_dir = FIXTURES_DIR / slug
     if fixture_dir.exists():
         if not args.force:
             print(f"{fixture_dir} already exists, pass --force to overwrite it")

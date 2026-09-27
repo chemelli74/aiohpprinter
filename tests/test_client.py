@@ -227,6 +227,23 @@ async def test_request_raises_parse_error_on_malformed_body(
             await printer.status()
 
 
+async def test_request_raises_parse_error_on_undecodable_body(
+    mock_session: ClientSession, make_server: MakeServer
+) -> None:
+    """A body that cannot be decoded as its declared charset raises a parse error."""
+    server = await make_server(
+        {
+            "/DevMgmt/ProductStatusDyn.xml": RouteResponse(
+                raw_body=b"\xff\xfe not valid utf-8"
+            )
+        }
+    )
+
+    async with _printer(server, mock_session) as printer:
+        with pytest.raises(HpPrinterParseError):
+            await printer.status()
+
+
 async def test_request_without_a_session_raises() -> None:
     """Using the client outside `async with` and without an injected session fails."""
     printer = HpPrinter("printer.local")

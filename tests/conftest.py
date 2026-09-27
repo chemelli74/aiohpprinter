@@ -153,6 +153,8 @@ class RouteResponse:
     body: str = ""
     content_type: str = "text/xml"
     delay: float = 0.0
+    #: Raw bytes to send instead of `body`, e.g. to test malformed encodings.
+    raw_body: bytes | None = None
 
 
 @pytest.fixture
@@ -194,6 +196,14 @@ def _make_handler(
     async def handler(_request: web.Request) -> web.Response:
         if route.delay:
             await asyncio.sleep(route.delay)
+
+        if route.raw_body is not None:
+            return web.Response(
+                status=route.status,
+                body=route.raw_body,
+                content_type=route.content_type,
+                charset="utf-8",
+            )
 
         return web.Response(
             status=route.status, text=route.body, content_type=route.content_type

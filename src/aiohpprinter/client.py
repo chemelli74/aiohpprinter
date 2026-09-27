@@ -25,6 +25,7 @@ from .exceptions import (
     HpPrinterConnectionError,
     HpPrinterError,
     HpPrinterHttpError,
+    HpPrinterParseError,
     HpPrinterTimeoutError,
 )
 from .models import HpPrinterData
@@ -300,7 +301,12 @@ class HpPrinter:
                     message = f"{url} returned HTTP {response.status}"
                     raise HpPrinterHttpError(response.status, message)
 
-                content = await response.text()
+                try:
+                    content = await response.text()
+                except UnicodeDecodeError as ex:
+                    message = f"Could not decode response from {url}: {ex}"
+                    raise HpPrinterParseError(message) from ex
+
                 content_type = response.content_type
         except TimeoutError as ex:
             message = f"Timed out requesting {url}"

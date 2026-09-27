@@ -94,6 +94,8 @@ of data, or that want failures raised instead of absorbed (see
   manages one shared session and its connection pooling itself.
 
 ```python
+import aiohttp
+
 async with aiohttp.ClientSession() as session:
     async with HpPrinter("192.168.1.100", session=session) as printer:
         device = await printer.device()
