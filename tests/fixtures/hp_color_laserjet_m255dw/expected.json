@@ -1,0 +1,169 @@
+{
+  "device": {
+    "make_and_model": "HP Color LaserJet M255dw",
+    "make_and_model_family": "HP ColorLaserJet M255-M256",
+    "sku_identifier": null,
+    "serial_number": "REDACTED",
+    "product_number": "7KW64A",
+    "manufacturer_name": null,
+    "manufactured_at": null
+  },
+  "status": {
+    "device_status": "inpowersave"
+  },
+  "consumables": [
+    {
+      "consumable_id": "C",
+      "consumable_type": "toner",
+      "marker_color": "Cyan",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "3",
+      "percentage_level_remaining": 30.0,
+      "raw_percentage_level_remaining": 31.0,
+      "estimated_pages_remaining": 800,
+      "max_capacity": 24.0,
+      "selectibility_number": "207X",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2022-12-05T00:00:00",
+      "installed_at": "2023-05-21T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "W2211X",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 1552
+    },
+    {
+      "consumable_id": "K",
+      "consumable_type": "toner",
+      "marker_color": "Black",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "0",
+      "percentage_level_remaining": 20.0,
+      "raw_percentage_level_remaining": 21.0,
+      "estimated_pages_remaining": 550,
+      "max_capacity": 31.0,
+      "selectibility_number": "207X",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2024-02-06T00:00:00",
+      "installed_at": "2024-07-01T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "W2210X",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 2220
+    },
+    {
+      "consumable_id": "M",
+      "consumable_type": "toner",
+      "marker_color": "Magenta",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "2",
+      "percentage_level_remaining": 50.0,
+      "raw_percentage_level_remaining": 50.0,
+      "estimated_pages_remaining": 1600,
+      "max_capacity": 24.0,
+      "selectibility_number": "207X",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-01-12T00:00:00",
+      "installed_at": "2024-05-01T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "W2213X",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 1376
+    },
+    {
+      "consumable_id": "Y",
+      "consumable_type": "toner",
+      "marker_color": "Yellow",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "1",
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 39.0,
+      "estimated_pages_remaining": 1150,
+      "max_capacity": 24.0,
+      "selectibility_number": "207X",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-01-15T00:00:00",
+      "installed_at": "2023-05-21T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "W2212X",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 1552
+    }
+  ],
+  "printer_usage": {
+    "total_impressions": 1344,
+    "monochrome_impressions": 452,
+    "color_impressions": 892,
+    "simplex_sheets": null,
+    "duplex_sheets": 408,
+    "jam_events": 0,
+    "mispick_events": 0
+  },
+  "scanner_usage": {
+    "scan_images": null,
+    "adf_images": null,
+    "duplex_sheets": null,
+    "flatbed_images": null,
+    "jam_events": null,
+    "mispick_events": null
+  },
+  "copy_usage": {
+    "total_impressions": null,
+    "adf_images": null,
+    "flatbed_images": null,
+    "monochrome_impressions": null,
+    "color_impressions": null
+  },
+  "fax_usage": {
+    "total_impressions": null
+  },
+  "adapters": [
+    {
+      "name": "eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": true
+    },
+    {
+      "name": "wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": false
+    },
+    {
+      "name": "wifiUAP",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": null
+    }
+  ],
+  "eprint": {
+    "printer_id": null,
+    "is_registered": true,
+    "cloud_services_enabled": null
+  },
+  "wifi": {
+    "ssid_prefix": "DIRECT-40-HP",
+    "connection_method": null
+  }
+}

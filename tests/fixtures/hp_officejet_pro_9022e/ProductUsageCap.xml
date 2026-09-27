@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<pucap:ProductUsageCap xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productusagecap/2007/12/11 ../schemas/ProductUsageCap.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:pucap="http://www.hp.com/schemas/imaging/con/ledm/productusagecap/2007/12/11" xmlns:pudyn="http://www.hp.com/schemas/imaging/con/ledm/productusagedyn/2007/12/11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.130</dd:Revision>
+		<dd:Date>2010-08-31</dd:Date>
+	</dd:Version>
+	<pucap:PrinterSubunitCap>
+		<pucap:TotalImpressions elementXPath="pudyn:PrinterSubunit/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		<pucap:MonochromeImpressions elementXPath="pudyn:PrinterSubunit/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+		<pucap:ColorImpressions elementXPath="pudyn:PrinterSubunit/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+		<pucap:A4EquivalentImpressionsCap>
+			<pucap:TotalImpressions elementXPath="dd:A4EquivalentImpressions/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			<pucap:MonochromeImpressions elementXPath="dd:A4EquivalentImpressions/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+			<pucap:ColorImpressions elementXPath="dd:A4EquivalentImpressions/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+		</pucap:A4EquivalentImpressionsCap>
+		<pucap:SimplexSheets elementXPath="pudyn:PrinterSubunit/dd:SimplexSheets" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:SimplexSheets>
+		<pucap:DuplexSheets elementXPath="pudyn:PrinterSubunit/dd:DuplexSheets" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:DuplexSheets>
+		<pucap:JamEvents elementXPath="pudyn:PrinterSubunit/dd:JamEvents" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:JamEvents>
+		<pucap:MispickEvents elementXPath="pudyn:PrinterSubunit/dd:MispickEvents" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MispickEvents>
+		<pucap:DraftImpressions elementXPath="pudyn:PrinterSubunit/dd:DraftImpressions/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:DraftImpressions>
+		<pucap:TotalFrontPanelCancelPresses elementXPath="pudyn:PrinterSubunit/dd:TotalFrontPanelCancelPresses" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalFrontPanelCancelPresses>
+		<pucap:TotalQuickFormsButtonPresses elementXPath="pudyn:PrinterSubunit/dd:TotalQuickFormsButtonPresses" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalQuickFormsButtonPresses>
+		<pucap:UsageByMarkingAgentSupport>
+			<pucap:CumulativeMarkingAgentUsedSupport>
+				<pucap:ValueFloat elementXPath="pudyn:UsageByMarkingAgent/dd2:CumulativeMarkingAgentUsed/dd:ValueFloat" typeof="dd:ValueFloat" min="0.00" max="10000.00" step="0.01" access="readOnly"></pucap:ValueFloat>
+				<pucap:UnitSupport access="readOnly">
+					<dd:Unit>microliters</dd:Unit>
+					<dd:Unit>milliliters</dd:Unit>
+					<dd:Unit>nanoliters</dd:Unit>
+					<dd:Unit>picoliters</dd:Unit>
+				</pucap:UnitSupport>
+			</pucap:CumulativeMarkingAgentUsedSupport>
+			<pucap:CumulativeHPMarkingAgentUsedSupport>
+				<pucap:ValueFloat elementXPath="pudyn:UsageByMarkingAgent/dd2:CumulativeHPMarkingAgentUsed/dd:ValueFloat" typeof="dd:ValueFloat" min="0.00" max="10000.00" step="0.01" access="readOnly"></pucap:ValueFloat>
+				<pucap:UnitSupport access="readOnly">
+					<dd:Unit>microliters</dd:Unit>
+					<dd:Unit>milliliters</dd:Unit>
+					<dd:Unit>nanoliters</dd:Unit>
+					<dd:Unit>picoliters</dd:Unit>
+				</pucap:UnitSupport>
+			</pucap:CumulativeHPMarkingAgentUsedSupport>
+			<pucap:CumulativeHPMarkingAgentInsertedSupport>
+				<pucap:ValueFloat elementXPath="pudyn:UsageByMarkingAgent/dd:CumulativeHPMarkingAgentInserted/dd:ValueFloat" typeof="dd:ValueFloat" min="0.00" max="10000.00" step="0.01" access="readOnly"></pucap:ValueFloat>
+				<pucap:UnitSupport access="readOnly">
+					<dd:Unit>microliters</dd:Unit>
+					<dd:Unit>milliliters</dd:Unit>
+					<dd:Unit>nanoliters</dd:Unit>
+					<dd:Unit>picoliters</dd:Unit>
+				</pucap:UnitSupport>
+			</pucap:CumulativeHPMarkingAgentInsertedSupport>
+		</pucap:UsageByMarkingAgentSupport>
+		<pucap:UsageByMediaSupport>
+			<pucap:TotalImpressions elementXPath="pudyn:UsageByMedia/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			<pucap:MonochromeImpressions elementXPath="pudyn:UsageByMedia/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+			<pucap:ColorImpressions elementXPath="pudyn:UsageByMedia/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+			<pucap:DuplexSheets elementXPath="pudyn:UsageByMedia/dd:DuplexSheets" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:DuplexSheets>
+			<pucap:MediaSizeNameSupport access="readOnly">
+				<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
+				<dd:MediaSizeName>na_legal_8.5x14in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_letter_8.5x11in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_foolscap_8.5x13in</dd:MediaSizeName>
+				<dd:MediaSizeName>custom</dd:MediaSizeName>
+				<dd:MediaSizeName>na_executive_7.25x10.5in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_govt-letter_8x10in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_invoice_5.5x8.5in</dd:MediaSizeName>
+				<dd:MediaSizeName>om_photo_89x127mm</dd:MediaSizeName>
+				<dd:MediaSizeName>custom_photo-2l-size-card_127x178mm</dd:MediaSizeName>
+				<dd:MediaSizeName>custom_photo_4x5in</dd:MediaSizeName>
+				<dd:MediaSizeName>custom_photo_4x12in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_index-3x5_3x5in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_index-4x6_4x6in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_5x7_5x7in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_index-5x8_5x8in</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_a5_148x210mm</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_a6_105x148mm</dd:MediaSizeName>
+				<dd:MediaSizeName>jis_b5_182x257mm</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_b5_176x250mm</dd:MediaSizeName>
+				<dd:MediaSizeName>om_small-photo_100x150mm</dd:MediaSizeName>
+				<dd:MediaSizeName>custom_photo_5x5in</dd:MediaSizeName>
+				<dd:MediaSizeName>jpn_hagaki_100x148mm</dd:MediaSizeName>
+				<dd:MediaSizeName>jpn_oufuku-rot_148x200mm</dd:MediaSizeName>
+				<dd:MediaSizeName>na_number-10_4.125x9.5in</dd:MediaSizeName>
+				<dd:MediaSizeName>na_monarch_3.875x7.5in</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_c5_162x229mm</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_c6_114x162mm</dd:MediaSizeName>
+				<dd:MediaSizeName>iso_dl_110x220mm</dd:MediaSizeName>
+				<dd:MediaSizeName>na_a2_4.375x5.75in</dd:MediaSizeName>
+				<dd:MediaSizeName>jpn_chou3_120x235mm</dd:MediaSizeName>
+				<dd:MediaSizeName>jpn_chou4_90x205mm</dd:MediaSizeName>
+				<dd:MediaSizeName>na_personal_3.625x6.5in</dd:MediaSizeName>
+				<dd:MediaSizeName>a4_or_letter</dd:MediaSizeName>
+				<dd:MediaSizeName>5x7</dd:MediaSizeName>
+				<dd:MediaSizeName>4x6</dd:MediaSizeName>
+				<dd:MediaSizeName>unknownenvelope</dd:MediaSizeName>
+			</pucap:MediaSizeNameSupport>
+		</pucap:UsageByMediaSupport>
+		<pucap:UsageByMediaTypeSupport>
+			<pucap:TotalImpressions elementXPath="pudyn:UsageByMediaType/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			<pucap:UsageByJobSizeSupport>
+				<pucap:TotalImpressions elementXPath="pudyn:UsageByMediaType/pudyn:UsageByJobSize/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+				<dd:PagesPerJob>one</dd:PagesPerJob>
+				<dd:PagesPerJob>two</dd:PagesPerJob>
+				<dd:PagesPerJob>threeToFive</dd:PagesPerJob>
+				<dd:PagesPerJob>sixToTen</dd:PagesPerJob>
+				<dd:PagesPerJob>greaterThanTen</dd:PagesPerJob>
+			</pucap:UsageByJobSizeSupport>
+			<pucap:UsageByQuality>
+				<pucap:NormalImpressions elementXPath="pudyn:UsageByMediaType/dd:UsageByQuality/dd:NormalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:NormalImpressions>
+				<pucap:DraftImpressions elementXPath="pudyn:UsageByMediaType/dd:UsageByQuality/dd:DraftImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:DraftImpressions>
+				<pucap:BetterImpressions elementXPath="pudyn:UsageByMediaType/dd:UsageByQuality/dd:BetterImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:BetterImpressions>
+			</pucap:UsageByQuality>
+			<pucap:MediaTypeSupport access="readOnly">
+				<dd:MediaType>plain</dd:MediaType>
+				<dd:MediaType>lightWeight</dd:MediaType>
+				<dd:MediaType>stationery-letterhead</dd:MediaType>
+				<dd:MediaType>photoStandard</dd:MediaType>
+				<dd:MediaType>specialtyMatte</dd:MediaType>
+				<dd:MediaType>specialtyGlossy</dd:MediaType>
+				<dd:MediaType>thickPlain</dd:MediaType>
+				<dd:MediaType>lightWeight</dd:MediaType>
+				<dd:MediaType>stationery-letterhead</dd:MediaType>
+				<dd:MediaType>HPTrifoldBrochureGlossy180gsm</dd:MediaType>
+				<dd:MediaType>photoOther</dd:MediaType>
+				<dd:MediaType>matteBrochure</dd:MediaType>
+				<dd:MediaType>matteInkjet</dd:MediaType>
+				<dd:MediaType>specialtyGlossyInkjet</dd:MediaType>
+				<dd:MediaType>inkjetHagaki</dd:MediaType>
+			</pucap:MediaTypeSupport>
+		</pucap:UsageByMediaTypeSupport>
+		<pucap:UsageByTimeIntervalSupport>
+			<pucap:JobCount typeof="dd:Integer" max="4294967295" step="0" access="readOnly" elementXPath="pudyn:UsageByTimeInterval/dd:JobCount" min="0"></pucap:JobCount>
+			<dd:JobDuration>lessthanTwoMinutes</dd:JobDuration>
+			<dd:JobDuration>twoToFiveMinutes</dd:JobDuration>
+			<dd:JobDuration>fiveToThirtyMinutes</dd:JobDuration>
+			<dd:JobDuration>thirtyToSixtyMinutes</dd:JobDuration>
+			<dd:JobDuration>oneToSixHours</dd:JobDuration>
+			<dd:JobDuration>sixHoursToOneDay</dd:JobDuration>
+			<dd:JobDuration>oneToThreeDays</dd:JobDuration>
+			<dd:JobDuration>threeToSevenDays</dd:JobDuration>
+			<dd:JobDuration>sevenDaysToOneMonth</dd:JobDuration>
+			<dd:JobDuration>oneToThreeMonths</dd:JobDuration>
+		</pucap:UsageByTimeIntervalSupport>
+		<pucap:UIButtonPressCountersSupport>
+			<pucap:ButtonPressCount typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:ButtonPressCount" min="0"></pucap:ButtonPressCount>
+			<dd:ButtonPressOptions>editPhotoButtonPress</dd:ButtonPressOptions>
+			<dd:ButtonPressOptions>featurePrintOptionPress</dd:ButtonPressOptions>
+			<dd:ButtonPressOptions>featureViewOptionPress</dd:ButtonPressOptions>
+			<dd:ButtonPressOptions>startScanButtonPress</dd:ButtonPressOptions>
+		</pucap:UIButtonPressCountersSupport>
+		<pucap:UsageByTrayAndMediaSupport>
+			<pucap:TotalImpressions elementXPath="pudyn:UsageByTrayAndMedia/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			<pucap:InputBinSupport access="readOnly">
+				<dd:InputBin>Tray1</dd:InputBin>
+				<dd:InputBin>Tray2</dd:InputBin>
+			</pucap:InputBinSupport>
+		</pucap:UsageByTrayAndMediaSupport>
+		<pucap:DetachableUIAppsLaunchCount typeof="dd:IntegerCounter" max="4294967295" step="1" access="readOnly" elementXPath="dd:DetachableUIAppsLaunchCount" min="0"></pucap:DetachableUIAppsLaunchCount>
+		<pucap:DetachableUIAppsImpressions typeof="dd:IntegerCounter" max="4294967295" step="1" access="readOnly" elementXPath="dd:DetachableUIAppsImpressions" min="0"></pucap:DetachableUIAppsImpressions>
+		<pucap:BluetoothImpressions typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:BluetoothImpressions" min="0"></pucap:BluetoothImpressions>
+		<pucap:EWSAccessCount typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:EWSAccessCount" min="0"></pucap:EWSAccessCount>
+		<pucap:NetworkImpressions typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:NetworkImpressions" min="0"></pucap:NetworkImpressions>
+		<pucap:WirelessNetworkImpressions typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:WirelessNetworkImpressions" min="0"></pucap:WirelessNetworkImpressions>
+		<pucap:SubscriptionImpressions typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="pudyn:PrinterSubunit/pudyn:SubscriptionImpressions" min="0"></pucap:SubscriptionImpressions>
+		<pucap:WirelessConfigUserSelectedOptionSupport access="readOnly">
+			<pucap:WirelessConfigUserSelectedOption>hostAssist</pucap:WirelessConfigUserSelectedOption>
+			<pucap:WirelessConfigUserSelectedOption>deviceAssist</pucap:WirelessConfigUserSelectedOption>
+			<pucap:WirelessConfigUserSelectedOption>connectLater</pucap:WirelessConfigUserSelectedOption>
+			<pucap:WirelessConfigUserSelectedOption>noSelectionMade</pucap:WirelessConfigUserSelectedOption>
+		</pucap:WirelessConfigUserSelectedOptionSupport>
+		<pucap:QuietModeImpressions>
+			<pucap:TotalImpressions elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:QuiteModeImpressions/pudyn:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		</pucap:QuietModeImpressions>
+		<pucap:CalibrationUsage>
+			<pucap:SuccessCount access="readOnly" step="1" max="4294967295" min="0" typeof="dd:Integer" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:CalibrationUsage/pudyn:SuccessCount"></pucap:SuccessCount>
+			<pucap:FailureCount access="readOnly" step="1" max="4294967295" min="0" typeof="dd:Integer" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:CalibrationUsage/pudyn:FailureCount"></pucap:FailureCount>
+			<pucap:CancelledCount access="readOnly" step="1" max="4294967295" min="0" typeof="dd:Integer" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:CalibrationUsage/pudyn:CancelledCount"></pucap:CancelledCount>
+			<pucap:SkippedCount access="readOnly" step="1" max="4294967295" min="0" typeof="dd:Integer" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:CalibrationUsage/pudyn:SkippedCount"></pucap:SkippedCount>
+			<pucap:StatusSupport access="readOnly" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:CalibrationUsage/pudyn:Status">
+				<pucap:Status>notDone</pucap:Status>
+				<pucap:Status>processing</pucap:Status>
+				<pucap:Status>completed</pucap:Status>
+				<pucap:Status>failed</pucap:Status>
+			</pucap:StatusSupport>
+		</pucap:CalibrationUsage>
+		<pucap:OOBESetupBy>
+			<pucap:SetupByOSSupport access="readOnly" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:OOBESetupBy/pudyn:SetupByOS">
+				<pucap:SetupByOS>Android</pucap:SetupByOS>
+				<pucap:SetupByOS>iOS</pucap:SetupByOS>
+				<pucap:SetupByOS>OSX</pucap:SetupByOS>
+				<pucap:SetupByOS>Windows7</pucap:SetupByOS>
+				<pucap:SetupByOS>Windows8</pucap:SetupByOS>
+				<pucap:SetupByOS>Windows10</pucap:SetupByOS>
+				<pucap:SetupByOS>Other</pucap:SetupByOS>
+			</pucap:SetupByOSSupport>
+			<pucap:SetupByAppSupport access="readOnly" elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:OOBESetupBy/pudyn:SetupByApp">
+				<pucap:SetupByApp>Aio-Android</pucap:SetupByApp>
+				<pucap:SetupByApp>Aio-iOS</pucap:SetupByApp>
+				<pucap:SetupByApp>Gotham</pucap:SetupByApp>
+				<pucap:SetupByApp>Karnak</pucap:SetupByApp>
+				<pucap:SetupByApp>Osprey</pucap:SetupByApp>
+				<pucap:SetupByApp>PrinterUI</pucap:SetupByApp>
+				<pucap:SetupByApp>Weave</pucap:SetupByApp>
+				<pucap:SetupByApp>Other</pucap:SetupByApp>
+			</pucap:SetupByAppSupport>
+		</pucap:OOBESetupBy>
+		<pucap:MISRVersion elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:MISRVersion" typeof="xs:string" length="4" access="readOnly"></pucap:MISRVersion>
+		<pucap:MISRProfile elementXPath="/pudyn:ProductUsageDyn/pudyn:PrinterSubunit/pudyn:MISRProfile" typeof="xs:string" length="4" access="readOnly"></pucap:MISRProfile>
+	</pucap:PrinterSubunitCap>
+	<pucap:ConsumableSubunitCap>
+		<pucap:ConsumableStationSupport>
+			<dd:ConsumableStation>1</dd:ConsumableStation>
+			<dd:ConsumableStation>2</dd:ConsumableStation>
+			<dd:ConsumableStation>3</dd:ConsumableStation>
+			<dd:ConsumableStation>4</dd:ConsumableStation>
+		</pucap:ConsumableStationSupport>
+		<pucap:MarkerColorSupport>
+			<dd:MarkerColor>Cyan</dd:MarkerColor>
+			<dd:MarkerColor>Magenta</dd:MarkerColor>
+			<dd:MarkerColor>Yellow</dd:MarkerColor>
+			<dd:MarkerColor>Black</dd:MarkerColor>
+		</pucap:MarkerColorSupport>
+		<pucap:ConsumableTypeEnumSupport>
+			<dd:ConsumableTypeEnum>ink</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>inkCartridge</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>introInkCartridge</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>introInkSupply</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>introPrinthead</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>maintenanceCartridge</dd:ConsumableTypeEnum>
+			<dd:ConsumableTypeEnum>printhead</dd:ConsumableTypeEnum>
+		</pucap:ConsumableTypeEnumSupport>
+		<pucap:CumulativeConsumableCountSupport elementXPath="pudyn:Consumable/dd2:CumulativeConsumableCount" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:CumulativeConsumableCountSupport>
+		<pucap:CumulativeMarkingAgentUsedSupport>
+			<pucap:ValueFloat elementXPath="pudyn:ConsumableSubunit/pudyn:Consumable/dd2:CumulativeMarkingAgentUsed/dd:ValueFloat" typeof="dd:ValueFloat" min="0.00" max="10000.00" step="0.01" access="readOnly"></pucap:ValueFloat>
+			<pucap:UnitSupport access="readOnly">
+				<dd:Unit>microliters</dd:Unit>
+				<dd:Unit>milliliters</dd:Unit>
+				<dd:Unit>nanoliters</dd:Unit>
+				<dd:Unit>picoliters</dd:Unit>
+			</pucap:UnitSupport>
+		</pucap:CumulativeMarkingAgentUsedSupport>
+		<pucap:EstimatedPagesRemaining elementXPath="pudyn:Consumable/dd:EstimatedPagesRemaining" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:EstimatedPagesRemaining>
+		<pucap:ApproximatePagesRemainingSymbolSupport access="readOnly">
+			<pudyn:ApproximatePagesRemainingSymbol>dashDash</pudyn:ApproximatePagesRemainingSymbol>
+			<pudyn:ApproximatePagesRemainingSymbol>questionMark</pudyn:ApproximatePagesRemainingSymbol>
+			<pudyn:ApproximatePagesRemainingSymbol>greaterThan</pudyn:ApproximatePagesRemainingSymbol>
+			<pudyn:ApproximatePagesRemainingSymbol>lessThan</pudyn:ApproximatePagesRemainingSymbol>
+		</pucap:ApproximatePagesRemainingSymbolSupport>
+		<pucap:ConsumableStateSupport access="readOnly">
+			<dd:ConsumableState>ok</dd:ConsumableState>
+			<dd:ConsumableState>low</dd:ConsumableState>
+			<dd:ConsumableState>empty</dd:ConsumableState>
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+		</pucap:ConsumableStateSupport>
+		<pucap:ConsumableRawPercentageLevelRemaining elementXPath="pudyn:Consumable/dd:ConsumableRawPercentageLevelRemaining" typeof="dd:Integer" min="0" max="100" step="1" access="readOnly"></pucap:ConsumableRawPercentageLevelRemaining>
+		<pucap:SupplyRegion typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyRegion" min="0"></pucap:SupplyRegion>
+		<pucap:SupplyFillLevel typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyFillLevel" min="0"></pucap:SupplyFillLevel>
+		<pucap:SupplyFamilyNumber typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyFamilyNumber" min="0"></pucap:SupplyFamilyNumber>
+		<pucap:SupplyModelNumber typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyModelNumber" min="0"></pucap:SupplyModelNumber>
+		<pucap:SupplySerialNumber typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplySerialNumber" min="0"></pucap:SupplySerialNumber>
+		<pucap:SupplyStatusBits typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyStatusBits" min="0"></pucap:SupplyStatusBits>
+		<pucap:SupplyRefilledStateCounter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:SupplyRefilledStateCounter" min="0"></pucap:SupplyRefilledStateCounter>
+		<pucap:PVPCartridgeCounter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:PVPCartridgeCounter" min="0"></pucap:PVPCartridgeCounter>
+		<pucap:PostInkAlertCounter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:PostInkAlertCounter" min="0"></pucap:PostInkAlertCounter>
+		<pucap:PrimeEventCounter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="dd:PrimeEventCounter" min="0"></pucap:PrimeEventCounter>
+		<pucap:PrimeEventLevel0Counter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="pudyn:ConsumableSubunit/pudyn:Consumable/dd:PrimeEventLevel0Counter" min="0"></pucap:PrimeEventLevel0Counter>
+		<pucap:PrimeEventLevel1Counter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="pudyn:ConsumableSubunit/pudyn:Consumable/dd:PrimeEventLevel1Counter" min="0"></pucap:PrimeEventLevel1Counter>
+		<pucap:PrimeEventLevel2Counter typeof="dd:Integer" max="4294967295" step="1" access="readOnly" elementXPath="pudyn:ConsumableSubunit/pudyn:Consumable/dd:PrimeEventLevel2Counter" min="0"></pucap:PrimeEventLevel2Counter>
+		<pucap:UsageByMarkingAgentCountSupport>
+			<pucap:MarkingAgentCount elementXPath="pudyn:Consumable/dd:UsageByMarkingAgentCount/dd:MarkingAgentCount" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MarkingAgentCount>
+			<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
+			<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
+		</pucap:UsageByMarkingAgentCountSupport>
+		<pucap:RefilledCount>
+			<pucap:CounterfeitRefilledCount elementXPath="dd:CounterfeitRefilledCount" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:CounterfeitRefilledCount>
+			<pucap:GenuineRefilledCount elementXPath="dd:GenuineRefilledCount" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:GenuineRefilledCount>
+		</pucap:RefilledCount>
+		<pucap:PenInsertionTriggerSnapshotCounter elementXPath="dd:PenInsertionTriggerSnapshotCounter" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:PenInsertionTriggerSnapshotCounter>
+		<pucap:CumulativeHPMarkingAgentUsedSupport>
+			<pucap:ValueFloat elementXPath="pudyn:UsageByMarkingAgent/dd2:CumulativeHPMarkingAgentUsed/dd:ValueFloat" typeof="dd:ValueFloat" min="0.00" max="10000.00" step="0.01" access="readOnly"></pucap:ValueFloat>
+			<pucap:UnitSupport access="readOnly">
+				<dd:Unit>microliters</dd:Unit>
+				<dd:Unit>milliliters</dd:Unit>
+				<dd:Unit>nanoliters</dd:Unit>
+				<dd:Unit>picoliters</dd:Unit>
+			</pucap:UnitSupport>
+		</pucap:CumulativeHPMarkingAgentUsedSupport>
+	</pucap:ConsumableSubunitCap>
+	<pucap:ScannerEngineSubunitCap>
+		<pucap:ScanImages elementXPath="dd:ScanImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ScanImages>
+		<pucap:UsageByScanMediaSizeSupport>
+			<pucap:ScanImages elementXPath="dd:ScanImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ScanImages>
+			<pucap:ScanMediaSizeSupport>
+				<dd:ScanMediaSize>any</dd:ScanMediaSize>
+				<dd:ScanMediaSize>na_legal_8.5x14in</dd:ScanMediaSize>
+			</pucap:ScanMediaSizeSupport>
+		</pucap:UsageByScanMediaSizeSupport>
+		<pucap:TMAScanToHostImages elementXPath="dd:TMAScanToHostImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TMAScanToHostImages>
+		<pucap:AdfImages elementXPath="pudyn:ScannerEngineSubunit/dd:AdfImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:AdfImages>
+		<pucap:DuplexSheets elementXPath="pudyn:ScannerEngineSubunit/dd:DuplexSheets" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:DuplexSheets>
+		<pucap:FlatbedImages elementXPath="pudyn:ScannerEngineSubunit/dd:FlatbedImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:FlatbedImages>
+		<pucap:JamEvents elementXPath="pudyn:ScannerEngineSubunit/dd:JamEvents" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:JamEvents>
+		<pucap:MispickEvents elementXPath="pudyn:ScannerEngineSubunit/dd:MispickEvents" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MispickEvents>
+		<pucap:ScanToCardCount elementXPath="dd:ScanToCardCount" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ScanToCardCount>
+		<pucap:UsageByADFSupport>
+			<pucap:TotalLegalScanImages elementXPath="ProductUsageDyn/pudyn:ScannerEngineSubunit/pudyn:UsageByADF/pudyn:TotalLegalScanImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalLegalScanImages>
+			<pucap:UsageByJobSizeAndMedia>
+				<pucap:UsageByJobSizeSupport>
+					<pucap:TotalImpressions elementXPath="pudyn:ProductUsageDyn/pudyn:ScannerEngineSubunit/pudyn:UsageByADF/pudyn:UsageByJobSizeAndMedia/pudyn:UsageByJobSize/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+					<dd:PagesPerJob>oneToTen</dd:PagesPerJob>
+					<dd:PagesPerJob>elevenToTwenty</dd:PagesPerJob>
+					<dd:PagesPerJob>twentyOneToThirtyFive</dd:PagesPerJob>
+					<dd:PagesPerJob>greaterThanThirtyfive</dd:PagesPerJob>
+				</pucap:UsageByJobSizeSupport>
+				<pucap:MediaSizeNameSupport access="readOnly">
+					<dd:MediaSizeName>na_legal_8.5x14in</dd:MediaSizeName>
+				</pucap:MediaSizeNameSupport>
+			</pucap:UsageByJobSizeAndMedia>
+		</pucap:UsageByADFSupport>
+	</pucap:ScannerEngineSubunitCap>
+	<pucap:MassStorageSubunitCap>
+		<pucap:TotalImpressions elementXPath="pudyn:MassStorageSubunit/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		<pucap:ColorImpressions elementXPath="pudyn:MassStorageSubunit/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+		<pucap:MonochromeImpressions elementXPath="pudyn:MassStorageSubunit/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+		<pucap:MemoryDevicesInserted elementXPath="pudyn:MassStorageSubunit/dd:MemoryDevicesInserted" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MemoryDevicesInserted>
+		<pucap:PictbridgeConnections elementXPath="pudyn:MassStorageSubunit/dd:PictbridgeConnections" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:PictbridgeConnections>
+		<pucap:UsageByPhotoCardSupport>
+			<pucap:TotalImpressions elementXPath="dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			<dd:PhotoCardType>4x6Impressions</dd:PhotoCardType>
+			<dd:PhotoCardType>4x6MetricEquivalentImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>5x7Impressions</dd:PhotoCardType>
+			<dd:PhotoCardType>5x7MetricEquivalentImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>8x10Or8.5x11orA4Impressions</dd:PhotoCardType>
+			<dd:PhotoCardType>8x10Or8.5x11orA4MetricEquivalentImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>albumImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>clipArtImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>3UpLayoutImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>designImpressions</dd:PhotoCardType>
+			<dd:PhotoCardType>frameImpressions</dd:PhotoCardType>
+		</pucap:UsageByPhotoCardSupport>
+	</pucap:MassStorageSubunitCap>
+	<pucap:CopyApplicationSubunitCap>
+		<pucap:TotalImpressions elementXPath="pudyn:CopyApplicationSubunit/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		<pucap:ColorImpressions elementXPath="pudyn:CopyApplicationSubunit/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+		<pucap:MonochromeImpressions elementXPath="pudyn:CopyApplicationSubunit/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+		<pucap:AdfImages elementXPath="pudyn:CopyApplicationSubunit/dd:AdfImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:AdfImages>
+		<pucap:FlatbedImages elementXPath="pudyn:CopyApplicationSubunit/dd:FlatbedImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:FlatbedImages>
+		<pucap:TotalAdfLegalImages elementXPath="pudyn:ProductUsageDyn/pudyn:CopyApplicationSubunit/pudyn:TotalAdfLegallmages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalAdfLegalImages>
+	</pucap:CopyApplicationSubunitCap>
+	<pucap:ScanApplicationSubunitCap>
+		<pucap:AdfImages elementXPath="pudyn:ScanApplicationSubunit/dd:AdfImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:AdfImages>
+		<pucap:FlatbedImages elementXPath="pudyn:ScanApplicationSubunit/dd:FlatbedImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:FlatbedImages>
+		<pucap:ImagesSentToEmail elementXPath="pudyn:ScanApplicationSubunit/dd:ImagesSentToEmail" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentToEmail>
+		<pucap:ImagesSentToFolder elementXPath="pudyn:ScanApplicationSubunit/dd:ImagesSentToFolder" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentToFolder>
+		<pucap:ScanToHostImages elementXPath="dd:ScanToHostImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ScanToHostImages>
+	</pucap:ScanApplicationSubunitCap>
+	<pucap:FaxApplicationSubunitCap>
+		<pucap:TotalImpressions elementXPath="pudyn:FaxApplicationSubunit/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		<pucap:ColorImpressions elementXPath="pudyn:FaxApplicationSubunit/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ColorImpressions>
+		<pucap:MonochromeImpressions elementXPath="pudyn:FaxApplicationSubunit/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MonochromeImpressions>
+		<pucap:AdfImages elementXPath="pudyn:FaxApplicationSubunit/dd:AdfImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:AdfImages>
+		<pucap:FlatbedImages elementXPath="pudyn:FaxApplicationSubunit/dd:FlatbedImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:FlatbedImages>
+		<pucap:ImagesSentToPC elementXPath="pudyn:FaxApplicationSubunit/dd:ImagesSentToPC" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentToPC>
+		<pucap:ImagesReceivedFromPC elementXPath="pudyn:FaxApplicationSubunit/dd:ImagesReceivedFromPC" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesReceivedFromPC>
+		<pucap:TotalReceivedImages elementXPath="dd:TotalFaxReceived" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalReceivedImages>
+		<pucap:ImagesSentToEmail elementXPath="dd:ImagesSentToEmail" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentToEmail>
+		<pucap:ImagesSentToNetworkFolder elementXPath="dd:ImagesSentToFolder" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentToNetworkFolder>
+		<pucap:TotalImagesSent elementXPath="dd:TotalFaxSent" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImagesSent>
+		<pucap:ImagesSentOverIPP typeof="dd:Integer" elementXPath="/pudyn:ProductUsageDyn/pudyn:FaxApplicationSubunit/pudyn:ImagesSentOverIPP" min="0" max="4294967295" step="1" access="readOnly"></pucap:ImagesSentOverIPP>
+		<pucap:TotalAdfLegalImages elementXPath="pudyn:ProductUsageDyn/pudyn:FaxApplicationSubunit/pudyn:TotalAdfLegalImages" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalAdfLegalImages>
+	</pucap:FaxApplicationSubunitCap>
+	<pucap:PrintApplicationSubunitCap>
+		<pucap:TotalImpressions elementXPath="dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+		<pucap:PhotoImpressions elementXPath="dd:PhotoImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:PhotoImpressions>
+		<pucap:MediaSize_4x6in_10x15cm_Impressions elementXPath="dd:MediaSize_4x6in_10x15cm_Impressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:MediaSize_4x6in_10x15cm_Impressions>
+		<pucap:CloudPrintImpressions elementXPath="dd:CloudPrintImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:CloudPrintImpressions>
+		<pucap:ReportsImpressionsInRTP access="readOnly" step="1" max="4294967295" min="0" typeof="dd:Integer" elementXPath="/pudyn:PrintApplicationSubunit/pudyn:ReportsImpressionsInRTP"></pucap:ReportsImpressionsInRTP>
+	</pucap:PrintApplicationSubunitCap>
+	<pucap:PonyExpressSubunitCap>
+		<pucap:PECounter elementXPath="pudyn:PonyExpressSubunit/pudyn:PECounter" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:PECounter>
+	</pucap:PonyExpressSubunitCap>
+	<pucap:MobileApplicationSubunitCap>
+		<pucap:TotalUsageCap>
+			<pucap:CounterCap>
+				<pucap:TotalImpressions elementXPath="pudyn:MobileApplicationSubunit/pudyn:Totalusage/pudyn:Counter/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			</pucap:CounterCap>
+			<pucap:RemoteDeviceTypeSupport>
+				<pucap:RemoteDeviceType>OSX</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>iOS</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Android</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>samsung</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Windows</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Chrome</pucap:RemoteDeviceType>
+			</pucap:RemoteDeviceTypeSupport>
+			<pucap:DriverTypeSupport>
+				<pucap:DriverType>discrete</pucap:DriverType>
+				<pucap:DriverType>inOS</pucap:DriverType>
+				<pucap:DriverType>ePrint</pucap:DriverType>
+				<pucap:DriverType>UniversalPrintDriver</pucap:DriverType>
+			</pucap:DriverTypeSupport>
+		</pucap:TotalUsageCap>
+		<pucap:DocumentUsageCap>
+			<pucap:CounterCap>
+				<pucap:TotalImpressions elementXPath="pudyn:MobileApplicationSubunit/pudyn:DocumentUsage/pudyn:Counter/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			</pucap:CounterCap>
+			<pucap:RemoteDeviceTypeSupport>
+				<pucap:RemoteDeviceType>OSX</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>iOS</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Android</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>samsung</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Windows</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Chrome</pucap:RemoteDeviceType>
+			</pucap:RemoteDeviceTypeSupport>
+		</pucap:DocumentUsageCap>
+		<pucap:PhotoUsageCap>
+			<pucap:CounterCap>
+				<pucap:TotalImpressions elementXPath="pudyn:MobileApplicationSubunit/pudyn:PhotoUsage/pudyn:Counter/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1" access="readOnly"></pucap:TotalImpressions>
+			</pucap:CounterCap>
+			<pucap:RemoteDeviceTypeSupport>
+				<pucap:RemoteDeviceType>OSX</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>iOS</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Android</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>samsung</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Windows</pucap:RemoteDeviceType>
+				<pucap:RemoteDeviceType>Chrome</pucap:RemoteDeviceType>
+			</pucap:RemoteDeviceTypeSupport>
+		</pucap:PhotoUsageCap>
+	</pucap:MobileApplicationSubunitCap>
+</pucap:ProductUsageCap>

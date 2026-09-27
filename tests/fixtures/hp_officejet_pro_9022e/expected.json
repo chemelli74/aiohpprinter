@@ -1,0 +1,199 @@
+{
+  "device": {
+    "make_and_model": "HP OfficeJet Pro 9020 series",
+    "make_and_model_family": "HP OfficeJet Pro 9020 series",
+    "sku_identifier": "9022e",
+    "serial_number": "REDACTED",
+    "product_number": "226Y0B",
+    "manufacturer_name": "HP",
+    "manufactured_at": "2023-03-13T00:00:00"
+  },
+  "status": {
+    "device_status": "inpowersave"
+  },
+  "consumables": [
+    {
+      "consumable_id": "C",
+      "consumable_type": "ink",
+      "marker_color": "Cyan",
+      "state": "used",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "1",
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 31.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 298.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-02-26T00:00:00",
+      "installed_at": "2024-03-18T00:00:00",
+      "warranty_expires_at": "2025-02-26T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": "3JA86A",
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "CMYK",
+      "consumable_type": "printhead",
+      "marker_color": null,
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "0",
+      "percentage_level_remaining": null,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": null,
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": "2023-07-31T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "K",
+      "consumable_type": "ink",
+      "marker_color": "Black",
+      "state": "used",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "4",
+      "percentage_level_remaining": 80.0,
+      "raw_percentage_level_remaining": 73.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 845.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-04-30T00:00:00",
+      "installed_at": "2024-11-11T00:00:00",
+      "warranty_expires_at": "2025-04-30T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": "3JA89A",
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "M",
+      "consumable_type": "ink",
+      "marker_color": "Magenta",
+      "state": "used",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "2",
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 40.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 299.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-03-05T00:00:00",
+      "installed_at": "2024-03-18T00:00:00",
+      "warranty_expires_at": "2025-03-05T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": "3JA87A",
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "Y",
+      "consumable_type": "ink",
+      "marker_color": "Yellow",
+      "state": "used",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "3",
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 32.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 299.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2023-03-05T00:00:00",
+      "installed_at": "2024-03-18T00:00:00",
+      "warranty_expires_at": "2025-03-05T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": "3JA88A",
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    }
+  ],
+  "printer_usage": {
+    "total_impressions": 875,
+    "monochrome_impressions": 226,
+    "color_impressions": 649,
+    "simplex_sheets": 697,
+    "duplex_sheets": 83,
+    "jam_events": 2,
+    "mispick_events": 24
+  },
+  "scanner_usage": {
+    "scan_images": 4279,
+    "adf_images": 2947,
+    "duplex_sheets": 589,
+    "flatbed_images": 1310,
+    "jam_events": 11,
+    "mispick_events": 6
+  },
+  "copy_usage": {
+    "total_impressions": 20,
+    "adf_images": 9,
+    "flatbed_images": 5,
+    "monochrome_impressions": 2,
+    "color_impressions": 18
+  },
+  "fax_usage": {
+    "total_impressions": 0
+  },
+  "adapters": [
+    {
+      "name": "Eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": false
+    },
+    {
+      "name": "Wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "Wifi1",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": false
+    },
+    {
+      "name": "Usb0",
+      "connectivity_port_type": "usb",
+      "is_connected": false
+    }
+  ],
+  "eprint": {
+    "printer_id": null,
+    "is_registered": true,
+    "cloud_services_enabled": true
+  },
+  "wifi": {
+    "ssid_prefix": "DIRECT-B3-HP",
+    "connection_method": "auto"
+  }
+}

@@ -32,9 +32,13 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "anyio>=4.11.0",
     "colorlog",
+    "mypy",
     "pytest>=9.0,<10",
-    "pytest-cov>=5,<8"
+    "pytest-anyio",
+    "pytest-cov>=5,<8",
+    "types-defusedxml"
 ]
 
 [tool.uv-version]
@@ -72,6 +76,7 @@ prerelease = true
 
 [tool.pytest.ini_options]
 addopts = "-v -Wdefault"
+anyio_mode = "auto"
 pythonpath = ["src"]
 testpaths = ["tests"]
 

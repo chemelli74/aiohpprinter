@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<sccap:SysLogConfigCap xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/syslogconfigcap/2009/04/13 ../schemas/SysLogConfigCap.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:sccap="http://www.hp.com/schemas/imaging/con/ledm/syslogconfigcap/2009/04/13" xmlns:scdyn="http://www.hp.com/schemas/imaging/con/ledm/syslogconfigdyn/2009/04/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-03-06</dd:Date>
+	</dd:Version>
+	<sccap:SyslogSupport access="readWrite">
+		<dd:Syslog>enabled</dd:Syslog>
+		<dd:Syslog>disabled</dd:Syslog>
+	</sccap:SyslogSupport>
+	<sccap:ServerIP typeof="dd:String" length="50" elementXPath="scdyn:SysLogConfigDyn/dd:ServerIP" access="readWrite"></sccap:ServerIP>
+	<sccap:Port typeof="dd:Int" min="1" max="65535" step="1" elementXPath="scdyn:SysLogConfigDyn/dd:Port" access="readWrite"></sccap:Port>
+	<sccap:ServiceTransportTypeSupport access="readWrite">
+		<dd:ServiceTransportType>TCP</dd:ServiceTransportType>
+		<dd:ServiceTransportType>UDP</dd:ServiceTransportType>
+	</sccap:ServiceTransportTypeSupport>
+	<sccap:MessageRate typeof="dd:Int" min="0" max="255" step="1" elementXPath="scdyn:SysLogConfigDyn/dd:MessageRate" access="readWrite"></sccap:MessageRate>
+	<sccap:DeliveryThresholdSupport access="readWrite">
+		<dd:DeliveryThreshold>Emergency</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Alert</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Critical</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Error</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Warning</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Notice</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Info</dd:DeliveryThreshold>
+		<dd:DeliveryThreshold>Debug</dd:DeliveryThreshold>
+	</sccap:DeliveryThresholdSupport>
+</sccap:SysLogConfigCap>

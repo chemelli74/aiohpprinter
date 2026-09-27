@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<fucap:FaxUploadCap xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06" xmlns:fudyn="http://www.hp.com/schemas/imaging/con/ledm/faxuploaddyn/2008/07/01" xmlns:fucap="http://www.hp.com/schemas/imaging/con/ledm/faxuploadcap/2008/08/12" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd                         http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06 ../schemas/dd3/DataDictionaryMasterLEDM.xsd       http://www.hp.com/schemas/imaging/con/ledm/faxuploadcap/2008/08/12 ../schemas/FaxUploadCap.xsd       http://www.hp.com/schemas/imaging/con/ledm/faxuploaddyn/2008/07/01 ../schemas/FaxUploadDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<fucap:FaxUploadConfigSupport>
+		<fucap:FeatureFaxUploadSupport access="readWrite">
+			<fax:FeatureFaxUpload>disabled</fax:FeatureFaxUpload>
+			<fax:FeatureFaxUpload>enabled</fax:FeatureFaxUpload>
+		</fucap:FeatureFaxUploadSupport>
+		<fucap:Hostname elementXPath="dd3:Hostname" typeof="xs:string" length="65" access="readWrite"></fucap:Hostname>
+		<fucap:FaxBackupPrintSupport access="readWrite">
+			<fax:BackupPrint>disabled</fax:BackupPrint>
+			<fax:BackupPrint>enabled</fax:BackupPrint>
+		</fucap:FaxBackupPrintSupport>
+	</fucap:FaxUploadConfigSupport>
+	<fucap:FaxUploadJobSupport>
+		<fucap:OperationStatusSupport access="readOnly">
+			<dd:OperationStatus>OperationInProgress</dd:OperationStatus>
+			<dd:OperationStatus>OperationCompleted</dd:OperationStatus>
+		</fucap:OperationStatusSupport>
+		<fucap:PagesCap>
+			<fucap:PageCap>
+				<fucap:ResourceURI elementXPath="jobs:Jobs/jobs:Job/fudyn:FaxUpload/fudyn:Pages/fudyn:Page/dd:ResourceURI" typeof="dd:String" length="128" access="readOnly"></fucap:ResourceURI>
+				<fucap:FaxCompressionMethodSupport access="readOnly">
+					<fax:FaxCompressionMethod>mmr</fax:FaxCompressionMethod>
+				</fucap:FaxCompressionMethodSupport>
+				<fucap:ImageFileEnumsSupport access="readOnly">
+					<dd:ImageFileEnums>jpeg</dd:ImageFileEnums>
+				</fucap:ImageFileEnumsSupport>
+				<fucap:ColorSpaceSupport access="readOnly">
+					<dd:ColorSpace>CIELab</dd:ColorSpace>
+				</fucap:ColorSpaceSupport>
+			</fucap:PageCap>
+		</fucap:PagesCap>
+	</fucap:FaxUploadJobSupport>
+</fucap:FaxUploadCap>

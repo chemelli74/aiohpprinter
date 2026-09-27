@@ -1,0 +1,124 @@
+{
+  "device": {
+    "make_and_model": "ENVY Photo 7800 All-in-One Printer series",
+    "make_and_model_family": "ENVY Photo 7800 series",
+    "sku_identifier": "7830",
+    "serial_number": "REDACTED",
+    "product_number": "Y0G50B",
+    "manufacturer_name": "HP",
+    "manufactured_at": "2017-07-14T00:00:00"
+  },
+  "status": {
+    "device_status": "trayempty"
+  },
+  "consumables": [
+    {
+      "consumable_id": "CMY",
+      "consumable_type": "inkCartridge",
+      "marker_color": "CyanMagentaYellow",
+      "state": "newGenuineHP",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "0",
+      "percentage_level_remaining": 50.0,
+      "raw_percentage_level_remaining": 46.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 0.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-03-01T00:00:00",
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "K",
+      "consumable_type": "inkCartridge",
+      "marker_color": "Black",
+      "state": "newGenuineHP",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "1",
+      "percentage_level_remaining": 60.0,
+      "raw_percentage_level_remaining": 58.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 0.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-08-01T00:00:00",
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    }
+  ],
+  "printer_usage": {
+    "total_impressions": 4035,
+    "monochrome_impressions": 0,
+    "color_impressions": 3401,
+    "simplex_sheets": 3413,
+    "duplex_sheets": 279,
+    "jam_events": 13,
+    "mispick_events": 59
+  },
+  "scanner_usage": {
+    "scan_images": 792,
+    "adf_images": 251,
+    "duplex_sheets": null,
+    "flatbed_images": 537,
+    "jam_events": 1,
+    "mispick_events": 4
+  },
+  "copy_usage": {
+    "total_impressions": 136,
+    "adf_images": 42,
+    "flatbed_images": 104,
+    "monochrome_impressions": 74,
+    "color_impressions": 62
+  },
+  "fax_usage": {
+    "total_impressions": 0
+  },
+  "adapters": [
+    {
+      "name": "Eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": true
+    },
+    {
+      "name": "Wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": false
+    },
+    {
+      "name": "Wifi1",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "Usb0",
+      "connectivity_port_type": "usb",
+      "is_connected": false
+    }
+  ],
+  "eprint": {
+    "printer_id": null,
+    "is_registered": true,
+    "cloud_services_enabled": true
+  },
+  "wifi": {
+    "ssid_prefix": "DIRECT-62-HP",
+    "connection_method": "manual"
+  }
+}
