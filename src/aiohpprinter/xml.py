@@ -57,9 +57,10 @@ def parse_json_document(content: str) -> dict[str, Any]:
     """Parse a JSON-encoded EWS response into the same dict shape.
 
     A small number of endpoints (observed on `/IoMgmt/Adapters`) answer with
-    a `Content-Type: application/javascript` JSON body instead of XML, using
-    the same element names as their XML counterparts. This lets the same
-    path-based parsers read either shape.
+    a JSON body instead of XML - either `Content-Type: application/javascript`
+    or `application/json` (see `aiohpprinter.const.JSON_CONTENT_TYPES`) -
+    using the same element names as their XML counterparts. This lets the
+    same path-based parsers read either shape.
     """
     try:
         document = json.loads(content)

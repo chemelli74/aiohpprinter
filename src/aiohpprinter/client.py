@@ -20,6 +20,7 @@ from .const import (
     ENDPOINT_PRODUCT_CONFIG,
     ENDPOINT_PRODUCT_STATUS,
     ENDPOINT_PRODUCT_USAGE,
+    JSON_CONTENT_TYPES,
 )
 from .exceptions import (
     HpPrinterConnectionError,
@@ -315,7 +316,7 @@ class HpPrinter:
             message = f"Could not connect to {url}: {ex}"
             raise HpPrinterConnectionError(message) from ex
 
-        if content_type == "application/javascript":
+        if content_type in JSON_CONTENT_TYPES:
             return parse_json_document(content)
 
         return parse_document(content)

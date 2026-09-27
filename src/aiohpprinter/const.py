@@ -22,6 +22,10 @@ ENDPOINT_ADAPTERS = "/IoMgmt/Adapters"
 ENDPOINT_EPRINT_CONFIG = "/ePrint/ePrintConfigDyn.xml"
 ENDPOINT_NET_APPS_SECURE = "/DevMgmt/NetAppsSecureDyn.xml"
 
+# A small number of endpoints (observed on `/IoMgmt/Adapters`) answer with a
+# JSON body instead of XML, using either of these content types.
+JSON_CONTENT_TYPES = frozenset({"application/javascript", "application/json"})
+
 # Keys present on every response's root element that carry protocol/schema
 # metadata rather than printer data, dropped once parsed.
 IGNORED_ROOT_KEYS = ("@schemaLocation", "Version")

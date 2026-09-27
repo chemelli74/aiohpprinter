@@ -149,8 +149,9 @@ async def test_usage_methods_fetch_live_when_no_document_given(
     assert to_json_safe(result) == load_expected(FULL_FIXTURE)[method_name]
 
 
+@pytest.mark.parametrize("content_type", ["application/javascript", "application/json"])
 async def test_adapters_via_json_content_type(
-    mock_session: ClientSession, make_server: MakeServer
+    mock_session: ClientSession, make_server: MakeServer, content_type: str
 ) -> None:
     """`/IoMgmt/Adapters` may reply as JSON instead of XML on some models."""
     payload = (
@@ -159,11 +160,7 @@ async def test_adapters_via_json_content_type(
         '"IsConnected": "true"}}]}}'
     )
     server = await make_server(
-        {
-            "/IoMgmt/Adapters": RouteResponse(
-                body=payload, content_type="application/javascript"
-            )
-        }
+        {"/IoMgmt/Adapters": RouteResponse(body=payload, content_type=content_type)}
     )
 
     async with _printer(server, mock_session) as printer:

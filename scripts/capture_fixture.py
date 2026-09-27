@@ -37,6 +37,7 @@ from aiohpprinter.const import (
     ENDPOINT_PRODUCT_CONFIG,
     ENDPOINT_PRODUCT_STATUS,
     ENDPOINT_PRODUCT_USAGE,
+    JSON_CONTENT_TYPES,
 )
 from aiohpprinter.exceptions import HpPrinterParseError
 from aiohpprinter.parsers import (
@@ -66,7 +67,6 @@ LIBRARY_ENDPOINTS = (
     ENDPOINT_NET_APPS_SECURE,
 )
 
-JSON_CONTENT_TYPE = "application/javascript"
 REDACTED = "REDACTED"
 
 #: Local element/key names whose value identifies the printer, its owner or
@@ -96,6 +96,10 @@ XML_ELEMENT = re.compile(
     r"(?P<value>(?:[^<]|<!\[CDATA\[.*?\]\]>)+)(</)",
     re.DOTALL,
 )
+#: Opening/self-closing tags, excluding closing tags, comments and CDATA.
+XML_TAG = re.compile(r"<[^!?/][^>]*>")
+#: A `name="value"` attribute assignment inside a tag.
+XML_ATTRIBUTE = re.compile(r'(?:[\w.-]+:)?(?P<name>[\w.-]+)="(?P<value>[^"]*)"')
 SERIES_MODEL = re.compile(
     r"(?i)^(?P<prefix>.*?)(?P<number>\d{3,})(?P<suffix>.*?)\s+series$"
 )
@@ -180,14 +184,24 @@ def filename_for(endpoint: str, *, is_json: bool) -> str:
 
 
 def sanitize_xml(content: str) -> str:
-    """Redact identifying element values, keeping the document structure."""
+    """Redact identifying element values and attributes, keeping the structure."""
 
-    def _replace(match: re.Match[str]) -> str:
+    def _replace_element(match: re.Match[str]) -> str:
         if not SENSITIVE_NAMES.match(match["name"]) or not match["value"].strip():
             return match[0]
         return f"{match[1]}{REDACTED}{match[4]}"
 
-    return redact_addresses(XML_ELEMENT.sub(_replace, content))
+    def _replace_attribute(match: re.Match[str]) -> str:
+        if not SENSITIVE_NAMES.match(match["name"]) or not match["value"].strip():
+            return match[0]
+        return f'{match["name"]}="{REDACTED}"'
+
+    def _replace_tag_attributes(match: re.Match[str]) -> str:
+        return XML_ATTRIBUTE.sub(_replace_attribute, match[0])
+
+    content = XML_ELEMENT.sub(_replace_element, content)
+    content = XML_TAG.sub(_replace_tag_attributes, content)
+    return redact_addresses(content)
 
 
 def redact_addresses(content: str) -> str:
@@ -230,7 +244,7 @@ async def fetch(
         print(f"  {endpoint}: {type(ex).__name__} {ex}, skipped")
         return None
 
-    is_json = content_type == JSON_CONTENT_TYPE
+    is_json = content_type in JSON_CONTENT_TYPES
     try:
         if is_json:
             content = json.dumps(sanitize_json(json.loads(content)), indent=2) + "\n"
