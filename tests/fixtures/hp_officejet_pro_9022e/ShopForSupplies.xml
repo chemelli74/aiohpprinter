@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<ss:ShopForSuppliesRequest xsi:schemaLocation="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07 ../schemas/ShopForSupplies.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ss="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<ss:RequesterID type="x-inkjet-serial-number">REDACTED</ss:RequesterID>
+	<ss:LocaleInformationSources>
+		<ss:LocaleInformationSource type="printing-device">
+			<dd:Language>it-IT</dd:Language>
+			<dd:TimeStamp>2026-09-26T23:31:18</dd:TimeStamp>
+		</ss:LocaleInformationSource>
+	</ss:LocaleInformationSources>
+	<ss:Devices>
+		<ss:Device>
+			<ss:GloballyUniqueDeviceModelID type="x-hp-device-model-string-with-sku-with-region-code">REDACTED</ss:GloballyUniqueDeviceModelID>
+			<ss:GloballyUniqueDeviceID type="">REDACTED</ss:GloballyUniqueDeviceID>
+			<ss:CompatibleSupplyModels>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:963XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:963</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:967XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">color:963XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">color:963</ss:GloballyUniqueSupplyModelIDMacro>
+			</ss:CompatibleSupplyModels>
+			<ss:Supplies>
+				<ss:Supply>
+					<dd:ConsumableStation>0</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-printhead-B.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:ConsumableState>inserted</dd:ConsumableState>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>1</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>40</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>2</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>40</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>3</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>40</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>4</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>80</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+			</ss:Supplies>
+			<ss:RewardsRegistrationStatus>
+				<dd:OptedIn>false</dd:OptedIn>
+				<dd:AutoSendData>false</dd:AutoSendData>
+				<dd:PromptAutoSendData>false</dd:PromptAutoSendData>
+			</ss:RewardsRegistrationStatus>
+		</ss:Device>
+	</ss:Devices>
+	<ss:DeviceInfoSets>
+		<ss:DeviceInfoSet type="String">
+			<ss:DeviceInfoDeviceID type="x-inkjet-serial-number">REDACTED</ss:DeviceInfoDeviceID>
+			<ss:DeviceInfoData><![CDATA[MFG:HP;MDL:HP OfficeJet Pro 9020 series;CMD:PCL3GUI,PCL3,PJL,Automatic,JPEG,AppleRaster,PWGRaster,PCLM,DW-PCL,802.11,802.3,DESKJET,DYN;CLS:PRINTER;DES:226Y0B;CID:HPIJVIPAV9;LEDMDIS:USB#FF#04#01,USB#FF#CC#00;MCT:MF;MCL:DI;MCV:3.2;SN:REDACTED;S:038888C4840000010058008000044180028451800284618002841180050;Z:05000009000001000001000001000001,12000,17000000000000000000000000000000,181;]]></ss:DeviceInfoData>
+		</ss:DeviceInfoSet>
+	</ss:DeviceInfoSets>
+</ss:ShopForSuppliesRequest>

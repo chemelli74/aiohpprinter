@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<faxactlgcap:FaxActivityLogCap xmlns:faxactlgcap="http://www.hp.com/schemas/imaging/con/ledm/faxactivitylogcap/2008/01/25" xmlns:faxactlgdyn="http://www.hp.com/schemas/imaging/con/ledm/faxactivitylogdyn/2008/01/25" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/faxactivitylogcap/2008/01/25 ../schemas/FaxActivityLogCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<faxactlgcap:FaxEntryID step="1" max="65535" min="5" elementXPath="faxactlgdyn:FaxLogEntry/fax:FaxEntryID" typeof="dd:Integer" access="readOnly"></faxactlgcap:FaxEntryID>
+	<faxactlgcap:PhoneNumber length="20" elementXPath="faxactlgdyn:FaxLogEntry/dd:PhoneNumber" typeof="dd:String" access="readOnly"></faxactlgcap:PhoneNumber>
+	<faxactlgcap:NumPages step="1" max="4294967295" min="0" elementXPath="faxactlgdyn:FaxLogEntry/fax:NumPages" typeof="dd:Integer" access="readOnly"></faxactlgcap:NumPages>
+	<faxactlgcap:StartTime length="25" elementXPath="faxactlgdyn:FaxLogEntry/fax:StartTime" typeof="dd:String" access="readOnly"></faxactlgcap:StartTime>
+	<faxactlgcap:DurationTime length="25" elementXPath="faxactlgdyn:FaxLogEntry/fax:DurationTime" typeof="dd:String" access="readOnly"></faxactlgcap:DurationTime>
+	<faxactlgcap:CallerID length="24" elementXPath="faxactlgdyn:FaxLogEntry/fax:CallerID" typeof="dd:String" access="readOnly"></faxactlgcap:CallerID>
+	<faxactlgcap:CallStationID length="20" elementXPath="faxactlgdyn:FaxLogEntry/fax:CallStationID" typeof="dd:String" access="readOnly"></faxactlgcap:CallStationID>
+	<faxactlgcap:SessionTypeSupport access="readOnly">
+		<fax:SessionType>monitorDial</fax:SessionType>
+		<fax:SessionType>send</fax:SessionType>
+		<fax:SessionType>receive</fax:SessionType>
+		<fax:SessionType>pollSend</fax:SessionType>
+		<fax:SessionType>pollReceive</fax:SessionType>
+		<fax:SessionType>receiveOrPollSend</fax:SessionType>
+		<fax:SessionType>pollReceiveMonitorDial</fax:SessionType>
+		<fax:SessionType>unknown</fax:SessionType>
+	</faxactlgcap:SessionTypeSupport>
+	<faxactlgcap:ResultCodeSupport access="readOnly">
+		<fax:ResultCode>ok</fax:ResultCode>
+		<fax:ResultCode>commError</fax:ResultCode>
+		<fax:ResultCode>stop</fax:ResultCode>
+		<fax:ResultCode>busy</fax:ResultCode>
+		<fax:ResultCode>noAnswer</fax:ResultCode>
+		<fax:ResultCode>noDialTone</fax:ResultCode>
+		<fax:ResultCode>noDocument</fax:ResultCode>
+		<fax:ResultCode>documentJam</fax:ResultCode>
+		<fax:ResultCode>doorOpen</fax:ResultCode>
+		<fax:ResultCode>powerFail</fax:ResultCode>
+		<fax:ResultCode>blacklist</fax:ResultCode>
+		<fax:ResultCode>storageFull</fax:ResultCode>
+		<fax:ResultCode>outOfMemory</fax:ResultCode>
+		<fax:ResultCode>phoneLineUnavailable</fax:ResultCode>
+		<fax:ResultCode>discarded</fax:ResultCode>
+		<fax:ResultCode>pcDisconnected</fax:ResultCode>
+		<fax:ResultCode>remoteNotColor</fax:ResultCode>
+		<fax:ResultCode>colorUnsupported</fax:ResultCode>
+		<fax:ResultCode>noFaxDetected</fax:ResultCode>
+		<fax:ResultCode>archiveError</fax:ResultCode>
+		<fax:ResultCode>error</fax:ResultCode>
+	</faxactlgcap:ResultCodeSupport>
+	<faxactlgcap:ColorInJobSupport access="readOnly">
+		<fax:ColorInJob>true</fax:ColorInJob>
+		<fax:ColorInJob>false</fax:ColorInJob>
+	</faxactlgcap:ColorInJobSupport>
+	<faxactlgcap:ArchiveStatusSupport access="readOnly">
+		<fax:ArchiveStatus>saved</fax:ArchiveStatus>
+		<fax:ArchiveStatus>notSaved</fax:ArchiveStatus>
+		<fax:ArchiveStatus>notApplicable</fax:ArchiveStatus>
+	</faxactlgcap:ArchiveStatusSupport>
+	<faxactlgcap:ClearableUrl>/DevMgmt/FaxActivityLogDyn.xml/FaxActivityLog</faxactlgcap:ClearableUrl>
+</faxactlgcap:FaxActivityLogCap>

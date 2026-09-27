@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<pudyn:ProductUsageDyn xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productusagedyn/2007/12/11 ../schemas/ProductUsageDyn.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd2="http://www.hp.com/schemas/imaging/con/dictionaries/2008/10/10" xmlns:pudyn="http://www.hp.com/schemas/imaging/con/ledm/productusagedyn/2007/12/11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.119</dd:Revision>
+		<dd:Date>2010-08-31</dd:Date>
+	</dd:Version>
+	<pudyn:PrinterSubunit>
+		<dd:TotalImpressions PEID="5082">875</dd:TotalImpressions>
+		<dd:MonochromeImpressions>226</dd:MonochromeImpressions>
+		<dd:ColorImpressions>649</dd:ColorImpressions>
+		<dd:A4EquivalentImpressions>
+			<dd:TotalImpressions>870.5</dd:TotalImpressions>
+			<dd:MonochromeImpressions>226.0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>644.5</dd:ColorImpressions>
+		</dd:A4EquivalentImpressions>
+		<dd:SimplexSheets>697</dd:SimplexSheets>
+		<dd:DuplexSheets PEID="5088">83</dd:DuplexSheets>
+		<dd:JamEvents PEID="16076">2</dd:JamEvents>
+		<dd:MispickEvents>24</dd:MispickEvents>
+		<dd:TotalFrontPanelCancelPresses PEID="30033">36</dd:TotalFrontPanelCancelPresses>
+		<pudyn:UsageByMarkingAgent>
+			<dd2:CumulativeMarkingAgentUsed PEID="64100">
+				<dd:ValueFloat>112</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeMarkingAgentUsed>
+			<dd2:CumulativeHPMarkingAgentUsed PEID="64101">
+				<dd:ValueFloat>112</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeHPMarkingAgentUsed>
+			<dd:CumulativeHPMarkingAgentInserted PEID="64001">
+				<dd:ValueFloat>228</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd:CumulativeHPMarkingAgentInserted>
+		</pudyn:UsageByMarkingAgent>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>864</dd:TotalImpressions>
+			<dd:MonochromeImpressions>226</dd:MonochromeImpressions>
+			<dd:ColorImpressions>638</dd:ColorImpressions>
+			<dd:DuplexSheets>95</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_legal_8.5x14in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>2</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>2</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_letter_8.5x11in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_foolscap_8.5x13in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>custom</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_executive_7.25x10.5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5086">0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_govt-letter_8x10in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_invoice_5.5x8.5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>om_photo_89x127mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>custom_photo-2l-size-card_127x178mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5114">0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>custom_photo_4x5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_index-3x5_3x5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_index-4x6_4x6in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_5x7_5x7in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_index-5x8_5x8in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>9</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>9</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_a5_148x210mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_a6_105x148mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>jis_b5_182x257mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_b5_176x250mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>om_small-photo_100x150mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5129">0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>custom_photo_5x5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>jpn_hagaki_100x148mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>jpn_oufuku-rot_148x200mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_number-10_4.125x9.5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_monarch_3.875x7.5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_c5_162x229mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_c6_114x162mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>iso_dl_110x220mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_a2_4.375x5.75in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>jpn_chou3_120x235mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>jpn_chou4_90x205mm</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+			<dd:ColorImpressions>0</dd:ColorImpressions>
+			<dd:DuplexSheets>0</dd:DuplexSheets>
+			<dd:MediaSizeName>na_personal_3.625x6.5in</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5087">866</dd:TotalImpressions>
+			<dd:MediaSizeName>a4_or_letter</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5085">0</dd:TotalImpressions>
+			<dd:MediaSizeName>5x7</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5084">0</dd:TotalImpressions>
+			<dd:MediaSizeName>4x6</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMedia>
+			<dd:TotalImpressions PEID="5083">0</dd:TotalImpressions>
+			<dd:MediaSizeName>unknownenvelope</dd:MediaSizeName>
+		</pudyn:UsageByMedia>
+		<pudyn:UsageByMediaType>
+			<dd:TotalImpressions PEID="5115">875</dd:TotalImpressions>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5048">310</dd:TotalImpressions>
+				<dd:PagesPerJob>one</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5049">81</dd:TotalImpressions>
+				<dd:PagesPerJob>two</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5050">47</dd:TotalImpressions>
+				<dd:PagesPerJob>threeToFive</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5051">27</dd:TotalImpressions>
+				<dd:PagesPerJob>sixToTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5052">4</dd:TotalImpressions>
+				<dd:PagesPerJob>greaterThanTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByQuality>
+				<dd:NormalImpressions PEID="5041">886</dd:NormalImpressions>
+				<dd:DraftImpressions PEID="5042">0</dd:DraftImpressions>
+				<dd:BetterImpressions PEID="5043">14</dd:BetterImpressions>
+			</dd:UsageByQuality>
+			<dd:MediaType>plain</dd:MediaType>
+		</pudyn:UsageByMediaType>
+		<pudyn:UsageByMediaType>
+			<dd:TotalImpressions PEID="5116">0</dd:TotalImpressions>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5053">0</dd:TotalImpressions>
+				<dd:PagesPerJob>one</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5054">0</dd:TotalImpressions>
+				<dd:PagesPerJob>two</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5055">0</dd:TotalImpressions>
+				<dd:PagesPerJob>threeToFive</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5056">0</dd:TotalImpressions>
+				<dd:PagesPerJob>sixToTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5057">0</dd:TotalImpressions>
+				<dd:PagesPerJob>greaterThanTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByQuality>
+				<dd:NormalImpressions PEID="5044">0</dd:NormalImpressions>
+				<dd:BetterImpressions PEID="5046">0</dd:BetterImpressions>
+			</dd:UsageByQuality>
+			<dd:MediaType>photoStandard</dd:MediaType>
+		</pudyn:UsageByMediaType>
+		<pudyn:UsageByMediaType>
+			<dd:TotalImpressions PEID="5116">0</dd:TotalImpressions>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5053">0</dd:TotalImpressions>
+				<dd:PagesPerJob>one</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5054">0</dd:TotalImpressions>
+				<dd:PagesPerJob>two</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5055">0</dd:TotalImpressions>
+				<dd:PagesPerJob>threeToFive</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5056">0</dd:TotalImpressions>
+				<dd:PagesPerJob>sixToTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="5057">0</dd:TotalImpressions>
+				<dd:PagesPerJob>greaterThanTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByQuality>
+				<dd:NormalImpressions PEID="5044">0</dd:NormalImpressions>
+				<dd:BetterImpressions PEID="5046">0</dd:BetterImpressions>
+			</dd:UsageByQuality>
+			<dd:MediaType>photoOther</dd:MediaType>
+		</pudyn:UsageByMediaType>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39000">206</dd:JobCount>
+			<dd:JobDuration>lessthanTwoMinutes</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39001">14</dd:JobCount>
+			<dd:JobDuration>twoToFiveMinutes</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39002">42</dd:JobCount>
+			<dd:JobDuration>fiveToThirtyMinutes</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39003">12</dd:JobCount>
+			<dd:JobDuration>thirtyToSixtyMinutes</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39004">31</dd:JobCount>
+			<dd:JobDuration>oneToSixHours</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39005">34</dd:JobCount>
+			<dd:JobDuration>sixHoursToOneDay</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39006">48</dd:JobCount>
+			<dd:JobDuration>oneToThreeDays</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39007">57</dd:JobCount>
+			<dd:JobDuration>threeToSevenDays</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39008">29</dd:JobCount>
+			<dd:JobDuration>sevenDaysToOneMonth</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<dd:UsageByTimeInterval>
+			<dd:JobCount PEID="39009">0</dd:JobCount>
+			<dd:JobDuration>oneToThreeMonths</dd:JobDuration>
+		</dd:UsageByTimeInterval>
+		<pudyn:UIButtonPressCounters>
+			<dd:ButtonPressCount PEID="30035">0</dd:ButtonPressCount>
+			<dd:ButtonPressOptions>editPhotoButtonPress</dd:ButtonPressOptions>
+		</pudyn:UIButtonPressCounters>
+		<pudyn:UIButtonPressCounters>
+			<dd:ButtonPressCount PEID="30054">0</dd:ButtonPressCount>
+			<dd:ButtonPressOptions>featurePrintOptionPress</dd:ButtonPressOptions>
+		</pudyn:UIButtonPressCounters>
+		<pudyn:UIButtonPressCounters>
+			<dd:ButtonPressCount PEID="30053">0</dd:ButtonPressCount>
+			<dd:ButtonPressOptions>featureViewOptionPress</dd:ButtonPressOptions>
+		</pudyn:UIButtonPressCounters>
+		<pudyn:UIButtonPressCounters>
+			<dd:ButtonPressCount PEID="30039">1601</dd:ButtonPressCount>
+			<dd:ButtonPressOptions>startScanButtonPress</dd:ButtonPressOptions>
+		</pudyn:UIButtonPressCounters>
+		<pudyn:UsageByTrayAndMedia>
+			<dd:TotalImpressions PEID="5029">20</dd:TotalImpressions>
+			<dd:MediaSizeName>any</dd:MediaSizeName>
+			<dd:InputBin>Tray2</dd:InputBin>
+		</pudyn:UsageByTrayAndMedia>
+		<dd:EWSAccessCount PEID="16081">20</dd:EWSAccessCount>
+		<dd:NetworkImpressions PEID="25000">513</dd:NetworkImpressions>
+		<dd:WirelessNetworkImpressions PEID="25002">513</dd:WirelessNetworkImpressions>
+		<pudyn:SubscriptionImpressions>875</pudyn:SubscriptionImpressions>
+		<pudyn:WirelessConfigUserSelectedOption PEID="30064">noSelectionMade</pudyn:WirelessConfigUserSelectedOption>
+		<pudyn:QuietModeImpressions><pudyn:TotalImpressions PEID='5107'>0</pudyn:TotalImpressions></pudyn:QuietModeImpressions>
+		<pudyn:CalibrationUsage>
+			<pudyn:SuccessCount PEID="30071">1</pudyn:SuccessCount>
+			<pudyn:FailureCount PEID="30072">0</pudyn:FailureCount>
+			<pudyn:CancelledCount PEID="30073">0</pudyn:CancelledCount>
+			<pudyn:SkippedCount PEID="30074">0</pudyn:SkippedCount>
+			<pudyn:Status PEID="30075">notDone</pudyn:Status>
+		</pudyn:CalibrationUsage>
+		<pudyn:OOBESetupBy>
+			<pudyn:SetupByOS PEID="36033">iOS</pudyn:SetupByOS>
+			<pudyn:SetupByApp PEID="36034">Aio-iOS</pudyn:SetupByApp>
+		</pudyn:OOBESetupBy>
+		<pudyn:MISRVersion>2.0</pudyn:MISRVersion>
+		<pudyn:MISRProfile>0</pudyn:MISRProfile>
+	</pudyn:PrinterSubunit>
+	<pudyn:ConsumableSubunit>
+		<pudyn:Consumable>
+			<dd:ConsumableStation>1</dd:ConsumableStation>
+			<dd:MarkerColor>Cyan</dd:MarkerColor>
+			<dd:ConsumableTypeEnum>ink</dd:ConsumableTypeEnum>
+			<dd2:CumulativeConsumableCount>2</dd2:CumulativeConsumableCount>
+			<dd2:CumulativeMarkingAgentUsed PEID="64113">
+				<dd:ValueFloat>23</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeMarkingAgentUsed>
+			<pudyn:ApproximatePagesRemainingSymbol>questionMark</pudyn:ApproximatePagesRemainingSymbol>
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+			<dd:ConsumableRawPercentageLevelRemaining>31</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:SupplyRegion PEID="64318">1</dd:SupplyRegion>
+			<dd:SupplyFillLevel PEID="64319">298</dd:SupplyFillLevel>
+			<dd:SupplyFamilyNumber PEID="64320">36</dd:SupplyFamilyNumber>
+			<dd:SupplyModelNumber PEID="64321">3</dd:SupplyModelNumber>
+			<dd:SupplySerialNumber PEID="64322">REDACTED</dd:SupplySerialNumber>
+			<dd:SupplyStatusBits PEID="64323">536936704</dd:SupplyStatusBits>
+			<dd:SupplyRefilledStateCounter PEID="28006">0</dd:SupplyRefilledStateCounter>
+			<dd:PVPCartridgeCounter PEID="28025">0</dd:PVPCartridgeCounter>
+			<dd:PrimeEventCounter PEID="40013">74</dd:PrimeEventCounter>
+			<dd:PrimeEventLevel0Counter PEID="40005">20</dd:PrimeEventLevel0Counter>
+			<dd:PrimeEventLevel1Counter PEID="40006">0</dd:PrimeEventLevel1Counter>
+			<dd:PrimeEventLevel2Counter PEID="40007">2598</dd:PrimeEventLevel2Counter>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11022">3315229</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11030">2644276</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:RefilledCount>
+				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
+				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
+			</dd:RefilledCount>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">12</dd:PenInsertionTriggerSnapshotCounter>
+			<dd2:CumulativeHPMarkingAgentUsed PEID="64114">
+				<dd:ValueFloat>23</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeHPMarkingAgentUsed>
+		</pudyn:Consumable>
+		<pudyn:Consumable>
+			<dd:ConsumableStation>2</dd:ConsumableStation>
+			<dd:MarkerColor>Magenta</dd:MarkerColor>
+			<dd:ConsumableTypeEnum>ink</dd:ConsumableTypeEnum>
+			<dd2:CumulativeConsumableCount>2</dd2:CumulativeConsumableCount>
+			<dd2:CumulativeMarkingAgentUsed PEID="64115">
+				<dd:ValueFloat>22</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeMarkingAgentUsed>
+			<pudyn:ApproximatePagesRemainingSymbol>questionMark</pudyn:ApproximatePagesRemainingSymbol>
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+			<dd:ConsumableRawPercentageLevelRemaining>40</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:SupplyRegion PEID="64330">1</dd:SupplyRegion>
+			<dd:SupplyFillLevel PEID="64331">299</dd:SupplyFillLevel>
+			<dd:SupplyFamilyNumber PEID="64332">36</dd:SupplyFamilyNumber>
+			<dd:SupplyModelNumber PEID="64333">3</dd:SupplyModelNumber>
+			<dd:SupplySerialNumber PEID="64334">REDACTED</dd:SupplySerialNumber>
+			<dd:SupplyStatusBits PEID="64335">536936704</dd:SupplyStatusBits>
+			<dd:SupplyRefilledStateCounter PEID="28007">0</dd:SupplyRefilledStateCounter>
+			<dd:PVPCartridgeCounter PEID="28026">0</dd:PVPCartridgeCounter>
+			<dd:PrimeEventCounter PEID="40012">69</dd:PrimeEventCounter>
+			<dd:PrimeEventLevel0Counter PEID="40005">20</dd:PrimeEventLevel0Counter>
+			<dd:PrimeEventLevel1Counter PEID="40006">0</dd:PrimeEventLevel1Counter>
+			<dd:PrimeEventLevel2Counter PEID="40007">2598</dd:PrimeEventLevel2Counter>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11023">3125365</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11031">2517548</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:RefilledCount>
+				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
+				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
+			</dd:RefilledCount>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">12</dd:PenInsertionTriggerSnapshotCounter>
+			<dd2:CumulativeHPMarkingAgentUsed PEID="64116">
+				<dd:ValueFloat>22</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeHPMarkingAgentUsed>
+		</pudyn:Consumable>
+		<pudyn:Consumable>
+			<dd:ConsumableStation>3</dd:ConsumableStation>
+			<dd:MarkerColor>Yellow</dd:MarkerColor>
+			<dd:ConsumableTypeEnum>ink</dd:ConsumableTypeEnum>
+			<dd2:CumulativeConsumableCount>2</dd2:CumulativeConsumableCount>
+			<dd2:CumulativeMarkingAgentUsed PEID="64117">
+				<dd:ValueFloat>24</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeMarkingAgentUsed>
+			<pudyn:ApproximatePagesRemainingSymbol>questionMark</pudyn:ApproximatePagesRemainingSymbol>
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+			<dd:ConsumableRawPercentageLevelRemaining>32</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:SupplyRegion PEID="64306">1</dd:SupplyRegion>
+			<dd:SupplyFillLevel PEID="64307">299</dd:SupplyFillLevel>
+			<dd:SupplyFamilyNumber PEID="64308">36</dd:SupplyFamilyNumber>
+			<dd:SupplyModelNumber PEID="64309">3</dd:SupplyModelNumber>
+			<dd:SupplySerialNumber PEID="64310">REDACTED</dd:SupplySerialNumber>
+			<dd:SupplyStatusBits PEID="64311">536936704</dd:SupplyStatusBits>
+			<dd:SupplyRefilledStateCounter PEID="28008">0</dd:SupplyRefilledStateCounter>
+			<dd:PVPCartridgeCounter PEID="28027">0</dd:PVPCartridgeCounter>
+			<dd:PrimeEventCounter PEID="40014">73</dd:PrimeEventCounter>
+			<dd:PrimeEventLevel0Counter PEID="40005">20</dd:PrimeEventLevel0Counter>
+			<dd:PrimeEventLevel1Counter PEID="40006">0</dd:PrimeEventLevel1Counter>
+			<dd:PrimeEventLevel2Counter PEID="40007">2598</dd:PrimeEventLevel2Counter>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11024">3376799</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11032">2572956</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:RefilledCount>
+				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
+				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
+			</dd:RefilledCount>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">12</dd:PenInsertionTriggerSnapshotCounter>
+			<dd2:CumulativeHPMarkingAgentUsed PEID="64118">
+				<dd:ValueFloat>24</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeHPMarkingAgentUsed>
+		</pudyn:Consumable>
+		<pudyn:Consumable>
+			<dd:ConsumableStation>4</dd:ConsumableStation>
+			<dd:MarkerColor>Black</dd:MarkerColor>
+			<dd:ConsumableTypeEnum>ink</dd:ConsumableTypeEnum>
+			<dd2:CumulativeConsumableCount>2</dd2:CumulativeConsumableCount>
+			<dd2:CumulativeMarkingAgentUsed PEID="64102">
+				<dd:ValueFloat>43</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeMarkingAgentUsed>
+			<pudyn:ApproximatePagesRemainingSymbol>questionMark</pudyn:ApproximatePagesRemainingSymbol>
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+			<dd:ConsumableRawPercentageLevelRemaining>73</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:SupplyRegion PEID="64300">1</dd:SupplyRegion>
+			<dd:SupplyFillLevel PEID="64301">845</dd:SupplyFillLevel>
+			<dd:SupplyFamilyNumber PEID="64302">36</dd:SupplyFamilyNumber>
+			<dd:SupplyModelNumber PEID="64303">3</dd:SupplyModelNumber>
+			<dd:SupplySerialNumber PEID="64304">REDACTED</dd:SupplySerialNumber>
+			<dd:SupplyStatusBits PEID="64305">536936704</dd:SupplyStatusBits>
+			<dd:SupplyRefilledStateCounter PEID="28005">0</dd:SupplyRefilledStateCounter>
+			<dd:PVPCartridgeCounter PEID="28024">0</dd:PVPCartridgeCounter>
+			<dd:PrimeEventCounter PEID="40011">99</dd:PrimeEventCounter>
+			<dd:PrimeEventLevel0Counter PEID="40002">4</dd:PrimeEventLevel0Counter>
+			<dd:PrimeEventLevel1Counter PEID="40003">0</dd:PrimeEventLevel1Counter>
+			<dd:PrimeEventLevel2Counter PEID="40004">3766</dd:PrimeEventLevel2Counter>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11021">4129750</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:UsageByMarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11029">2314003</dd:MarkingAgentCount>
+				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
+			</dd:UsageByMarkingAgentCount>
+			<dd:RefilledCount>
+				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
+				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
+			</dd:RefilledCount>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">12</dd:PenInsertionTriggerSnapshotCounter>
+			<dd2:CumulativeHPMarkingAgentUsed PEID="64103">
+				<dd:ValueFloat>43</dd:ValueFloat>
+				<dd:Unit>milliliters</dd:Unit>
+			</dd2:CumulativeHPMarkingAgentUsed>
+		</pudyn:Consumable>
+	</pudyn:ConsumableSubunit>
+	<pudyn:ScannerEngineSubunit>
+		<dd:ScanImages PEID="6000">4279</dd:ScanImages>
+		<pudyn:UsageByScanMediaSize>
+			<dd:ScanImages PEID="6000">4279</dd:ScanImages>
+			<dd:ScanMediaSize>any</dd:ScanMediaSize>
+		</pudyn:UsageByScanMediaSize>
+		<pudyn:UsageByScanMediaSize>
+			<dd:ScanImages PEID="6021">0</dd:ScanImages>
+			<dd:ScanMediaSize>na_legal_8.5x14in</dd:ScanMediaSize>
+		</pudyn:UsageByScanMediaSize>
+		<dd:AdfImages PEID="6011">2947</dd:AdfImages>
+		<dd:DuplexSheets PEID="6015">589</dd:DuplexSheets>
+		<dd:FlatbedImages>1310</dd:FlatbedImages>
+		<dd:JamEvents>11</dd:JamEvents>
+		<dd:MispickEvents>6</dd:MispickEvents>
+		<dd:ScanToCardCount PEID="6010">0</dd:ScanToCardCount>
+		<pudyn:UsageByADF>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="6016">597</dd:TotalImpressions>
+				<dd:PagesPerJob>oneToTen</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="6017">52</dd:TotalImpressions>
+				<dd:PagesPerJob>elevenToTwenty</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="6018">17</dd:TotalImpressions>
+				<dd:PagesPerJob>twentyOneToThirtyFive</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<dd:UsageByJobSize>
+				<dd:TotalImpressions PEID="6019">1</dd:TotalImpressions>
+				<dd:PagesPerJob>greaterThanThirtyfive</dd:PagesPerJob>
+			</dd:UsageByJobSize>
+			<pudyn:TotalLegalScanlmages PEID="6022">0</pudyn:TotalLegalScanlmages>
+			<pudyn:UsageByJobSizeAndMedia>
+				<pudyn:UsageByJobSize>
+					<dd:TotalImpressions PEID="6023">0</dd:TotalImpressions>
+					<dd:PagesPerJob>oneToTen</dd:PagesPerJob>
+				</pudyn:UsageByJobSize>
+				<pudyn:MediaSizeName>na_legal_8.5x14in</pudyn:MediaSizeName>
+			</pudyn:UsageByJobSizeAndMedia>
+			<pudyn:UsageByJobSizeAndMedia>
+				<pudyn:UsageByJobSize>
+					<dd:TotalImpressions PEID="6024">0</dd:TotalImpressions>
+					<dd:PagesPerJob>elevenToTwenty</dd:PagesPerJob>
+				</pudyn:UsageByJobSize>
+				<pudyn:MediaSizeName>na_legal_8.5x14in</pudyn:MediaSizeName>
+			</pudyn:UsageByJobSizeAndMedia>
+			<pudyn:UsageByJobSizeAndMedia>
+				<pudyn:UsageByJobSize>
+					<dd:TotalImpressions PEID="6025">0</dd:TotalImpressions>
+					<dd:PagesPerJob>twentyOneToThirtyFive</dd:PagesPerJob>
+				</pudyn:UsageByJobSize>
+				<pudyn:MediaSizeName>na_legal_8.5x14in</pudyn:MediaSizeName>
+			</pudyn:UsageByJobSizeAndMedia>
+			<pudyn:UsageByJobSizeAndMedia>
+				<pudyn:UsageByJobSize>
+					<dd:TotalImpressions PEID="6026">0</dd:TotalImpressions>
+					<dd:PagesPerJob>greaterThanThirtyfive</dd:PagesPerJob>
+				</pudyn:UsageByJobSize>
+				<pudyn:MediaSizeName>na_legal_8.5x14in</pudyn:MediaSizeName>
+			</pudyn:UsageByJobSizeAndMedia>
+		</pudyn:UsageByADF>
+	</pudyn:ScannerEngineSubunit>
+	<pudyn:MassStorageSubunit>
+		<dd:TotalImpressions PEID="18018">0</dd:TotalImpressions>
+		<dd:MemoryDevicesInserted PEID="23017">0</dd:MemoryDevicesInserted>
+		<dd:PhotoCardInserts PEID="23005">0</dd:PhotoCardInserts>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions PEID="18003">0</dd:TotalImpressions>
+			<dd:PhotoCardType>4x6Impressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>4x6MetricEquivalentImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions PEID="18004">0</dd:TotalImpressions>
+			<dd:PhotoCardType>5x7Impressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>5x7MetricEquivalentImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions PEID="18006">0</dd:TotalImpressions>
+			<dd:PhotoCardType>8x10Or8.5x11orA4Impressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>8x10Or8.5x11orA4MetricEquivalentImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>albumImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>clipArtImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>3UpLayoutImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>designImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByPhotocard>
+			<dd:TotalImpressions>0</dd:TotalImpressions>
+			<dd:PhotoCardType>frameImpressions</dd:PhotoCardType>
+		</pudyn:UsageByPhotocard>
+		<pudyn:UsageByDocumentType><pudyn:TotalImpressions PEID="18067">0</pudyn:TotalImpressions>
+<pudyn:DocumentType>photo</pudyn:DocumentType></pudyn:UsageByDocumentType>
+	</pudyn:MassStorageSubunit>
+	<pudyn:CopyApplicationSubunit>
+		<dd:TotalImpressions PEID="3019">20</dd:TotalImpressions>
+		<dd:ColorImpressions>18</dd:ColorImpressions>
+		<dd:MonochromeImpressions>2</dd:MonochromeImpressions>
+		<dd:AdfImages>9</dd:AdfImages>
+		<dd:FlatbedImages>5</dd:FlatbedImages>
+		<pudyn:TotalAdfLegallmages PEID="3027">0</pudyn:TotalAdfLegallmages>
+	</pudyn:CopyApplicationSubunit>
+	<pudyn:ScanApplicationSubunit>
+		<dd:AdfImages>2886</dd:AdfImages>
+		<dd:FlatbedImages>1270</dd:FlatbedImages>
+		<dd:ImagesSentToEmail PEID="6014">REDACTED</dd:ImagesSentToEmail>
+		<dd:ImagesSentToFolder PEID="6013">4128</dd:ImagesSentToFolder>
+		<dd:ScanToHostImages PEID="6001">4156</dd:ScanToHostImages>
+	</pudyn:ScanApplicationSubunit>
+	<pudyn:FaxApplicationSubunit>
+		<dd:TotalImpressions PEID="4016">0</dd:TotalImpressions>
+		<dd:ColorImpressions>0</dd:ColorImpressions>
+		<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
+		<dd:AdfImages>0</dd:AdfImages>
+		<dd:FlatbedImages>0</dd:FlatbedImages>
+		<dd:ImagesSentToPC PEID="4012">0</dd:ImagesSentToPC>
+		<dd:ImagesReceivedFromPC >0</dd:ImagesReceivedFromPC>
+		<dd:TotalReceivedImages PEID="4007">0</dd:TotalReceivedImages>
+		<dd:ImagesSentToEmail PEID="4015">REDACTED</dd:ImagesSentToEmail>
+		<dd:ImagesSentToFolder PEID="4014">0</dd:ImagesSentToFolder>
+		<dd:TotalImagesSent PEID="4011">0</dd:TotalImagesSent>
+		<pudyn:ImagesSentOverIPP>0</pudyn:ImagesSentOverIPP>
+		<pudyn:TotalAdfLegallmages PEID="4017">0</pudyn:TotalAdfLegallmages>
+	</pudyn:FaxApplicationSubunit>
+	<pudyn:PrintApplicationSubunit>
+		<dd:TotalImpressions PEID="7009">874</dd:TotalImpressions>
+		<dd:PhotoImpressions PEID="7002">0</dd:PhotoImpressions>
+		<dd:MediaSize_4x6in_10x15cm_Impressions PEID="7006">0</dd:MediaSize_4x6in_10x15cm_Impressions>
+		<dd:CloudPrintImpressions PEID="36016">0</dd:CloudPrintImpressions>
+		<pudyn:ReportsImpressionsInRTP>1</pudyn:ReportsImpressionsInRTP>
+	</pudyn:PrintApplicationSubunit>
+	<pudyn:PonyExpressSubunit>
+		<pudyn:PECounter PEID="5000">894</pudyn:PECounter>
+		<pudyn:PECounter PEID="5021">96</pudyn:PECounter>
+		<pudyn:PECounter PEID="5033">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="4013">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5031">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5032">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5037">888</pudyn:PECounter>
+		<pudyn:PECounter PEID="5011">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="3001">2</pudyn:PECounter>
+		<pudyn:PECounter PEID="5106">226</pudyn:PECounter>
+		<pudyn:PECounter PEID="5105">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5108">9</pudyn:PECounter>
+		<pudyn:PECounter PEID="5109">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="64106">112084</pudyn:PECounter>
+		<pudyn:PECounter PEID="64107">43365</pudyn:PECounter>
+		<pudyn:PECounter PEID="64108">43365</pudyn:PECounter>
+		<pudyn:PECounter PEID="64109">68719</pudyn:PECounter>
+		<pudyn:PECounter PEID="64110">68719</pudyn:PECounter>
+		<pudyn:PECounter PEID="64119">23205</pudyn:PECounter>
+		<pudyn:PECounter PEID="64120">23205</pudyn:PECounter>
+		<pudyn:PECounter PEID="64121">21875</pudyn:PECounter>
+		<pudyn:PECounter PEID="64122">21875</pudyn:PECounter>
+		<pudyn:PECounter PEID="64123">23639</pudyn:PECounter>
+		<pudyn:PECounter PEID="64124">23639</pudyn:PECounter>
+		<pudyn:PECounter PEID="5110">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5111">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5112">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5113">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="30065">2</pudyn:PECounter>
+		<pudyn:PECounter PEID="30066">6</pudyn:PECounter>
+		<pudyn:PECounter PEID="30067">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="30068">6</pudyn:PECounter>
+		<pudyn:PECounter PEID="30069">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="30070">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="3026">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="5003">900</pudyn:PECounter>
+		<pudyn:PECounter PEID="5004">0</pudyn:PECounter>
+		<pudyn:PECounter PEID="16088">0</pudyn:PECounter>
+	</pudyn:PonyExpressSubunit>
+	<pudyn:MobileApplicationSubunit>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36024">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Windows</pudyn:RemoteDeviceType>
+			<pudyn:DriverType>ePrint</pudyn:DriverType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36025">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Windows</pudyn:RemoteDeviceType>
+			<pudyn:DriverType>inOS</pudyn:DriverType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36026">339</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Windows</pudyn:RemoteDeviceType>
+			<pudyn:DriverType>discrete</pudyn:DriverType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36028">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Windows</pudyn:RemoteDeviceType>
+			<pudyn:DriverType>UniversalPrintDriver</pudyn:DriverType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36027">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>OSX</pudyn:RemoteDeviceType>
+			<pudyn:DriverType>inOS</pudyn:DriverType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36032">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Chrome</pudyn:RemoteDeviceType>
+		</pudyn:TotalUsage>
+		<pudyn:TotalUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36023">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>samsung</pudyn:RemoteDeviceType>
+		</pudyn:TotalUsage>
+		<pudyn:DocumentUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36017">272</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>OSX</pudyn:RemoteDeviceType>
+		</pudyn:DocumentUsage>
+		<pudyn:DocumentUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36018">80</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>iOS</pudyn:RemoteDeviceType>
+		</pudyn:DocumentUsage>
+		<pudyn:DocumentUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36021">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Android</pudyn:RemoteDeviceType>
+		</pudyn:DocumentUsage>
+		<pudyn:PhotoUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36019">3</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>OSX</pudyn:RemoteDeviceType>
+		</pudyn:PhotoUsage>
+		<pudyn:PhotoUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36020">2</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>iOS</pudyn:RemoteDeviceType>
+		</pudyn:PhotoUsage>
+		<pudyn:PhotoUsage>
+			<pudyn:Counter>
+				<pudyn:TotalImpressions PEID="36022">0</pudyn:TotalImpressions>
+			</pudyn:Counter>
+			<pudyn:RemoteDeviceType>Android</pudyn:RemoteDeviceType>
+		</pudyn:PhotoUsage>
+	</pudyn:MobileApplicationSubunit>
+</pudyn:ProductUsageDyn>

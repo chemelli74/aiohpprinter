@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<plcap:ProductLogsCap xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productlogscap/2008/01/16 ../schemas/ProductLogsCap.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:plcap="http://www.hp.com/schemas/imaging/con/ledm/productlogscap/2008/01/16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<plcap:EventLogCap>
+		<plcap:EventLogMaxSize>20</plcap:EventLogMaxSize>
+		<plcap:SequenceNumber elementXPath="pldyn:EventLog/pldyn:Event/dd:SequenceNumber" typeof="dd:Integer" min="0" max="10" step="1"></plcap:SequenceNumber>
+		<plcap:EventOccurrences elementXPath="pldyn:EventLog/pldyn:Event/dd:EventOccurrences" typeof="dd:Integer" min="0" max="10" step="1"></plcap:EventOccurrences>
+		<plcap:EventCode elementXPath="pldyn:ProductLogsDyn/pldyn:EventLog/pldyn:Event/dd:EventCode" typeof="dd:String" length="9"></plcap:EventCode>
+		<plcap:TotalImpressions elementXPath="pldyn:EventLog/pldyn:Event/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:TotalImpressions>
+		<plcap:TimeStamp typeof="String" length="20" access="readOnly" elementXPath="pldyn:EventLog/pldyn:Event/dd:TimeStamp"></plcap:TimeStamp>
+		<plcap:TimeFormatSupport>
+			<dd:TimeFormat>HR12</dd:TimeFormat>
+			<dd:TimeFormat>HR24</dd:TimeFormat>
+		</plcap:TimeFormatSupport>
+		<plcap:DateFormatSupport>
+			<dd:DateFormat>DDMMMYYYY</dd:DateFormat>
+			<dd:DateFormat>MMMDDYYYY</dd:DateFormat>
+			<dd:DateFormat>YYYYMMMDD</dd:DateFormat>
+		</plcap:DateFormatSupport>
+		<plcap:EventDetail elementXPath="pldyn:ProductLogsDyn/pldyn:EventLog/pldyn:Event/dd:EventDetail" typeof="dd:String" length="255"></plcap:EventDetail>
+		<plcap:SeveritySupport access="readOnly">
+			<dd:Severity>Info</dd:Severity>
+			<dd:Severity>Warning</dd:Severity>
+			<dd:Severity>StrictWarning</dd:Severity>
+			<dd:Severity>Error</dd:Severity>
+		</plcap:SeveritySupport>
+		<plcap:FirmwareVersion>
+			<plcap:Revision elementXPath="pldyn:ProductLogsDyn/pldyn:EventLog/pldyn:Event/dd:FirmwareVersion/dd:Revision" typeof="dd:String" length="255" access="readOnly"></plcap:Revision>
+		</plcap:FirmwareVersion>
+	</plcap:EventLogCap>
+	<plcap:ErrorLogCap elementXPath="pldyn:ErrorLog" typeof="dd:String" length="1000" access="readOnly"></plcap:ErrorLogCap>
+	<plcap:ColorUsageJobLogCap>
+		<plcap:UsageTotalsCap>
+			<plcap:TotalEntries elementXPath="pldyn:ColorUsageJobLog/pldyn:UsageTotals/dd:TotalEntries" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:TotalEntries>
+			<plcap:MonochromeImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:UsageTotals/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:MonochromeImpressions>
+			<plcap:ColorImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:UsageTotals/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:ColorImpressions>
+			<plcap:TotalImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:UsageTotals/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:TotalImpressions>
+		</plcap:UsageTotalsCap>
+		<plcap:JobListCap>
+			<plcap:ColorUsageJobLogJobListMaxSize>32</plcap:ColorUsageJobLogJobListMaxSize>
+			<plcap:DriverJobDateTime elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:DriverJobDateTime" typeof="dd:String" length="14"></plcap:DriverJobDateTime>
+			<plcap:DriverJobUserID elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:DriverJobUserID" typeof="dd:String" length="32"></plcap:DriverJobUserID>
+			<plcap:DriverJobName elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:DriverJobName" typeof="dd:String" length="32"></plcap:DriverJobName>
+			<plcap:DriverJobApplicationID elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:DriverJobApplicationID" typeof="dd:String" length="32"></plcap:DriverJobApplicationID>
+			<plcap:MonochromeImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:MonochromeImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:MonochromeImpressions>
+			<plcap:ColorImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:ColorImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:ColorImpressions>
+			<plcap:TotalImpressions elementXPath="pldyn:ColorUsageJobLog/pldyn:JobList/pldyn:JobEntry/dd:TotalImpressions" typeof="dd:Integer" min="0" max="4294967295" step="1"></plcap:TotalImpressions>
+		</plcap:JobListCap>
+	</plcap:ColorUsageJobLogCap>
+</plcap:ProductLogsCap>

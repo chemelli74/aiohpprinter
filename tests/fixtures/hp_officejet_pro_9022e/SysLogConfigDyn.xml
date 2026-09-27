@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<scdyn:SysLogConfigDyn xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/syslogconfigdyn/2009/04/13 ../schemas/SysLogConfigDyn.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:scdyn="http://www.hp.com/schemas/imaging/con/ledm/syslogconfigdyn/2009/04/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-03-06</dd:Date>
+	</dd:Version>
+	<dd:Syslog>enabled</dd:Syslog>
+	<dd:Port>514</dd:Port>
+	<dd:ServiceTransportType>UDP</dd:ServiceTransportType>
+	<dd:MessageRate>0</dd:MessageRate>
+	<dd:DeliveryThreshold>Info</dd:DeliveryThreshold>
+</scdyn:SysLogConfigDyn>

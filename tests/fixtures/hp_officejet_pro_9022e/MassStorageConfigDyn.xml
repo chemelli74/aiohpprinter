@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+                               <!-- THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN. --> 
+<mscfgdyn:MassStorageConfigDyn xmlns:mscfgdyn="http://www.hp.com/schemas/imaging/con/ledm/massstorageconfigdyn/2008/01/25" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/massstorageconfigdyn/2008/01/25 ../schemas/MassStorageConfigDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.280</dd:Revision>
+		<dd:Date>2011-05-19</dd:Date>
+	</dd:Version>
+	<dd:MassStorage>enabled</dd:MassStorage>
+	<dd:RetainThumbnails>enabled</dd:RetainThumbnails>
+	<mscfgdyn:DefaultTray>Tray1</mscfgdyn:DefaultTray>
+	<mscfgdyn:DevicesSupported>
+		<mscfgdyn:DeviceSupported>
+			<dd:DigitalStorageTypeEnum>usbkey</dd:DigitalStorageTypeEnum>
+			<dd:EnableDisable>enabled</dd:EnableDisable>
+		</mscfgdyn:DeviceSupported>
+	</mscfgdyn:DevicesSupported>
+	<dd:RestrictColor>disabled</dd:RestrictColor>
+	<mscfgdyn:PrintFromMassStorage>enabled</mscfgdyn:PrintFromMassStorage>
+	<mscfgdyn:ScanToMassStorage>enabled</mscfgdyn:ScanToMassStorage>
+</mscfgdyn:MassStorageConfigDyn>

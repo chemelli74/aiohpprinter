@@ -28,6 +28,10 @@ lint.ignore = [
     "INP001",    # Missing an __init__.py file
     "T201",      # `print` found
 ]
+"scripts/capture_fixture.py" = [
+    "INP001",    # Missing an __init__.py file
+    "T201",      # `print` found
+]
 "tests/*" = [
     "S101",     # Use of `assert` detected
     "S105",     # Possible hardcoded password strings in tests

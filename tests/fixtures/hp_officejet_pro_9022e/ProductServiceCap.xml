@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<prdservicecap:ProductServiceCap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:prdservicedyn="http://www.hp.com/schemas/imaging/con/ledm/productservicedyn/2009/01/10" xmlns:prdservicecap="http://www.hp.com/schemas/imaging/con/ledm/productservicecap/2009/01/10" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productservicecap/2009/01/10 ../schemas/ProductServiceCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.1016</dd:Revision>
+		<dd:Date>2015-12-16</dd:Date>
+	</dd:Version>
+	<prdservicecap:EngineFWVersion>
+		<prdservicecap:Revision typeof="String" length="256" elementXPath="prdservicedyn:ProductServiceDyn/prdservicedyn:EngineFWVersion/dd:Revision" access="readOnly"></prdservicecap:Revision>
+	</prdservicecap:EngineFWVersion>
+</prdservicecap:ProductServiceCap>
