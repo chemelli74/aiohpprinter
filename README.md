@@ -21,12 +21,12 @@
 </p>
 <p align="center">
   <a href="https://pypi.org/project/aiohpprinter/">
-    <img src="https://img.shields.io/pypi/v/aiohpprinter.svg?logo=python&logoColor=fff&style=flat-square" alt="PyPI Version">
+    <img src="https://img.shields.io/pypi/v/aiohpprinter.svg?logo=python&logoColor=fff&style=flat-square&cacheSeconds=300" alt="PyPI Version">
   </a>
   <a href="https://pypi.org/project/aiohpprinter/">
-    <img src="https://img.shields.io/pypi/pyversions/aiohpprinter.svg?style=flat-square&amp;logo=python&amp;logoColor=fff" alt="Supported Python versions">
+    <img src="https://img.shields.io/pypi/pyversions/aiohpprinter.svg?style=flat-square&amp;logo=python&amp;logoColor=fff&amp;cacheSeconds=300" alt="Supported Python versions">
   </a>
-  <img src="https://img.shields.io/pypi/l/aiohpprinter.svg?style=flat-square" alt="License">
+  <img src="https://img.shields.io/pypi/l/aiohpprinter.svg?style=flat-square&cacheSeconds=300" alt="License">
 </p>
 
 ---
