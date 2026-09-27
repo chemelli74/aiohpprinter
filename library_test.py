@@ -19,7 +19,13 @@ def get_arguments() -> tuple[ArgumentParser, Namespace]:
     """Parse command line arguments, optionally seeded from a JSON config file."""
     parser = ArgumentParser(description="aiohpprinter library test")
     parser.add_argument("--host", "-H", type=str, help="Printer hostname or IP")
-    parser.add_argument("--port", "-P", type=int, default=80, help="EWS port")
+    parser.add_argument(
+        "--port",
+        "-P",
+        type=int,
+        default=None,
+        help="EWS port (default: 443 with --ssl, else 80)",
+    )
     parser.add_argument("--ssl", action="store_true", help="Use HTTPS for the EWS")
     parser.add_argument(
         "--configfile",
@@ -48,12 +54,13 @@ async def main() -> None:
         parser.print_help()
         sys.exit(1)
 
-    print(f"Connecting to {args.host}:{args.port}")
+    port = args.port if args.port is not None else (443 if args.ssl else 80)
+    print(f"Connecting to {args.host}:{port}")
     session = ClientSession()
 
     try:
         async with HpPrinter(
-            args.host, session=session, port=args.port, ssl=args.ssl
+            args.host, session=session, port=port, ssl=args.ssl
         ) as printer:
             data = await printer.update()
 

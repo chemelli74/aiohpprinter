@@ -138,6 +138,19 @@ def to_json_safe(value: Any) -> Any:  # noqa: ANN401
 
 
 @pytest.fixture
+def anyio_backend() -> str:
+    """Run async tests under asyncio only.
+
+    They create real `aiohttp.ClientSession`/`aiohttp.test_utils.TestServer`
+    instances, which require an asyncio event loop; anyio's default
+    `anyio_backend` fixture parametrizes over every installed backend
+    (including Trio, if it is ever pulled in), which would fail before any
+    assertion runs.
+    """
+    return "asyncio"
+
+
+@pytest.fixture
 async def mock_session() -> AsyncGenerator[ClientSession]:
     """Return a real `ClientSession`, meant to be paired with `make_server`."""
     session = ClientSession()

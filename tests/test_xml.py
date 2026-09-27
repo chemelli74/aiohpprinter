@@ -49,6 +49,22 @@ def test_parse_document_raises_on_malformed_xml() -> None:
         parse_document("<not><valid")
 
 
+def test_parse_document_raises_on_entity_declaration() -> None:
+    """A document with a forbidden DTD/entity raises a typed parse error.
+
+    `defusedxml` rejects these with its own exception hierarchy
+    (`DefusedXmlException`, a `ValueError` subclass), not `ParseError`.
+    """
+    content = (
+        '<?xml version="1.0"?>'
+        '<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>'
+        "<foo>&xxe;</foo>"
+    )
+
+    with pytest.raises(HpPrinterParseError):
+        parse_document(content)
+
+
 def test_parse_document_element_with_attribute_and_text() -> None:
     """An element with both an attribute and text keeps both under `#text`."""
     document = parse_document('<Root><Value PEID="5">42</Value></Root>')

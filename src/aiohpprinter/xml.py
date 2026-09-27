@@ -21,6 +21,7 @@ import json
 from typing import TYPE_CHECKING, Any
 from xml.etree.ElementTree import ParseError
 
+from defusedxml import DefusedXmlException
 from defusedxml.ElementTree import fromstring
 
 from .const import IGNORED_ROOT_KEYS
@@ -41,7 +42,7 @@ def parse_document(content: str) -> dict[str, Any]:
     """
     try:
         root = fromstring(content)
-    except ParseError as ex:
+    except (ParseError, DefusedXmlException) as ex:
         message = f"Could not parse printer response as XML: {ex}"
         raise HpPrinterParseError(message) from ex
 

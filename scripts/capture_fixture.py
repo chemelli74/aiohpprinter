@@ -92,7 +92,9 @@ IPV6_ADDRESS = re.compile(
     r"(?i)(?<![\w:.])(?=[0-9a-f:]*::)(?:[0-9a-f]{1,4})?(?::[0-9a-f]{0,4}){2,7}(?![\w:.])"
 )
 XML_ELEMENT = re.compile(
-    r"(<(?:[\w.-]+:)?(?P<name>[\w.-]+)(?:\s[^>]*)?>)(?P<value>[^<]+)(</)"
+    r"(<(?:[\w.-]+:)?(?P<name>[\w.-]+)(?:\s[^>]*)?>)"
+    r"(?P<value>(?:[^<]|<!\[CDATA\[.*?\]\]>)+)(</)",
+    re.DOTALL,
 )
 SERIES_MODEL = re.compile(
     r"(?i)^(?P<prefix>.*?)(?P<number>\d{3,})(?P<suffix>.*?)\s+series$"

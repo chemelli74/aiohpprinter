@@ -29,7 +29,7 @@
   "consumables": [
     {
       "consumable_id": "C",
-      "consumable_type": null,
+      "consumable_type": "toner",
       "marker_color": "Cyan",
       "state": null,
       "usage_state": null,
@@ -54,7 +54,7 @@
     },
     {
       "consumable_id": "K",
-      "consumable_type": null,
+      "consumable_type": "toner",
       "marker_color": "Black",
       "state": null,
       "usage_state": null,
@@ -79,7 +79,7 @@
     },
     {
       "consumable_id": "M",
-      "consumable_type": null,
+      "consumable_type": "toner",
       "marker_color": "Magenta",
       "state": null,
       "usage_state": null,
@@ -104,7 +104,7 @@
     },
     {
       "consumable_id": "Y",
-      "consumable_type": null,
+      "consumable_type": "toner",
       "marker_color": "Yellow",
       "state": null,
       "usage_state": null,

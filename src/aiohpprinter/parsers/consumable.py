@@ -108,6 +108,7 @@ def _parse_usage_item(item: Any) -> tuple[str | None, HpConsumable]:  # noqa: AN
 
     usage = HpConsumable(
         consumable_id=consumable_id or "",
+        consumable_type=text(item, "ConsumableTypeEnum"),
         marker_color=marker_color,
         usage_state=text(item, "ConsumableState"),
         station=text(item, "ConsumableStation"),
@@ -129,6 +130,7 @@ def _parse_usage_item(item: Any) -> tuple[str | None, HpConsumable]:  # noqa: AN
 def _merge(config: HpConsumable, usage: HpConsumable) -> HpConsumable:
     return replace(
         config,
+        consumable_type=config.consumable_type or usage.consumable_type,
         marker_color=usage.marker_color,
         usage_state=usage.usage_state,
         station=config.station or usage.station,
