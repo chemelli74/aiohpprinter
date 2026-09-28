@@ -1,4 +1,0 @@
-[run]
-source = aiohpprinter
-omit =
-    library_test.py

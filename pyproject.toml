@@ -82,6 +82,8 @@ testpaths = ["tests"]
 
 [tool.coverage.run]
 branch = true
+source = ["aiohpprinter"]
+omit = ["library_test.py"]
 
 [tool.coverage.report]
 exclude_lines = [
