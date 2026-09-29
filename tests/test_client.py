@@ -12,7 +12,7 @@ client -> parser -> model.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 import pytest
 from aiohttp import ClientTimeout
@@ -112,8 +112,12 @@ async def test_consumables_success(
     assert to_json_safe(consumables) == load_expected(FULL_FIXTURE)["consumables"]
 
 
-async def test_printer_usage_reuses_supplied_document(
-    mock_session: ClientSession, make_server: MakeServer
+@pytest.mark.parametrize(
+    "method_name",
+    ["printer_usage", "scanner_usage", "copy_usage", "fax_usage"],
+)
+async def test_usage_methods_reuse_supplied_document(
+    mock_session: ClientSession, make_server: MakeServer, method_name: str
 ) -> None:
     """Passing a pre-fetched document skips the HTTP request entirely."""
     usage_xml = load_xml(FULL_FIXTURE, "ProductUsageDyn.xml")
@@ -123,9 +127,12 @@ async def test_printer_usage_reuses_supplied_document(
     server = await make_server({})
 
     async with _printer(server, mock_session) as printer:
-        usage = await printer.printer_usage(document)
+        method: Callable[[dict[str, Any]], Awaitable[object]] = getattr(
+            printer, method_name
+        )
+        usage = await method(document)
 
-    assert to_json_safe(usage) == load_expected(FULL_FIXTURE)["printer_usage"]
+    assert to_json_safe(usage) == load_expected(FULL_FIXTURE)[method_name]
 
 
 @pytest.mark.parametrize(
