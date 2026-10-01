@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seccap:SecurityCap
+    xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/securitycap/2008/02/01 ../schemas/SecurityCap.xsd"
+    xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/"
+    xmlns:seccap="http://www.hp.com/schemas/imaging/con/ledm/securitycap/2008/02/01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dd:Version>
+    <dd:Revision>SVN-IPG-LEDM.802</dd:Revision>
+    <dd:Date>2014-08-05</dd:Date>
+  </dd:Version>
+  <seccap:Password typeof="String" length="16" access="writeOnly" elementXPath="secdyn:SecurityDyn/secdyn:Password"/>
+  <seccap:PasswordEncodingSupport access="readOnly">
+    <seccap:Encoding>base64</seccap:Encoding>
+  </seccap:PasswordEncodingSupport>
+  <seccap:EncryptionStrengthSupport access="readOnly">
+    <seccap:EncryptionStrength>high</seccap:EncryptionStrength>
+    <seccap:EncryptionStrength>medium</seccap:EncryptionStrength>
+    <seccap:EncryptionStrength>low</seccap:EncryptionStrength>
+  </seccap:EncryptionStrengthSupport>
+  <seccap:CipherSuiteSupport>
+    <seccap:SslTlsLow>
+      <seccap:Name>EDH-RSA-DES-CBC-SHA</seccap:Name>
+    </seccap:SslTlsLow>
+    <seccap:SslTlsMedium>
+      <seccap:Name>EDH-RSA-DES-CBC3-SHA</seccap:Name>
+      <seccap:Name>DES-CBC3-SHA</seccap:Name>
+      <seccap:Name>RC4-SHA</seccap:Name>
+      <seccap:Name>RC4-MD5</seccap:Name>
+    </seccap:SslTlsMedium>
+    <seccap:SslTlsHigh>
+      <seccap:Name>DHE-RSA-AES256-GCM-SHA384</seccap:Name>
+      <seccap:Name>DHE-RSA-AES256-SHA256</seccap:Name>
+      <seccap:Name>DHE-RSA-AES256-SHA</seccap:Name>
+      <seccap:Name>AES256-GCM-SHA384</seccap:Name>
+      <seccap:Name>AES256-SHA256</seccap:Name>
+      <seccap:Name>AES256-SHA</seccap:Name>
+      <seccap:Name>DHE-RSA-AES128-GCM-SHA256</seccap:Name>
+      <seccap:Name>DHE-RSA-AES128-SHA256</seccap:Name>
+      <seccap:Name>DHE-RSA-AES128-SHA</seccap:Name>
+      <seccap:Name>AES128-GCM-SHA256</seccap:Name>
+      <seccap:Name>AES128-SHA256</seccap:Name>
+      <seccap:Name>AES128-SHA</seccap:Name>
+    </seccap:SslTlsHigh>
+  </seccap:CipherSuiteSupport>
+  <seccap:SecurityFeaturesSupport access="readOnly">
+    <seccap:SecureBoot>enabled</seccap:SecureBoot>
+    <seccap:Whitelisting>enabled</seccap:Whitelisting>
+  </seccap:SecurityFeaturesSupport>
+</seccap:SecurityCap>

@@ -196,20 +196,21 @@ fixture's files from a local HTTP server (`test_update_fixture` in
 
 ## Known limitations
 
-- Real captures of every endpoint exist for three models: HP OfficeJet
-  Pro 9022e, HP ENVY Photo 7830 All-in-One Printer and HP Color LaserJet
-  M255dw; an HP LaserJet 200 color M251nw is covered by
-  `ProductUsageDyn.xml` only. None of them reports an ePrint `PrinterID`,
-  so that field is only covered by a unit test. If you have another
-  printer, contributing a capture per **Adding a New Printer Model** above
-  is very welcome.
+- Full captures (every endpoint `aiohpprinter` reads plus every
+  `DiscoveryTree.xml` resource) exist for two models: HP OfficeJet Pro
+  9022e and HP ENVY Photo 7830 All-in-One Printer. An HP Color LaserJet
+  M255dw is covered by the endpoints `aiohpprinter` reads only, and an
+  HP LaserJet 200 color M251nw by `ProductUsageDyn.xml` only. None of
+  them reports an ePrint `PrinterID`, so that field is only covered by a
+  unit test. If you have another printer, contributing a capture per
+  **Adding a New Printer Model** above is very welcome.
 - A field is looked up at one fixed XML path per printer generation
   (tolerant of a `PEID` attribute appearing or not, see
   `aiohpprinter.parsers.common.text`), but not of a field moving to a
   different element entirely on some model; that would need a fixture
   demonstrating the variation and a parser update.
-- Fax usage has no real-world fixture at all (the one real capture this
-  library has access to came from a printer without fax hardware).
+- Fax usage has no real-world fixture with non-zero counters: both full
+  captures report a `FaxApplicationSubunit` with every value at `0`.
 
 ## Manual testing against a real printer
 

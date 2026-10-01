@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<faxcfgcap:FaxConfigCap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:faxcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/faxconfigdyn/2009/03/03" xmlns:faxcfgcap="http://www.hp.com/schemas/imaging/con/ledm/faxconfigcap/2009/03/03" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/faxconfigcap/2009/03/03 ../schemas/FaxConfigCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.74</dd:Revision>
+		<dd:Date>2010-07-13</dd:Date>
+	</dd:Version>
+	<faxcfgcap:SystemSettingsCap>
+		<faxcfgcap:SystemCompanyNameSupport elementXPath="faxcfgdyn:FaxSystemSettings/dd:CompanyName" typeof="dd:String" length="25" access="readWrite"></faxcfgcap:SystemCompanyNameSupport>
+		<faxcfgcap:SystemPhoneNumberSupport elementXPath="faxcfgdyn:FaxSystemSettings/dd:PhoneNumber" typeof="dd:String" length="20" access="readWrite"></faxcfgcap:SystemPhoneNumberSupport>
+		<faxcfgcap:SystemSpeedSupport access="readWrite">
+			<fax:SystemSpeed>fastV34</fax:SystemSpeed>
+			<fax:SystemSpeed>mediumV17</fax:SystemSpeed>
+			<fax:SystemSpeed>slowV29</fax:SystemSpeed>
+		</faxcfgcap:SystemSpeedSupport>
+		<faxcfgcap:SystemRingerVolumeSupport access="readWrite">
+			<dd:FaxRingerVolume>off</dd:FaxRingerVolume>
+			<dd:FaxRingerVolume>soft</dd:FaxRingerVolume>
+			<dd:FaxRingerVolume>loud</dd:FaxRingerVolume>
+		</faxcfgcap:SystemRingerVolumeSupport>
+		<faxcfgcap:SystemAutoPrintConfirmationSupport access="readWrite">
+			<fax:SystemAutoPrintConfirmation>never</fax:SystemAutoPrintConfirmation>
+			<fax:SystemAutoPrintConfirmation>allSendJobs</fax:SystemAutoPrintConfirmation>
+			<fax:SystemAutoPrintConfirmation>allReceiveJobs</fax:SystemAutoPrintConfirmation>
+			<fax:SystemAutoPrintConfirmation>always</fax:SystemAutoPrintConfirmation>
+		</faxcfgcap:SystemAutoPrintConfirmationSupport>
+		<faxcfgcap:SystemAutoPrintErrorSupport access="readWrite">
+			<fax:SystemAutoPrintError>never</fax:SystemAutoPrintError>
+			<fax:SystemAutoPrintError>sendErrorsOnly</fax:SystemAutoPrintError>
+			<fax:SystemAutoPrintError>receiveErrorsOnly</fax:SystemAutoPrintError>
+			<fax:SystemAutoPrintError>allErrors</fax:SystemAutoPrintError>
+		</faxcfgcap:SystemAutoPrintErrorSupport>
+		<faxcfgcap:FaxErrorCorrectionModeSupport access="readWrite">
+			<dd:FaxErrorCorrectionMode>disabled</dd:FaxErrorCorrectionMode>
+			<dd:FaxErrorCorrectionMode>enabled</dd:FaxErrorCorrectionMode>
+		</faxcfgcap:FaxErrorCorrectionModeSupport>
+		<faxcfgcap:FaxThumbNailOnCallReportSupport access="readWrite">
+			<dd:FaxThumbNailOnCallReport>disabled</dd:FaxThumbNailOnCallReport>
+			<dd:FaxThumbNailOnCallReport>enabled</dd:FaxThumbNailOnCallReport>
+		</faxcfgcap:FaxThumbNailOnCallReportSupport>
+		<faxcfgcap:IPPFaxOutSupport access="readWrite">
+			<faxcfgcap:IPPFaxOut>disabled</faxcfgcap:IPPFaxOut>
+			<faxcfgcap:IPPFaxOut>enabled</faxcfgcap:IPPFaxOut>
+		</faxcfgcap:IPPFaxOutSupport>
+		<faxcfgcap:eFCLStateSupport access="readWrite">
+			<faxcfgcap:eFCLState>disabled</faxcfgcap:eFCLState>
+			<faxcfgcap:eFCLState>enabled</faxcfgcap:eFCLState>
+		</faxcfgcap:eFCLStateSupport>
+	</faxcfgcap:SystemSettingsCap>
+	<faxcfgcap:SendSettingsCap>
+		<faxcfgcap:SendNumberPrefixSupport elementXPath="faxcfgdyn:FaxSendSettings/dd:FaxNumberPrefix" typeof="dd:String" length="50" access="readWrite"></faxcfgcap:SendNumberPrefixSupport>
+		<faxcfgcap:SendResolutionSupport access="readWrite">
+			<dd:FaxSendResolution>photo</dd:FaxSendResolution>
+			<dd:FaxSendResolution>fine</dd:FaxSendResolution>
+			<dd:FaxSendResolution>superFine</dd:FaxSendResolution>
+			<dd:FaxSendResolution>standard</dd:FaxSendResolution>
+		</faxcfgcap:SendResolutionSupport>
+		<faxcfgcap:SendDialingModeSupport access="readWrite">
+			<dd:DialingMode>tone</dd:DialingMode>
+			<dd:DialingMode>pulse</dd:DialingMode>
+		</faxcfgcap:SendDialingModeSupport>
+		<faxcfgcap:SendNumberPrefixUsedSupport access="readWrite">
+			<fax:SendNumberPrefixUsed>disabled</fax:SendNumberPrefixUsed>
+			<fax:SendNumberPrefixUsed>enabled</fax:SendNumberPrefixUsed>
+		</faxcfgcap:SendNumberPrefixUsedSupport>
+		<faxcfgcap:SendRedialIfBusySupport access="readWrite">
+			<fax:SendRedialIfBusy>disabled</fax:SendRedialIfBusy>
+			<fax:SendRedialIfBusy>enabled</fax:SendRedialIfBusy>
+		</faxcfgcap:SendRedialIfBusySupport>
+		<faxcfgcap:SendRedialIfNoAnswerSupport access="readWrite">
+			<fax:SendRedialIfNoAnswer>disabled</fax:SendRedialIfNoAnswer>
+			<fax:SendRedialIfNoAnswer>enabled</fax:SendRedialIfNoAnswer>
+		</faxcfgcap:SendRedialIfNoAnswerSupport>
+		<faxcfgcap:SendRedialIfCommErrorSupport access="readWrite">
+			<fax:SendRedialIfCommError>disabled</fax:SendRedialIfCommError>
+			<fax:SendRedialIfCommError>enabled</fax:SendRedialIfCommError>
+		</faxcfgcap:SendRedialIfCommErrorSupport>
+		<faxcfgcap:PrintToFaxSupport access="readOnly">
+			<dd:PrintToFax>disabled</dd:PrintToFax>
+			<dd:PrintToFax>enabled</dd:PrintToFax>
+		</faxcfgcap:PrintToFaxSupport>
+	</faxcfgcap:SendSettingsCap>
+	<faxcfgcap:ReceiveSettingsCap>
+		<faxcfgcap:ReceiveAnswerModeSupport access="readWrite">
+			<fax:ReceiveAnswerMode>manual</fax:ReceiveAnswerMode>
+			<fax:ReceiveAnswerMode>automatic</fax:ReceiveAnswerMode>
+		</faxcfgcap:ReceiveAnswerModeSupport>
+		<faxcfgcap:ReceiveRingsToAnswerSupport elementXPath="faxcfgdyn:FaxReceiveSettings/dd:FaxRingsToAnswer" typeof="dd:Integer" min="2" max="6" step="1" access="readWrite"></faxcfgcap:ReceiveRingsToAnswerSupport>
+		<faxcfgcap:ReceiveDistinctiveRingSupport access="readWrite">
+			<fax:ReceiveDistinctiveRing>allRings</fax:ReceiveDistinctiveRing>
+			<fax:ReceiveDistinctiveRing>single</fax:ReceiveDistinctiveRing>
+			<fax:ReceiveDistinctiveRing>double</fax:ReceiveDistinctiveRing>
+			<fax:ReceiveDistinctiveRing>triple</fax:ReceiveDistinctiveRing>
+			<fax:ReceiveDistinctiveRing>doubleAndTriple</fax:ReceiveDistinctiveRing>
+		</faxcfgcap:ReceiveDistinctiveRingSupport>
+		<faxcfgcap:ReceiveForwardingNumberSupport elementXPath="faxcfgdyn:FaxReceiveSettings/dd:FaxForwardingNumber" typeof="dd:String" length="80" access="readWrite"></faxcfgcap:ReceiveForwardingNumberSupport>
+		<faxcfgcap:ReceiveOutputPlexSupport access="readWrite">
+			<dd:FaxOutputPlex>Simplex</dd:FaxOutputPlex>
+			<dd:FaxOutputPlex>Duplex</dd:FaxOutputPlex>
+		</faxcfgcap:ReceiveOutputPlexSupport>
+		<faxcfgcap:FitToPageSupport access="readWrite">
+			<dd:FitToPage>disabled</dd:FitToPage>
+			<dd:FitToPage>enabled</dd:FitToPage>
+		</faxcfgcap:FitToPageSupport>
+		<faxcfgcap:DetectDialToneSupport access="readOnly">
+			<dd:DetectDialTone>disabled</dd:DetectDialTone>
+			<dd:DetectDialTone>enabled</dd:DetectDialTone>
+		</faxcfgcap:DetectDialToneSupport>
+		<faxcfgcap:StampReceivedFaxSupport access="readWrite">
+			<dd:StampReceivedFax>disabled</dd:StampReceivedFax>
+			<dd:StampReceivedFax>enabled</dd:StampReceivedFax>
+		</faxcfgcap:StampReceivedFaxSupport>
+		<faxcfgcap:ReceiveAllowReprintSupport access="readWrite">
+			<fax:ReceiveAllowReprint>disabled</fax:ReceiveAllowReprint>
+			<fax:ReceiveAllowReprint>enabled</fax:ReceiveAllowReprint>
+		</faxcfgcap:ReceiveAllowReprintSupport>
+		<faxcfgcap:ReceiveBlockJunkFaxesSupport access="readWrite">
+			<fax:ReceiveBlockJunkFaxes>disabled</fax:ReceiveBlockJunkFaxes>
+			<fax:ReceiveBlockJunkFaxes>enabled</fax:ReceiveBlockJunkFaxes>
+		</faxcfgcap:ReceiveBlockJunkFaxesSupport>
+		<faxcfgcap:ReceiveBackupSupport access="readWrite">
+			<fax:FaxPrintMode>printAllRcvFaxes</fax:FaxPrintMode>
+			<fax:FaxPrintMode>printAndStoreRcvFaxes</fax:FaxPrintMode>
+			<fax:FaxPrintMode>storeRcvFaxesOnError</fax:FaxPrintMode>
+		</faxcfgcap:ReceiveBackupSupport>
+		<faxcfgcap:ReceiveForwardSupport access="readWrite">
+			<fax:ReceiveForward>none</fax:ReceiveForward>
+			<fax:ReceiveForward>forward</fax:ReceiveForward>
+			<fax:ReceiveForward>printAndForward</fax:ReceiveForward>
+		</faxcfgcap:ReceiveForwardSupport>
+		<faxcfgcap:ForwardScheduleSettingsSupport access="readWrite">
+			<faxcfgcap:ForwardStartTime elementXPath="faxcfgdyn:FaxConfigDyn/faxcfgdyn:ReceiveSettings/faxcfgdyn:ForwardScheduleSettings/faxcfgdyn:ForwardStartTime" typeof="dd:String" length="25" access="readWrite"></faxcfgcap:ForwardStartTime>
+			<faxcfgcap:ForwardStopTime elementXPath="faxcfgdyn:FaxConfigDyn/faxcfgdyn:ReceiveSettings/faxcfgdyn:ForwardScheduleSettings/faxcfgdyn:ForwardStopTime" typeof="dd:String" length="25" access="readWrite"></faxcfgcap:ForwardStopTime>
+		</faxcfgcap:ForwardScheduleSettingsSupport>
+		<faxcfgcap:ReceiveColorFaxesSupport access="readWrite">
+			<fax:ReceiveColorFaxes>disabled</fax:ReceiveColorFaxes>
+			<fax:ReceiveColorFaxes>enabled</fax:ReceiveColorFaxes>
+		</faxcfgcap:ReceiveColorFaxesSupport>
+	</faxcfgcap:ReceiveSettingsCap>
+</faxcfgcap:FaxConfigCap>

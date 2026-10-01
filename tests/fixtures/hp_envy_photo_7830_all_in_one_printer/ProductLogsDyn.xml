@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<pldyn:ProductLogsDyn xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productlogsdyn/2008/01/16 ../schemas/ProductLogsDyn.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:pldyn="http://www.hp.com/schemas/imaging/con/ledm/productlogsdyn/2008/01/16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<pldyn:EventLog>
+		<pldyn:Event>
+			<dd:SequenceNumber>2372</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69962</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2371</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69962</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2370</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69666</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2364</dd:SequenceNumber>
+			<dd:EventOccurrences>6</dd:EventOccurrences>
+			<dd:EventCode>69962</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2363</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>70350</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2361</dd:SequenceNumber>
+			<dd:EventOccurrences>2</dd:EventOccurrences>
+			<dd:EventCode>69962</dd:EventCode>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>2360</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69552</dd:EventCode>
+		</pldyn:Event>
+	</pldyn:EventLog>
+	<pldyn:ErrorLog> 
+#0Error Code: 89E60250
+File: hw_pll_app_PUFF.c
+Line: 411
+When: 09/28/2026 00:39:42Page:      0
+FILE CRC:  250
+COMP_ID: 9E6  ERRNO:  250
+</pldyn:ErrorLog>
+</pldyn:ProductLogsDyn>
