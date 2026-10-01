@@ -6,25 +6,25 @@
 		<dd:Date>2010-08-31</dd:Date>
 	</dd:Version>
 	<pudyn:PrinterSubunit>
-		<dd:TotalImpressions PEID="5082">4035</dd:TotalImpressions>
+		<dd:TotalImpressions PEID="5082">4053</dd:TotalImpressions>
 		<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
-		<dd:ColorImpressions>3401</dd:ColorImpressions>
+		<dd:ColorImpressions>3417</dd:ColorImpressions>
 		<dd:A4EquivalentImpressions>
-			<dd:TotalImpressions PEID="5082">4035</dd:TotalImpressions>
+			<dd:TotalImpressions PEID="5082">4053</dd:TotalImpressions>
 			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
 		</dd:A4EquivalentImpressions>
-		<dd:SimplexSheets>3413</dd:SimplexSheets>
+		<dd:SimplexSheets>3431</dd:SimplexSheets>
 		<dd:DuplexSheets PEID="5088">279</dd:DuplexSheets>
 		<dd:JamEvents PEID="16076">13</dd:JamEvents>
 		<dd:MispickEvents>59</dd:MispickEvents>
-		<dd:TotalFrontPanelCancelPresses PEID="30033">53</dd:TotalFrontPanelCancelPresses>
+		<dd:TotalFrontPanelCancelPresses PEID="30033">54</dd:TotalFrontPanelCancelPresses>
 		<pudyn:UsageByMarkingAgent>
 			<dd2:CumulativeMarkingAgentUsed PEID="64100">
-				<dd:ValueFloat>162</dd:ValueFloat>
+				<dd:ValueFloat>163</dd:ValueFloat>
 				<dd:Unit>milliliters</dd:Unit>
 			</dd2:CumulativeMarkingAgentUsed>
 			<dd2:CumulativeHPMarkingAgentUsed PEID="64101">
-				<dd:ValueFloat>162</dd:ValueFloat>
+				<dd:ValueFloat>163</dd:ValueFloat>
 				<dd:Unit>milliliters</dd:Unit>
 			</dd2:CumulativeHPMarkingAgentUsed>
 			<dd:CumulativeHPMarkingAgentInserted PEID="64001">
@@ -38,7 +38,7 @@
 			<dd:MediaSizeName>na_executive_7.25x10.5in</dd:MediaSizeName>
 		</pudyn:UsageByMedia>
 		<pudyn:UsageByMedia>
-			<dd:TotalImpressions PEID="5087">4006</dd:TotalImpressions>
+			<dd:TotalImpressions PEID="5087">4024</dd:TotalImpressions>
 			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
 			<dd:MediaSizeName>na_letter_8.5x11in</dd:MediaSizeName>
 		</pudyn:UsageByMedia>
@@ -63,7 +63,7 @@
 			<dd:MediaSizeName>iso_a5_148x210mm</dd:MediaSizeName>
 		</pudyn:UsageByMedia>
 		<pudyn:UsageByMedia>
-			<dd:TotalImpressions PEID="5087">4006</dd:TotalImpressions>
+			<dd:TotalImpressions PEID="5087">4024</dd:TotalImpressions>
 			<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
 			<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
 		</pudyn:UsageByMedia>
@@ -173,9 +173,9 @@
 			<dd:MediaSizeName>na_foolscap_8.5x13in</dd:MediaSizeName>
 		</pudyn:UsageByMedia>
 		<pudyn:UsageByMediaType>
-			<dd:TotalImpressions PEID="5115">4024</dd:TotalImpressions>
+			<dd:TotalImpressions PEID="5115">4042</dd:TotalImpressions>
 			<dd:UsageByJobSize>
-				<dd:TotalImpressions PEID="5048">1677</dd:TotalImpressions>
+				<dd:TotalImpressions PEID="5048">1689</dd:TotalImpressions>
 				<dd:PagesPerJob>one</dd:PagesPerJob>
 			</dd:UsageByJobSize>
 			<dd:UsageByJobSize>
@@ -187,7 +187,7 @@
 				<dd:PagesPerJob>threeToFive</dd:PagesPerJob>
 			</dd:UsageByJobSize>
 			<dd:UsageByJobSize>
-				<dd:TotalImpressions PEID="5051">64</dd:TotalImpressions>
+				<dd:TotalImpressions PEID="5051">65</dd:TotalImpressions>
 				<dd:PagesPerJob>sixToTen</dd:PagesPerJob>
 			</dd:UsageByJobSize>
 			<dd:UsageByJobSize>
@@ -195,7 +195,7 @@
 				<dd:PagesPerJob>greaterThanTen</dd:PagesPerJob>
 			</dd:UsageByJobSize>
 			<dd:UsageByQuality>
-				<dd:NormalImpressions PEID="5041">4101</dd:NormalImpressions>
+				<dd:NormalImpressions PEID="5041">4119</dd:NormalImpressions>
 				<dd:DraftImpressions PEID="5042">7</dd:DraftImpressions>
 				<dd:BetterImpressions PEID="5043">47</dd:BetterImpressions>
 			</dd:UsageByQuality>
@@ -230,7 +230,7 @@
 			<dd:MediaType>photoStandard</dd:MediaType>
 		</pudyn:UsageByMediaType>
 		<dd:UsageByTimeInterval>
-			<dd:JobCount PEID="39000">1216</dd:JobCount>
+			<dd:JobCount PEID="39000">1221</dd:JobCount>
 			<dd:JobDuration>lessthanTwoMinutes</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
@@ -238,15 +238,15 @@
 			<dd:JobDuration>twoToFiveMinutes</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
-			<dd:JobCount PEID="39002">183</dd:JobCount>
+			<dd:JobCount PEID="39002">184</dd:JobCount>
 			<dd:JobDuration>fiveToThirtyMinutes</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
-			<dd:JobCount PEID="39003">84</dd:JobCount>
+			<dd:JobCount PEID="39003">86</dd:JobCount>
 			<dd:JobDuration>thirtyToSixtyMinutes</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
-			<dd:JobCount PEID="39004">220</dd:JobCount>
+			<dd:JobCount PEID="39004">222</dd:JobCount>
 			<dd:JobDuration>oneToSixHours</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
@@ -254,7 +254,7 @@
 			<dd:JobDuration>sixHoursToOneDay</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
-			<dd:JobCount PEID="39006">275</dd:JobCount>
+			<dd:JobCount PEID="39006">279</dd:JobCount>
 			<dd:JobDuration>oneToThreeDays</dd:JobDuration>
 		</dd:UsageByTimeInterval>
 		<dd:UsageByTimeInterval>
@@ -290,10 +290,10 @@
 			<dd:MediaSizeName>custom_or_other</dd:MediaSizeName>
 			<dd:InputBin>PhotoTray</dd:InputBin>
 		</pudyn:UsageByTrayAndMedia>
-		<dd:EWSAccessCount PEID="16081">131233</dd:EWSAccessCount>
-		<dd:NetworkImpressions PEID="25000">3788</dd:NetworkImpressions>
+		<dd:EWSAccessCount PEID="16081">164</dd:EWSAccessCount>
+		<dd:NetworkImpressions PEID="25000">3806</dd:NetworkImpressions>
 		<dd:WirelessNetworkImpressions PEID="25002">10</dd:WirelessNetworkImpressions>
-		<pudyn:SubscriptionImpressions>4030</pudyn:SubscriptionImpressions>
+		<pudyn:SubscriptionImpressions>4048</pudyn:SubscriptionImpressions>
 		<pudyn:WirelessConfigUserSelectedOption PEID="30064">deviceAssist</pudyn:WirelessConfigUserSelectedOption>
 		<pudyn:QuietModeImpressions><pudyn:TotalImpressions PEID='5107'>702</pudyn:TotalImpressions></pudyn:QuietModeImpressions>
 		<pudyn:UsageByConsumableSubscription>
@@ -332,36 +332,36 @@
 				<dd:TotalImpressions>0</dd:TotalImpressions>
 				<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
 			</dd:A4EquivalentImpressions>
-			<dd:ConsumableRawPercentageLevelRemaining>46</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:ConsumableRawPercentageLevelRemaining>44</dd:ConsumableRawPercentageLevelRemaining>
 			<dd:PVPCartridgeCounter PEID="28025">0</dd:PVPCartridgeCounter>
 			<dd:PVPCartridgeCounter PEID="28026">0</dd:PVPCartridgeCounter>
 			<dd:PVPCartridgeCounter PEID="28027">0</dd:PVPCartridgeCounter>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11001">10242757</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11001">10263977</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11002">7311592</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11002">7330417</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11003">7823114</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11003">7842410</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11057">5107972</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11057">5119051</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>LDWDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11057">5107972</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11057">5119051</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>LDWDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11058">4543899</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11058">4554687</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>LDWDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11059">4516456</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11059">4527136</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>LDWDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
@@ -373,7 +373,7 @@
 				<dd:MarkingAgentCountType>OOISensorFiredDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11015">16225959</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11015">16286479</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByPenStall>
@@ -411,7 +411,7 @@
 					<dd:PenStallValueLocation>two</dd:PenStallValueLocation>
 				</dd:PenStall>
 				<dd:PenStall>
-					<dd:PenStallValue PEID="64226">16777712</dd:PenStallValue>
+					<dd:PenStallValue PEID="64226">16778224</dd:PenStallValue>
 					<dd:PenStallValueLocation>three</dd:PenStallValueLocation>
 				</dd:PenStall>
 				<dd:TijGenAndVersion PEID="64228">5</dd:TijGenAndVersion>
@@ -422,7 +422,7 @@
 				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
 				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
 			</dd:RefilledCount>
-			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">1941</dd:PenInsertionTriggerSnapshotCounter>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">1949</dd:PenInsertionTriggerSnapshotCounter>
 			<dd2:CumulativeHPMarkingAgentUsed PEID="64105">
 				<dd:ValueFloat>55</dd:ValueFloat>
 				<dd:Unit>microliters</dd:Unit>
@@ -434,17 +434,17 @@
 			<dd:ConsumableTypeEnum>inkCartridge</dd:ConsumableTypeEnum>
 			<dd2:CumulativeConsumableCount>9</dd2:CumulativeConsumableCount>
 			<dd2:CumulativeMarkingAgentUsed PEID="64102">
-				<dd:ValueFloat>107</dd:ValueFloat>
+				<dd:ValueFloat>108</dd:ValueFloat>
 				<dd:Unit>microliters</dd:Unit>
 			</dd2:CumulativeMarkingAgentUsed>
 			<dd:A4EquivalentImpressions>
 				<dd:TotalImpressions>0</dd:TotalImpressions>
 				<dd:MonochromeImpressions>0</dd:MonochromeImpressions>
 			</dd:A4EquivalentImpressions>
-			<dd:ConsumableRawPercentageLevelRemaining>58</dd:ConsumableRawPercentageLevelRemaining>
+			<dd:ConsumableRawPercentageLevelRemaining>56</dd:ConsumableRawPercentageLevelRemaining>
 			<dd:PVPCartridgeCounter PEID="28024">0</dd:PVPCartridgeCounter>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11000">33498905</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11000">33647178</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>HPDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
@@ -456,7 +456,7 @@
 				<dd:MarkingAgentCountType>OOISensorFiredDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByMarkingAgentCount>
-				<dd:MarkingAgentCount PEID="11014">6043428</dd:MarkingAgentCount>
+				<dd:MarkingAgentCount PEID="11014">6063575</dd:MarkingAgentCount>
 				<dd:MarkingAgentCountType>serviceDropsCount</dd:MarkingAgentCountType>
 			</dd:UsageByMarkingAgentCount>
 			<dd:UsageByPenStall>
@@ -494,7 +494,7 @@
 					<dd:PenStallValueLocation>two</dd:PenStallValueLocation>
 				</dd:PenStall>
 				<dd:PenStall>
-					<dd:PenStallValue PEID="64226">16777712</dd:PenStallValue>
+					<dd:PenStallValue PEID="64226">16778224</dd:PenStallValue>
 					<dd:PenStallValueLocation>three</dd:PenStallValueLocation>
 				</dd:PenStall>
 				<dd:TijGenAndVersion PEID="64228">5</dd:TijGenAndVersion>
@@ -505,9 +505,9 @@
 				<dd:CounterfeitRefilledCount PEID="16086">0</dd:CounterfeitRefilledCount>
 				<dd:GenuineRefilledCount>0</dd:GenuineRefilledCount>
 			</dd:RefilledCount>
-			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">1941</dd:PenInsertionTriggerSnapshotCounter>
+			<dd:PenInsertionTriggerSnapshotCounter PEID="28031">1949</dd:PenInsertionTriggerSnapshotCounter>
 			<dd2:CumulativeHPMarkingAgentUsed PEID="64103">
-				<dd:ValueFloat>107</dd:ValueFloat>
+				<dd:ValueFloat>108</dd:ValueFloat>
 				<dd:Unit>microliters</dd:Unit>
 			</dd2:CumulativeHPMarkingAgentUsed>
 		</pudyn:Consumable>
@@ -653,30 +653,30 @@
 		<pudyn:TotalAdfLegallmages PEID="4017">0</pudyn:TotalAdfLegallmages>
 	</pudyn:FaxApplicationSubunit>
 	<pudyn:PrintApplicationSubunit>
-		<dd:TotalImpressions PEID="7009">3916</dd:TotalImpressions>
+		<dd:TotalImpressions PEID="7009">3932</dd:TotalImpressions>
 		<dd:PhotoImpressions PEID="7002">0</dd:PhotoImpressions>
 		<dd:MediaSize_4x6in_10x15cm_Impressions PEID="7006">0</dd:MediaSize_4x6in_10x15cm_Impressions>
 		<dd:CloudPrintImpressions PEID="36016">0</dd:CloudPrintImpressions>
 	</pudyn:PrintApplicationSubunit>
 	<pudyn:PonyExpressSubunit>
-		<pudyn:PECounter PEID="5000">4235</pudyn:PECounter>
+		<pudyn:PECounter PEID="5000">4254</pudyn:PECounter>
 		<pudyn:PECounter PEID="5021">341</pudyn:PECounter>
 		<pudyn:PECounter PEID="5033">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="4013">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="5031">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="5032">0</pudyn:PECounter>
-		<pudyn:PECounter PEID="5037">4138</pudyn:PECounter>
+		<pudyn:PECounter PEID="5037">4156</pudyn:PECounter>
 		<pudyn:PECounter PEID="5011">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="3001">74</pudyn:PECounter>
-		<pudyn:PECounter PEID="5106">635</pudyn:PECounter>
+		<pudyn:PECounter PEID="5106">637</pudyn:PECounter>
 		<pudyn:PECounter PEID="5105">26</pudyn:PECounter>
 		<pudyn:PECounter PEID="5108">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="5109">0</pudyn:PECounter>
-		<pudyn:PECounter PEID="64106">161900</pudyn:PECounter>
-		<pudyn:PECounter PEID="64107">107200</pudyn:PECounter>
-		<pudyn:PECounter PEID="64108">107200</pudyn:PECounter>
-		<pudyn:PECounter PEID="64109">54800</pudyn:PECounter>
-		<pudyn:PECounter PEID="64110">54700</pudyn:PECounter>
+		<pudyn:PECounter PEID="64106">162600</pudyn:PECounter>
+		<pudyn:PECounter PEID="64107">107700</pudyn:PECounter>
+		<pudyn:PECounter PEID="64108">107700</pudyn:PECounter>
+		<pudyn:PECounter PEID="64109">55000</pudyn:PECounter>
+		<pudyn:PECounter PEID="64110">54900</pudyn:PECounter>
 		<pudyn:PECounter PEID="5110">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="5111">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="5112">0</pudyn:PECounter>
@@ -686,7 +686,7 @@
 		<pudyn:PECounter PEID="30069">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="30070">0</pudyn:PECounter>
 		<pudyn:PECounter PEID="3026">0</pudyn:PECounter>
-		<pudyn:PECounter PEID="5003">4155</pudyn:PECounter>
+		<pudyn:PECounter PEID="5003">4173</pudyn:PECounter>
 		<pudyn:PECounter PEID="5004">11</pudyn:PECounter>
 	</pudyn:PonyExpressSubunit>
 	<pudyn:MobileApplicationSubunit>
@@ -739,7 +739,7 @@
 		</pudyn:TotalUsage>
 		<pudyn:DocumentUsage>
 			<pudyn:Counter>
-				<pudyn:TotalImpressions PEID="36017">981</pudyn:TotalImpressions>
+				<pudyn:TotalImpressions PEID="36017">993</pudyn:TotalImpressions>
 			</pudyn:Counter>
 			<pudyn:RemoteDeviceType>OSX</pudyn:RemoteDeviceType>
 		</pudyn:DocumentUsage>
@@ -763,7 +763,7 @@
 		</pudyn:PhotoUsage>
 		<pudyn:PhotoUsage>
 			<pudyn:Counter>
-				<pudyn:TotalImpressions PEID="36020">78</pudyn:TotalImpressions>
+				<pudyn:TotalImpressions PEID="36020">80</pudyn:TotalImpressions>
 			</pudyn:Counter>
 			<pudyn:RemoteDeviceType>iOS</pudyn:RemoteDeviceType>
 		</pudyn:PhotoUsage>

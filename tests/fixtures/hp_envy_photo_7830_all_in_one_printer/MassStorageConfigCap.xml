@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<mscfgcap:MassStorageConfigCap xmlns:mscfgcap="http://www.hp.com/schemas/imaging/con/ledm/massstorageconfigcap/2009/01/12" xmlns:mscfgdyn="http://www.hp.com/schemas/imaging/con/ledm/massstorageconfigdyn/2008/01/25" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/massstorageconfigcap/2009/01/12 ../schemas/MassStorageConfigCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.280</dd:Revision>
+		<dd:Date>2011-05-19</dd:Date>
+	</dd:Version>
+	<mscfgcap:MassStorageSupport access="readWrite">
+		<dd:MassStorage>enabled</dd:MassStorage>
+		<dd:MassStorage>disabled</dd:MassStorage>
+	</mscfgcap:MassStorageSupport>
+	<mscfgcap:RetainThumbnailsSupport access="readWrite">
+		<dd:RetainThumbnails>enabled</dd:RetainThumbnails>
+		<dd:RetainThumbnails>disabled</dd:RetainThumbnails>
+	</mscfgcap:RetainThumbnailsSupport>
+	<mscfgcap:DefaultTraySupport access="readWrite">
+		<dd:InputBin>Tray1</dd:InputBin>
+		<dd:InputBin>PhotoTray</dd:InputBin>
+	</mscfgcap:DefaultTraySupport>
+	<mscfgcap:DevicesSupported>
+		<mscfgcap:DeviceSupported>
+			<dd:DigitalStorageTypeEnum>secureDigital</dd:DigitalStorageTypeEnum>
+			<mscfgcap:EnableDisableSupport access="readOnly">
+				<dd:EnableDisable>enabled</dd:EnableDisable>
+				<dd:EnableDisable>disabled</dd:EnableDisable>
+			</mscfgcap:EnableDisableSupport>
+		</mscfgcap:DeviceSupported>
+		<mscfgcap:DeviceSupported>
+			<dd:DigitalStorageTypeEnum>usbkey</dd:DigitalStorageTypeEnum>
+			<mscfgcap:EnableDisableSupport access="readOnly">
+				<dd:EnableDisable>enabled</dd:EnableDisable>
+				<dd:EnableDisable>disabled</dd:EnableDisable>
+			</mscfgcap:EnableDisableSupport>
+		</mscfgcap:DeviceSupported>
+	</mscfgcap:DevicesSupported>
+	<mscfgcap:PrintFromMassStorageSupport access="readWrite">
+		<mscfgcap:PrintFromMassStorage>enabled</mscfgcap:PrintFromMassStorage>
+		<mscfgcap:PrintFromMassStorage>disabled</mscfgcap:PrintFromMassStorage>
+	</mscfgcap:PrintFromMassStorageSupport>
+	<mscfgcap:ScanToMassStorageSupport access="readWrite">
+		<mscfgcap:ScanToMassStorage>enabled</mscfgcap:ScanToMassStorage>
+		<mscfgcap:ScanToMassStorage>disabled</mscfgcap:ScanToMassStorage>
+	</mscfgcap:ScanToMassStorageSupport>
+</mscfgcap:MassStorageConfigCap>

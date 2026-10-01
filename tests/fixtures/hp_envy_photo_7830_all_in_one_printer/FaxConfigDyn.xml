@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<faxcfgdyn:FaxConfigDyn xmlns:faxcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/faxconfigdyn/2009/03/03" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/faxconfigdyn/2009/03/03 ../schemas/FaxConfigDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.74</dd:Revision>
+		<dd:Date>2010-07-13</dd:Date>
+	</dd:Version>
+	<faxcfgdyn:SystemSettings>
+		<dd:CompanyName></dd:CompanyName>
+		<dd:PhoneNumber></dd:PhoneNumber>
+		<fax:SystemSpeed>mediumV17</fax:SystemSpeed>
+		<dd:FaxRingerVolume>soft</dd:FaxRingerVolume>
+		<fax:SystemAutoPrintConfirmation>allSendJobs</fax:SystemAutoPrintConfirmation>
+		<fax:SystemAutoPrintError>sendErrorsOnly</fax:SystemAutoPrintError>
+		<dd:FaxErrorCorrectionMode>enabled</dd:FaxErrorCorrectionMode>
+		<dd:FaxThumbNailOnCallReport>disabled</dd:FaxThumbNailOnCallReport>
+		<faxcfgdyn:IPPFaxOut>enabled</faxcfgdyn:IPPFaxOut>
+		<faxcfgdyn:eFCLState>enabled</faxcfgdyn:eFCLState>
+	</faxcfgdyn:SystemSettings>
+	<faxcfgdyn:SendSettings>
+		<dd:FaxNumberPrefix></dd:FaxNumberPrefix>
+		<dd:FaxSendResolution>fine</dd:FaxSendResolution>
+		<dd:DialingMode>tone</dd:DialingMode>
+		<fax:SendNumberPrefixUsed>disabled</fax:SendNumberPrefixUsed>
+		<dd:PrintToFax>enabled</dd:PrintToFax>
+		<fax:SendRedialIfBusy>enabled</fax:SendRedialIfBusy>
+		<fax:SendRedialIfCommError>enabled</fax:SendRedialIfCommError>
+		<fax:SendRedialIfNoAnswer>disabled</fax:SendRedialIfNoAnswer>
+	</faxcfgdyn:SendSettings>
+	<faxcfgdyn:ReceiveSettings>
+		<fax:ReceiveAnswerMode>automatic</fax:ReceiveAnswerMode>
+		<dd:FaxRingsToAnswer>5</dd:FaxRingsToAnswer>
+		<fax:ReceiveDistinctiveRing>allRings</fax:ReceiveDistinctiveRing>
+		<dd:FaxForwardingNumber></dd:FaxForwardingNumber>
+		<dd:FaxOutputPlex>Simplex</dd:FaxOutputPlex>
+		<fax:ReceiveAllowReprint>enabled</fax:ReceiveAllowReprint>
+		<fax:ReceiveBlockJunkFaxes>enabled</fax:ReceiveBlockJunkFaxes>
+		<dd:DetectDialTone>disabled</dd:DetectDialTone>
+		<dd:FitToPage>enabled</dd:FitToPage>
+		<dd:StampReceivedFax>disabled</dd:StampReceivedFax>
+		<fax:FaxPrintMode>printAndStoreRcvFaxes</fax:FaxPrintMode>
+		<fax:ReceiveForward>none</fax:ReceiveForward>
+		<fax:ReceiveColorFaxes>enabled</fax:ReceiveColorFaxes>
+	</faxcfgdyn:ReceiveSettings>
+</faxcfgdyn:FaxConfigDyn>

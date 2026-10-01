@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<fudyn:FaxUploadDyn xmlns:fudyn="http://www.hp.com/schemas/imaging/con/ledm/faxuploaddyn/2008/07/01" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd                         http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06 ../schemas/dd3/DataDictionaryMasterLEDM.xsd                         http://www.hp.com/schemas/imaging/con/ledm/faxuploaddyn/2008/07/01 ../schemas/FaxUploadDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<fudyn:FaxUploadConfig>
+		<fax:FeatureFaxUpload>disabled</fax:FeatureFaxUpload>
+		<dd3:Hostname></dd3:Hostname>
+		<fax:BackupPrint>enabled</fax:BackupPrint>
+	</fudyn:FaxUploadConfig>
+</fudyn:FaxUploadDyn>

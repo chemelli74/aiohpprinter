@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<mhcap2:MediaHandlingCap xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingcap/2007/11/26 ../schemas/MediaHandlingCap.xsd   http://www.hp.com/schemas/imaging/con/ledm/mediahandlingcap/2009/06/25 ../schemas/ledm2/MediaHandlingCap.xsd  http://www.hp.com/schemas/imaging/con/ledm/mediahandlingdyn/2007/11/21 ../schemas/MediaHandlingDyn.xsd  http://www.hp.com/schemas/imaging/con/ledm/2007/09/21 ../schemas/LEDM.xsd  http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd" xmlns:ledm="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:mhcap="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingcap/2007/11/26" xmlns:mhcap2="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingcap/2009/06/25" xmlns:mhdyn="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingdyn/2007/11/21" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<mhcap:MediaHandlingInfoCap>
+		<mhcap:NumOfInputTrays typeof="dd:NonNegativeInteger" max="2" step="1" elementXPath="mhdyn:MediaHandlingDyn/mhdyn:MediaHandlingInfo/dd:NumOfInputTrays" min="1"></mhcap:NumOfInputTrays>
+		<mhcap:NumOfOutputBins typeof="dd:NonNegativeInteger" max="1" step="1" elementXPath="mhdyn:MediaHandlingDyn/mhdyn:MediaHandlingInfo/dd:NumOfOutputBins" min="1"></mhcap:NumOfOutputBins>
+		<mhcap:DefaultInputTraySupport access="readWrite">
+			<dd:DefaultInputTray>Tray1</dd:DefaultInputTray>
+			<dd:DefaultInputTray>PhotoTray</dd:DefaultInputTray>
+		</mhcap:DefaultInputTraySupport>
+		<mhcap:DefaultOutputBinSupport>
+			<dd:DefaultOutputBin>OutputBin1</dd:DefaultOutputBin>
+		</mhcap:DefaultOutputBinSupport>
+		<mhcap:MediaOutTime typeof="dd:Int" max="7200" step="1" elementXPath="mhdyn:MediaHandlingDyn/mhdyn:MediaHandlingInfo/dd:MediaOutTime" min="-1"></mhcap:MediaOutTime>
+		<mhcap:MediaOutActionTypeSupport>
+			<dd:MediaOutActionType>waitForPaperToBeLoaded</dd:MediaOutActionType>
+		</mhcap:MediaOutActionTypeSupport>
+	</mhcap:MediaHandlingInfoCap>
+	<mhcap2:InputTrayCap>
+		<mhcap2:InputBinSupport>
+			<dd:InputBin>Tray1</dd:InputBin>
+		</mhcap2:InputBinSupport>
+		<mhcap2:TrayLockSupport access="readWrite">
+			<dd:TrayLock>off</dd:TrayLock>
+			<dd:TrayLock>on</dd:TrayLock>
+		</mhcap2:TrayLockSupport>
+		<mhcap:InputTrayLocationSupport>
+			<dd:InputTrayLocation>bottom</dd:InputTrayLocation>
+		</mhcap:InputTrayLocationSupport>
+		<mhcap2:MaxCapacitySupport>
+			<dd:MaxCapacity>-2</dd:MaxCapacity>
+			<mhcap:UnitSupport>
+				<dd:Unit>pages</dd:Unit>
+			</mhcap:UnitSupport>
+		</mhcap2:MaxCapacitySupport>
+		<mhcap:TrayTypeSupport>
+			<dd:TrayType>genericMedia</dd:TrayType>
+		</mhcap:TrayTypeSupport>
+		<mhcap2:MediaFeedSizeRangeSupport access="readOnly">
+			<dd:MediaFeedSizeRange>
+				<dd:Min>0</dd:Min>
+				<dd:Max>0</dd:Max>
+				<dd:Unit>tenThousandthsOfInches</dd:Unit>
+			</dd:MediaFeedSizeRange>
+			<mhcap:UnitSupport>
+				<dd:Unit>tenThousandthsOfInches</dd:Unit>
+			</mhcap:UnitSupport>
+		</mhcap2:MediaFeedSizeRangeSupport>
+		<mhcap:ComponentOriginSupport>
+			<dd:ComponentOrigin>builtIn</dd:ComponentOrigin>
+		</mhcap:ComponentOriginSupport>
+		<mhcap:PageOrientationSupport>
+			<dd:PageOrientation>FaceDown</dd:PageOrientation>
+		</mhcap:PageOrientationSupport>
+		<mhcap:TrayStateSupport access="readOnly">
+			<dd:TrayState>engaged</dd:TrayState>
+			<dd:TrayState>error</dd:TrayState>
+			<dd:TrayState>installed</dd:TrayState>
+			<dd:TrayState>notEngaged</dd:TrayState>
+		</mhcap:TrayStateSupport>
+		<mhcap:FeederTypeSupport>
+			<dd:FeederType>auto</dd:FeederType>
+		</mhcap:FeederTypeSupport>
+		<mhcap:PlexSupport>
+			<dd:Plex>Duplex</dd:Plex>
+		</mhcap:PlexSupport>
+		<mhcap:MediaTypeSupport access="readWrite">
+			<dd:MediaType>plain</dd:MediaType>
+			<dd:MediaType>photoStandard</dd:MediaType>
+			<dd:MediaType>specialtyGlossy</dd:MediaType>
+			<dd:MediaType>specialtyMatte</dd:MediaType>
+			<dd:MediaType>lightWeight</dd:MediaType>
+		</mhcap:MediaTypeSupport>
+		<mhcap:MediaSizeNameSupport access="readWrite">
+			<dd:MediaSizeName>na_executive_7.25x10.5in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_letter_8.5x11in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_legal_8.5x14in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_govt-letter_8x10in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_invoice_5.5x8.5in</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_a5_148x210mm</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
+			<dd:MediaSizeName>jis_b5_182x257mm</dd:MediaSizeName>
+			<dd:MediaSizeName>jpn_hagaki_100x148mm</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_a6_105x148mm</dd:MediaSizeName>
+			<dd:MediaSizeName>na_index-4x6_4x6in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_index-5x8_5x8in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_monarch_3.875x7.5in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_number-10_4.125x9.5in</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_dl_110x220mm</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_c5_162x229mm</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_c6_114x162mm</dd:MediaSizeName>
+			<dd:MediaSizeName>na_a2_4.375x5.75in</dd:MediaSizeName>
+			<dd:MediaSizeName>jpn_chou3_120x235mm</dd:MediaSizeName>
+			<dd:MediaSizeName>jpn_chou4_90x205mm</dd:MediaSizeName>
+			<dd:MediaSizeName>om_medium-photo_130x180mm</dd:MediaSizeName>
+			<dd:MediaSizeName>custom_photo_4x12in</dd:MediaSizeName>
+			<dd:MediaSizeName>custom_photo-2l-size-card_127x178mm</dd:MediaSizeName>
+			<dd:MediaSizeName>na_personal_3.625x6.5in</dd:MediaSizeName>
+			<dd:MediaSizeName>jpn_oufuku-rot_148x200mm</dd:MediaSizeName>
+			<dd:MediaSizeName>iso_b5_176x250mm</dd:MediaSizeName>
+			<dd:MediaSizeName>om_small-photo_100x150mm</dd:MediaSizeName>
+			<dd:MediaSizeName>custom_photo_4x5in</dd:MediaSizeName>
+			<dd:MediaSizeName>na_foolscap_8.5x13in</dd:MediaSizeName>
+		</mhcap:MediaSizeNameSupport>
+		<mhcap2:AvailableMediaSizesSupport>false</mhcap2:AvailableMediaSizesSupport>
+		<mhcap2:MediaStateSupport access="readOnly">
+			<mhcap2:MediaState>present</mhcap2:MediaState>
+			<mhcap2:MediaState>missing</mhcap2:MediaState>
+		</mhcap2:MediaStateSupport>
+	</mhcap2:InputTrayCap>
+	<mhcap2:InputTrayCap>
+		<mhcap2:InputBinSupport>
+			<dd:InputBin>PhotoTray</dd:InputBin>
+		</mhcap2:InputBinSupport>
+		<mhcap2:TrayLockSupport access="readWrite">
+			<dd:TrayLock>off</dd:TrayLock>
+			<dd:TrayLock>on</dd:TrayLock>
+		</mhcap2:TrayLockSupport>
+		<mhcap:InputTrayLocationSupport>
+			<dd:InputTrayLocation>top</dd:InputTrayLocation>
+		</mhcap:InputTrayLocationSupport>
+		<mhcap2:MaxCapacitySupport>
+			<dd:MaxCapacity>0</dd:MaxCapacity>
+			<mhcap:UnitSupport>
+				<dd:Unit>pages</dd:Unit>
+			</mhcap:UnitSupport>
+		</mhcap2:MaxCapacitySupport>
+		<mhcap:TrayTypeSupport>
+			<dd:TrayType>photo</dd:TrayType>
+		</mhcap:TrayTypeSupport>
+		<mhcap2:MediaFeedSizeRangeSupport access="readOnly">
+			<dd:MediaFeedSizeRange>
+				<dd:Min>0</dd:Min>
+				<dd:Max>0</dd:Max>
+				<dd:Unit>tenThousandthsOfInches</dd:Unit>
+			</dd:MediaFeedSizeRange>
+			<mhcap:UnitSupport>
+				<dd:Unit>tenThousandthsOfInches</dd:Unit>
+			</mhcap:UnitSupport>
+		</mhcap2:MediaFeedSizeRangeSupport>
+		<mhcap:ComponentOriginSupport>
+			<dd:ComponentOrigin>builtIn</dd:ComponentOrigin>
+		</mhcap:ComponentOriginSupport>
+		<mhcap:PageOrientationSupport>
+			<dd:PageOrientation>FaceDown</dd:PageOrientation>
+		</mhcap:PageOrientationSupport>
+		<mhcap:TrayStateSupport access="readOnly">
+			<dd:TrayState>engaged</dd:TrayState>
+			<dd:TrayState>error</dd:TrayState>
+			<dd:TrayState>installed</dd:TrayState>
+			<dd:TrayState>notEngaged</dd:TrayState>
+		</mhcap:TrayStateSupport>
+		<mhcap:FeederTypeSupport>
+			<dd:FeederType>auto</dd:FeederType>
+		</mhcap:FeederTypeSupport>
+		<mhcap:PlexSupport>
+			<dd:Plex>Duplex</dd:Plex>
+		</mhcap:PlexSupport>
+		<mhcap:MediaTypeSupport access="readWrite">
+			<dd:MediaType>photoStandard</dd:MediaType>
+		</mhcap:MediaTypeSupport>
+		<mhcap:MediaSizeNameSupport access="readWrite">
+			<dd:MediaSizeName>na_index-4x6_4x6in</dd:MediaSizeName>
+			<dd:MediaSizeName>om_medium-photo_130x180mm</dd:MediaSizeName>
+			<dd:MediaSizeName>om_small-photo_100x150mm</dd:MediaSizeName>
+			<dd:MediaSizeName>custom_photo_4x5in</dd:MediaSizeName>
+		</mhcap:MediaSizeNameSupport>
+		<mhcap2:AvailableMediaSizesSupport>false</mhcap2:AvailableMediaSizesSupport>
+		<mhcap2:MediaStateSupport access="readOnly">
+			<mhcap2:MediaState>present</mhcap2:MediaState>
+			<mhcap2:MediaState>missing</mhcap2:MediaState>
+		</mhcap2:MediaStateSupport>
+	</mhcap2:InputTrayCap>
+	<mhcap:OutputBinCap>
+		<mhcap:HPOutputBinSupport>
+			<dd:HPOutputBin>OutputBin1</dd:HPOutputBin>
+		</mhcap:HPOutputBinSupport>
+		<mhcap:MediaHandlingDeviceFunctionTypeSupport>
+			<dd:MediaHandlingDeviceFunctionType>stack</dd:MediaHandlingDeviceFunctionType>
+		</mhcap:MediaHandlingDeviceFunctionTypeSupport>
+	</mhcap:OutputBinCap>
+	<mhcap:AccessoriesCap>
+		<mhcap:MediaHandlingDeviceFunctionTypeSupport>
+			<dd:MediaHandlingDeviceFunctionType>autoDuplexor</dd:MediaHandlingDeviceFunctionType>
+			<dd:MediaHandlingDeviceFunctionType>adf</dd:MediaHandlingDeviceFunctionType>
+		</mhcap:MediaHandlingDeviceFunctionTypeSupport>
+	</mhcap:AccessoriesCap>
+</mhcap2:MediaHandlingCap>

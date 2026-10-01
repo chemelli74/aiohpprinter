@@ -83,7 +83,7 @@
 		</prdcfgdyn:ProductLanguage>
 		<prdcfgdyn:CountryAndRegionName PEID="30062">italy</prdcfgdyn:CountryAndRegionName>
 		<dd:KeyPressVolume>off</dd:KeyPressVolume>
-		<dd:TimeStamp>2026-09-20T23:10:31+00:00</dd:TimeStamp>
+		<dd:TimeStamp>2026-09-29T22:22:43+00:00</dd:TimeStamp>
 		<dd:TimeFormat>HR24</dd:TimeFormat>
 		<dd:DateFormat>DDMMMYYYY</dd:DateFormat>
 		<dd:Fax>Yes</dd:Fax>
@@ -130,7 +130,7 @@
 		</dd:ControlPanel>
 	</prdcfgdyn2:ProductSettings>
 	<prdcfgdyn:Memory>
-		<dd:AvailableMemory>89920</dd:AvailableMemory>
+		<dd:AvailableMemory>89980</dd:AvailableMemory>
 		<dd:TotalMemory>90592</dd:TotalMemory>
 		<dd:MemorySlot>
 			<dd:DigitalStorageTypeEnum>DIMM</dd:DigitalStorageTypeEnum>

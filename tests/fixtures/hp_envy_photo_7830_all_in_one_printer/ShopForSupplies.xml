@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<ss:ShopForSuppliesRequest xsi:schemaLocation="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07 ../schemas/ShopForSupplies.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ss="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<ss:RequesterID type="x-inkjet-serial-number">REDACTED</ss:RequesterID>
+	<ss:LocaleInformationSources>
+		<ss:LocaleInformationSource type="printing-device">
+			<dd:Language>it-IT</dd:Language>
+			<dd:TimeStamp>2026-09-29T22:22:49+00:00</dd:TimeStamp>
+		</ss:LocaleInformationSource>
+	</ss:LocaleInformationSources>
+	<ss:Devices>
+		<ss:Device>
+			<ss:GloballyUniqueDeviceModelID type="x-hp-device-model-string-with-sku-with-region-code">REDACTED</ss:GloballyUniqueDeviceModelID>
+			<ss:GloballyUniqueDeviceID type="">REDACTED</ss:GloballyUniqueDeviceID>
+			<ss:Supplies>
+				<ss:Supply>
+					<dd:ConsumableStation>0</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.3D" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>50</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>1</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.3D" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>60</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+			</ss:Supplies>
+			<ss:MarkingAgentSubscriptionLevel>1</ss:MarkingAgentSubscriptionLevel>
+			<ss:RewardsRegistrationStatus>
+				<dd:OptedIn>false</dd:OptedIn>
+				<dd:AutoSendData>false</dd:AutoSendData>
+				<dd:PromptAutoSendData>false</dd:PromptAutoSendData>
+			</ss:RewardsRegistrationStatus>
+		</ss:Device>
+	</ss:Devices>
+	<ss:DeviceInfoSets>
+		<ss:DeviceInfoSet type="String">
+			<ss:DeviceInfoDeviceID type="x-inkjet-serial-number">REDACTED</ss:DeviceInfoDeviceID>
+			<ss:DeviceInfoData><![CDATA[MFG:HP;MDL:ENVY Photo 7800 series;CMD:PCL3GUI,PCL3,PJL,Automatic,JPEG,PCLM,AppleRaster,PWGRaster,DW-PCL,802.11,802.3,DESKJET,DYN;CLS:PRINTER;DES:Y0G50B;CID:HPIJVIPAV7;LEDMDIS:USB#FF#04#01,USB#FF#CC#00;SN:REDACTED;S:038088C484500001002c2400032c140003c;Z:05000009000009,12000,17000000000000,180;]]></ss:DeviceInfoData>
+		</ss:DeviceInfoSet>
+		<ss:DeviceInfoSet type="ledm:/ConsumableSubscription/Info">
+			<ss:DeviceInfoDeviceID type="x-inkjet-serial-number">REDACTED</ss:DeviceInfoDeviceID>
+			<ss:DeviceInfoData><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<cs:ConsumableSubscriptionInfo xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/consumablesubscription/2012/06/18 ../../schemas/consumableSubscription/ConsumableSubscription.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:cs="http://www.hp.com/schemas/imaging/con/ledm/consumablesubscription/2012/06/18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<cs:Name>Hy:Gem1</cs:Name>
+	<cs:Status>active</cs:Status>
+	<cs:ConnectionURLs>
+		<cs:HPWeb>www.hpconnected.com</cs:HPWeb>
+		<cs:InstantInk>www.hpinstantink.com</cs:InstantInk>
+		<cs:InstantInkSupport>www.hpconnected.com/support/ink</cs:InstantInkSupport>
+	</cs:ConnectionURLs>
+	<cs:DeviceLastConnectionData>
+		<cs:SequenceNumber>1513</cs:SequenceNumber>
+		<cs:ReceivedDate>2026-09-28</cs:ReceivedDate>
+		<cs:ConnectionDate>2026-09-29</cs:ConnectionDate>
+	</cs:DeviceLastConnectionData>
+	<cs:CurrentSequenceNumber>1513</cs:CurrentSequenceNumber>
+	<cs:OutOfPagesExtensionAvailable>true</cs:OutOfPagesExtensionAvailable>
+	<cs:EffectiveOutOfPages>4076</cs:EffectiveOutOfPages>
+	<cs:EnrollmentType>xmo2</cs:EnrollmentType>
+</cs:ConsumableSubscriptionInfo>
+]]></ss:DeviceInfoData>
+		</ss:DeviceInfoSet>
+	</ss:DeviceInfoSets>
+</ss:ShopForSuppliesRequest>

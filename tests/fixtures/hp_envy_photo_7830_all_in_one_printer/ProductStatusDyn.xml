@@ -14,11 +14,11 @@
 		<locid:StringId>65640</locid:StringId>
 	</psdyn:Status>
 	<psdyn:AlertTable>
-		<dd:ModificationNumber>5</dd:ModificationNumber>
+		<dd:ModificationNumber>3</dd:ModificationNumber>
 		<psdyn:Alert>
 			<ad:ProductStatusAlertID>trayEmpty</ad:ProductStatusAlertID>
 			<locid:StringId>65921</locid:StringId>
-			<dd:SequenceNumber>19</dd:SequenceNumber>
+			<dd:SequenceNumber>17</dd:SequenceNumber>
 			<ad:Severity>Warning</ad:Severity>
 			<ad:AlertPriority>209</ad:AlertPriority>
 			<ad:AlertDetails>
