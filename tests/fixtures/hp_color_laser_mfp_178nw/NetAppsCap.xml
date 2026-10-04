@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nacap:NetAppsCap xmlns:nacap="http://www.hp.com/schemas/imaging/con/ledm/netappcap/2009/06/24" xmlns:nadyn="http://www.hp.com/schemas/imaging/con/ledm/netappdyn/2009/06/24" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16../schemas/ledm2/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05../schemas/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2009/03/16../schemas/ledm2/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2007/11/05../schemas/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/dictionaries/1.0/../schemas/dd/DataDictionaryMasterLEDM.xsd">
+<nacap:DNSSDConfigSupport>
+	<nacap:ApplicationServiceName access="readWrite" elementXPath="dd:mDNSServiceName" typeof="dd:String" length="63">
+</nacap:ApplicationServiceName>
+</nacap:DNSSDConfigSupport>
+<nacap:DirectPrintSupport access="readWrite">
+	<nadyn:DirectPrint access="readWrite">enabled</nadyn:DirectPrint>
+	<nadyn:DirectPrint access="readWrite">disabled</nadyn:DirectPrint>
+</nacap:DirectPrintSupport>
+</nacap:NetAppsCap>

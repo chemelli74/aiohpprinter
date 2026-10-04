@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mhdyn:MediaHandlingDyn xmlns:mhdyn="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingdyn/2007/11/21" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/mediahandlingdyn/2007/11/21 ../schemas/MediaHandlingDyn.xsd">
+<dd:Version>
+	<dd:Revision>SVN-IPG-LEDM.1226</dd:Revision>
+</dd:Version>
+<mhdyn:MediaHandlingInfo>
+	<dd:DefaultInputTray>Tray1</dd:DefaultInputTray>
+</mhdyn:MediaHandlingInfo>
+<mhdyn:InputTray>
+	<dd:InputBin>Tray1</dd:InputBin>
+	<dd:TrayState>ready</dd:TrayState>
+	<dd:MediaType>plain</dd:MediaType>
+	<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
+</mhdyn:InputTray>
+</mhdyn:MediaHandlingDyn>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iocfgcap2:IOConfigCap xmlns:iocfgcap2="http://www.hp.com/schemas/imaging/con/ledm/ioconfigcap/2009/03/17" xmlns:iocfgcap="http://www.hp.com/schemas/imaging/con/ledm/ioconfigcap/2007/11/15" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ledm="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/ioconfigcap/2009/03/17 ../schemas/ledm2/IOConfigCap.xsd">
+<iocfgcap2:IOAdaptorConfigSupportCap>
+	<iocfgcap:ApplicationConfigSupport>
+		<iocfgcap:BonjourConfigSupport>
+			<iocfgcap:BonjourServiceName access="readWrite" elementXPath="dd:ApplicationServiceName" typeof="dd:String">
+</iocfgcap:BonjourServiceName>
+</iocfgcap:BonjourConfigSupport>
+</iocfgcap:ApplicationConfigSupport>
+</iocfgcap2:IOAdaptorConfigSupportCap>
+</iocfgcap2:IOConfigCap>
