@@ -1,0 +1,137 @@
+{
+  "device": {
+    "make_and_model": "HP Color Laser MFP 178nw",
+    "make_and_model_family": null,
+    "sku_identifier": null,
+    "serial_number": "REDACTED",
+    "product_number": "6HU08A",
+    "manufacturer_name": null,
+    "manufactured_at": null
+  },
+  "status": {
+    "device_status": "inpowersave"
+  },
+  "consumables": [
+    {
+      "consumable_id": "C",
+      "consumable_type": "toner",
+      "marker_color": null,
+      "state": "ok",
+      "usage_state": null,
+      "brand": null,
+      "station": null,
+      "percentage_level_remaining": 90.0,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": "W2071A",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": "W2071A",
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "K",
+      "consumable_type": "toner",
+      "marker_color": null,
+      "state": "ok",
+      "usage_state": null,
+      "brand": null,
+      "station": null,
+      "percentage_level_remaining": 70.0,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": "W2070A",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": "W2070A",
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "M",
+      "consumable_type": "toner",
+      "marker_color": null,
+      "state": "ok",
+      "usage_state": null,
+      "brand": null,
+      "station": null,
+      "percentage_level_remaining": 80.0,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": "W2073A",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": "W2073A",
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    },
+    {
+      "consumable_id": "Y",
+      "consumable_type": "toner",
+      "marker_color": null,
+      "state": "low",
+      "usage_state": null,
+      "brand": null,
+      "station": null,
+      "percentage_level_remaining": 10.0,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": "W2072A",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": "W2072A",
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    }
+  ],
+  "adapters": [
+    {
+      "name": "eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": false
+    },
+    {
+      "name": "wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "wifiUAP",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": false
+    }
+  ],
+  "wifi": {
+    "ssid_prefix": null,
+    "connection_method": null
+  }
+}

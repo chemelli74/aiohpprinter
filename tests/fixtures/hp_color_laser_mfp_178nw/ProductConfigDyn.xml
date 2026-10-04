@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prdcfgdyn2:ProductConfigDyn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:prdcfgdyn2="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16" xmlns:prdcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16 ../schemas/ledm2/ProductConfigDyn.xsd                            http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05../schemas/ProductConfigDyn.xsd                            http://www.hp.com/schemas/imaging/con/dictionaries/1.0/../schemas/dd/DataDictionaryMasterLEDM.xsd">
+<prdcfgdyn:ProductInformation>
+	<dd:Version>
+		<dd:Revision>V3.82.01.14</dd:Revision>
+</dd:Version>
+	<dd:MakeAndModel>HP Color Laser MFP 178nw</dd:MakeAndModel>
+	<dd:UUID>REDACTED</dd:UUID>
+	<dd:SerialNumber>REDACTED</dd:SerialNumber>
+	<dd:ProductNumber>6HU08A</dd:ProductNumber>
+	<dd:ServiceID>00000</dd:ServiceID>
+	<dd:PasswordStatus>notSet</dd:PasswordStatus>
+	<dd:DuplexUnit>NotInstalled</dd:DuplexUnit>
+</prdcfgdyn:ProductInformation>
+<prdcfgdyn2:ProductSettings>
+	<prdcfgdyn:ProductLanguage>
+		<dd:DeviceLanguage>de</dd:DeviceLanguage>
+</prdcfgdyn:ProductLanguage>
+	<prdcfgdyn:CountryAndRegionName>germany</prdcfgdyn:CountryAndRegionName>
+	<dd:Duplex>disabled</dd:Duplex>
+	<dd:OobePhase>setupComplete</dd:OobePhase>
+	<dd:ControlPanelAccess>mostlyOpen</dd:ControlPanelAccess>
+	<dd:ControlPanel>
+		<dd:Display>CGD</dd:Display>
+</dd:ControlPanel>
+</prdcfgdyn2:ProductSettings>
+</prdcfgdyn2:ProductConfigDyn>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iocfgdyn2:IOConfigDyn xmlns:iocfgdyn2="http://www.hp.com/schemas/imaging/con/ledm/ioconfigdyn/2009/03/17" xmlns:iocfgdyn="http://www.hp.com/schemas/imaging/con/ledm/ioconfigdyn/2007/11/1" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd2="http://www.hp.com/schemas/imaging/con/dictionaries/2008/10/10" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06" xmlns:ledm="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/ioconfigdyn/2009/03/17 ../schemas/ledm2/IOConfigDyn.xsd">
+<dd:Version>
+	<dd:Revision>SVN.1234</dd:Revision>
+</dd:Version>
+<dd3:IOAdaptorConfig>
+	<dd:DeviceConnectivityPortType>usb</dd:DeviceConnectivityPortType>
+</dd3:IOAdaptorConfig>
+<dd3:IOAdaptorConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>AutoIP</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>Bonjour</dd:ApplicationSupport>
+		<dd:ApplicationServiceName>HP MFP178nw</dd:ApplicationServiceName>
+		<dd3:DomainName>REDACTED</dd3:DomainName>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>BOOTP</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>DHCPv4</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>DHCPv6</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>LPD</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>MDNS</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>SLP</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd3:ApplicationConfig>
+		<dd:ApplicationSupport>SNMP</dd:ApplicationSupport>
+</dd3:ApplicationConfig>
+	<dd:DeviceConnectivityPortType>wifiEmbedded</dd:DeviceConnectivityPortType>
+	<dd3:NetworkAdaptorConfig>
+		<dd3:CurrentHostname>HPF4390957D7A6</dd3:CurrentHostname>
+</dd3:NetworkAdaptorConfig>
+</dd3:IOAdaptorConfig>
+</iocfgdyn2:IOConfigDyn>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nadyn:NetAppsDyn xmlns:nadyn="http://www.hp.com/schemas/imaging/con/ledm/netappdyn/2009/06/24" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16../schemas/ledm2/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05../schemas/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2009/03/16../schemas/ledm2/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2007/11/05../schemas/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/dictionaries/1.0/../schemas/dd/DataDictionaryMasterLEDM.xsd">
+<nadyn:DNSSDConfig>
+	<dd:ApplicationServiceName>HP Color Laser MFP 178nw (HPF4390957D7A6)</dd:ApplicationServiceName>
+</nadyn:DNSSDConfig>
+<nadyn:DirectPrint>disabled</nadyn:DirectPrint>
+</nadyn:NetAppsDyn>

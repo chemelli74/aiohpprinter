@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nasdyn:NetAppsSecureDyn xmlns:nasdyn="http://www.hp.com/schemas/imaging/con/ledm/netappsecdyn/2012/11/15" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16../schemas/ledm2/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05../schemas/ProductConfigDyn.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2009/03/16../schemas/ledm2/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2007/11/05../schemas/ProductConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/dictionaries/1.0/../schemas/dd/DataDictionaryMasterLEDM.xsd">
+<nasdyn:AutoWirelessConfig>
+	<nasdyn:State>disabled</nasdyn:State>
+</nasdyn:AutoWirelessConfig>
+<nasdyn:AirPrintConfig>
+	<nasdyn:State>enabled</nasdyn:State>
+</nasdyn:AirPrintConfig>
+<nasdyn:IPPSConfig>
+	<nasdyn:State>enabled</nasdyn:State>
+</nasdyn:IPPSConfig>
+<nasdyn:ProxyConfig>
+	<nasdyn:State>disabled</nasdyn:State>
+</nasdyn:ProxyConfig>
+</nasdyn:NetAppsSecureDyn>
