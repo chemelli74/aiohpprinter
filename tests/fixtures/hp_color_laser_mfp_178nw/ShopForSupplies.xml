@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ss:ShopForSuppliesRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ss="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ dd/DataDictionaryMasterLEDM.xsd 							http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07 ShopForSupplies.xsd">
+<dd:Version>
+	<dd:Revision>SVN.4567</dd:Revision>
+</dd:Version>
+<ss:LocaleInformationSources>
+	<ss:LocaleInformationSource>
+		<dd:Language>en</dd:Language>
+</ss:LocaleInformationSource>
+</ss:LocaleInformationSources>
+<ss:Devices>
+	<ss:Device>
+		<ss:GloballyUniqueDeviceModelID type="x-laserjet-model-string">REDACTED</ss:GloballyUniqueDeviceModelID>
+		<ss:GloballyUniqueDeviceID type="x-laserjet-serial-number">REDACTED</ss:GloballyUniqueDeviceID>
+		<ss:Supplies>
+			<ss:Supply>
+				<ss:GloballyUniqueSupplyModelID type="x-hp-supply-sku">REDACTED</ss:GloballyUniqueSupplyModelID>
+				<ss:GloballyUniqueSupplyID type="x-laserjet-supply-serial-number">REDACTED</ss:GloballyUniqueSupplyID>
+				<dd:Level>62</dd:Level>
+				<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+				<dd:ConsumableState>ok</dd:ConsumableState>
+</ss:Supply>
+</ss:Supplies>
+		<ss:Supplies>
+			<ss:Supply>
+				<ss:GloballyUniqueSupplyModelID type="x-hp-supply-sku">REDACTED</ss:GloballyUniqueSupplyModelID>
+				<ss:GloballyUniqueSupplyID type="x-laserjet-supply-serial-number">REDACTED</ss:GloballyUniqueSupplyID>
+				<dd:Level>87</dd:Level>
+				<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+				<dd:ConsumableState>ok</dd:ConsumableState>
+</ss:Supply>
+</ss:Supplies>
+		<ss:Supplies>
+			<ss:Supply>
+				<ss:GloballyUniqueSupplyModelID type="x-hp-supply-sku">REDACTED</ss:GloballyUniqueSupplyModelID>
+				<ss:GloballyUniqueSupplyID type="x-laserjet-supply-serial-number">REDACTED</ss:GloballyUniqueSupplyID>
+				<dd:Level>74</dd:Level>
+				<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+				<dd:ConsumableState>ok</dd:ConsumableState>
+</ss:Supply>
+</ss:Supplies>
+		<ss:Supplies>
+			<ss:Supply>
+				<ss:GloballyUniqueSupplyModelID type="x-hp-supply-sku">REDACTED</ss:GloballyUniqueSupplyModelID>
+				<ss:GloballyUniqueSupplyID type="x-laserjet-supply-serial-number">REDACTED</ss:GloballyUniqueSupplyID>
+				<dd:Level>1</dd:Level>
+				<dd:MeasuredQuantityState>low</dd:MeasuredQuantityState>
+				<dd:ConsumableState>low</dd:ConsumableState>
+</ss:Supply>
+</ss:Supplies>
+</ss:Device>
+</ss:Devices>
+<ss:DeviceInfoSets>
+	<ss:DeviceInfoSet type="ledm:/DevMgmt/ProductConfigDyn.xml">
+		<ss:DeviceInfoDeviceID type="x-laserjet-serial-number">REDACTED</ss:DeviceInfoDeviceID>
+		<ss:DeviceInfoData>&lt;![CDATA[&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;prdcfgdyn2:ProductConfigDyn xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:dd=&quot;http://www.hp.com/schemas/imaging/con/dictionaries/1.0/&quot; xmlns:prdcfgdyn2=&quot;http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16&quot; xmlns:prdcfgdyn=&quot;http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05&quot; xsi:schemaLocation=&quot;http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16 ../schemas/ledm2/ProductConfigDyn.xsd                            http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2007/11/05../schemas/ProductConfigDyn.xsd                            http://www.hp.com/schemas/imaging/con/dictionaries/1.0/../schemas/dd/DataDictionaryMasterLEDM.xsd&quot;&gt;
+&lt;prdcfgdyn:ProductInformation&gt;
+	&lt;dd:Version&gt;
+		&lt;dd:Revision&gt;V3.82.01.14&lt;/dd:Revision&gt;
+&lt;/dd:Version&gt;
+	&lt;dd:MakeAndModel&gt;HP Color Laser MFP 178nw&lt;/dd:MakeAndModel&gt;
+	&lt;dd:UUID&gt;16a65700-007c-1000-bb49-f4390957d7a6&lt;/dd:UUID&gt;
+	&lt;dd:SerialNumber&gt;CNB3M7T9P0&lt;/dd:SerialNumber&gt;
+	&lt;dd:ProductNumber&gt;6HU08A&lt;/dd:ProductNumber&gt;
+	&lt;dd:ServiceID&gt;00000&lt;/dd:ServiceID&gt;
+	&lt;dd:PasswordStatus&gt;notSet&lt;/dd:PasswordStatus&gt;
+	&lt;dd:DuplexUnit&gt;NotInstalled&lt;/dd:DuplexUnit&gt;
+&lt;/prdcfgdyn:ProductInformation&gt;
+&lt;prdcfgdyn2:ProductSettings&gt;
+	&lt;prdcfgdyn:ProductLanguage&gt;
+		&lt;dd:DeviceLanguage&gt;de&lt;/dd:DeviceLanguage&gt;
+&lt;/prdcfgdyn:ProductLanguage&gt;
+	&lt;prdcfgdyn:CountryAndRegionName&gt;germany&lt;/prdcfgdyn:CountryAndRegionName&gt;
+	&lt;dd:Duplex&gt;disabled&lt;/dd:Duplex&gt;
+	&lt;dd:OobePhase&gt;setupComplete&lt;/dd:OobePhase&gt;
+	&lt;dd:ControlPanelAccess&gt;mostlyOpen&lt;/dd:ControlPanelAccess&gt;
+	&lt;dd:ControlPanel&gt;
+		&lt;dd:Display&gt;CGD&lt;/dd:Display&gt;
+&lt;/dd:ControlPanel&gt;
+&lt;/prdcfgdyn2:ProductSettings&gt;
+&lt;/prdcfgdyn2:ProductConfigDyn&gt;
+]]&gt;</ss:DeviceInfoData>
+</ss:DeviceInfoSet>
+</ss:DeviceInfoSets>
+</ss:ShopForSuppliesRequest>

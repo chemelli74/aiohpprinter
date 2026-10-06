@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cccap:ConsumableConfigCap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:cccap="http://www.hp.com/schemas/imaging/con/ledm/consumableconfigcap/2007/11/19" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/consumableconfigcap/2007/11/19 ../schemas/ConsumableConfigCap.xsd                                              http://www.hp.com/schemas/imaging/con/ledm/consumableconfigdyn/2007/11/19 ../schemas/ConsumableConfigDyn.xsd                                              http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd">
+<dd:Version>
+	<dd:Revision>SVN-IPG-LEDM.1226</dd:Revision>
+</dd:Version>
+<cccap:ProductConsumableInfoCap>
+	<cccap:AtVeryLowSettingsSupport>
+		<cccap:ConsumableSettingSupport>
+			<cccap:ConsumableLabelCodeSupport access="readOnly">
+				<dd:ConsumableLabelCode>K</dd:ConsumableLabelCode>
+				<dd:ConsumableLabelCode>C</dd:ConsumableLabelCode>
+				<dd:ConsumableLabelCode>M</dd:ConsumableLabelCode>
+				<dd:ConsumableLabelCode>Y</dd:ConsumableLabelCode>
+</cccap:ConsumableLabelCodeSupport>
+			<cccap:ConsumableStateActionSupport access="readOnly">
+				<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+				<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+				<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</cccap:ConsumableStateActionSupport>
+</cccap:ConsumableSettingSupport>
+</cccap:AtVeryLowSettingsSupport>
+</cccap:ProductConsumableInfoCap>
+<cccap:ConsumableInfoCap>
+	<cccap:ProductNumber access="readOnly" elementXPath="ccdyn:ConsumableConfigDyn/ccdyn:ConsumableInfo/dd:ProductNumber" typeof="dd:String" length="63">
+</cccap:ProductNumber>
+	<cccap:ConsumableUniqueID access="readOnly" elementXPath="ccdyn:ConsumableInfo/ccdyn:ConsumableUniqueID" typeof="xs:hexBinary" length="32">
+</cccap:ConsumableUniqueID>
+	<cccap:ConsumableLabelCodeSupport access="readOnly">
+		<dd:ConsumableLabelCode>K</dd:ConsumableLabelCode>
+		<dd:ConsumableLabelCode>C</dd:ConsumableLabelCode>
+		<dd:ConsumableLabelCode>M</dd:ConsumableLabelCode>
+		<dd:ConsumableLabelCode>Y</dd:ConsumableLabelCode>
+</cccap:ConsumableLabelCodeSupport>
+	<cccap:ConsumableTypeEnumSupport access="readOnly">
+		<dd:ConsumableTypeEnum>toner</dd:ConsumableTypeEnum>
+</cccap:ConsumableTypeEnumSupport>
+	<cccap:ConsumableLifeStateSupport>
+		<cccap:ConsumableStateSupport access="readOnly">
+			<dd:ConsumableState>unknown</dd:ConsumableState>
+			<dd:ConsumableState>ok</dd:ConsumableState>
+			<dd:ConsumableState>low</dd:ConsumableState>
+			<dd:ConsumableState>empty</dd:ConsumableState>
+			<dd:ConsumableState>invalidStatus</dd:ConsumableState>
+			<dd:ConsumableState>refilled</dd:ConsumableState>
+			<dd:ConsumableState>unsupported</dd:ConsumableState>
+			<dd:ConsumableState>genuineHP</dd:ConsumableState>
+			<dd:ConsumableState>mediaPrompt</dd:ConsumableState>
+			<dd:ConsumableState>missing</dd:ConsumableState>
+</cccap:ConsumableStateSupport>
+		<cccap:MeasuredQuantityStateSupport access="readOnly">
+			<dd:MeasuredQuantityState>unknown</dd:MeasuredQuantityState>
+			<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+			<dd:MeasuredQuantityState>low</dd:MeasuredQuantityState>
+			<dd:MeasuredQuantityState>out</dd:MeasuredQuantityState>
+			<dd:MeasuredQuantityState>outOverrideActive</dd:MeasuredQuantityState>
+			<dd:MeasuredQuantityState>replaceOutStop</dd:MeasuredQuantityState>
+</cccap:MeasuredQuantityStateSupport>
+		<cccap:BrandSupport access="readOnly">
+			<dd:Brand>HP</dd:Brand>
+			<dd:Brand>clone</dd:Brand>
+			<dd:Brand>unknown</dd:Brand>
+</cccap:BrandSupport>
+		<cccap:ConsumableStateActionSupport access="readOnly">
+			<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</cccap:ConsumableStateActionSupport>
+</cccap:ConsumableLifeStateSupport>
+</cccap:ConsumableInfoCap>
+</cccap:ConsumableConfigCap>

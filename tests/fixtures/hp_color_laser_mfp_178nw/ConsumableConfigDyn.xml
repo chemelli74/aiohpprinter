@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccdyn:ConsumableConfigDyn xmlns:ccdyn="http://www.hp.com/schemas/imaging/con/ledm/consumableconfigdyn/2007/11/19" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd2="http://www.hp.com/schemas/imaging/con/dictionaries/2008/10/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/consumableconfigdyn/2007/11/19 ../schemas/ConsumableConfigDyn.xsd                                              http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd                                              http://www.hp.com/schemas/imaging/con/dictionaries/2008/10/10 ../schemas/dd2/DataDictionaryMasterLEDM.xsd">
+<dd:Version>
+	<dd:Revision>SVN-IPG-LEDM.309</dd:Revision>
+</dd:Version>
+<ccdyn:ProductConsumableInfo>
+	<ccdyn:AtVeryLowSettings>
+		<ccdyn:ConsumableSetting>
+			<dd:ConsumableLabelCode>K</dd:ConsumableLabelCode>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+</ccdyn:ConsumableSetting>
+		<ccdyn:ConsumableSetting>
+			<dd:ConsumableLabelCode>C</dd:ConsumableLabelCode>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+</ccdyn:ConsumableSetting>
+		<ccdyn:ConsumableSetting>
+			<dd:ConsumableLabelCode>M</dd:ConsumableLabelCode>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+</ccdyn:ConsumableSetting>
+		<ccdyn:ConsumableSetting>
+			<dd:ConsumableLabelCode>Y</dd:ConsumableLabelCode>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+</ccdyn:ConsumableSetting>
+</ccdyn:AtVeryLowSettings>
+</ccdyn:ProductConsumableInfo>
+<ccdyn:ConsumableInfo>
+	<dd:ConsumableLabelCode>K</dd:ConsumableLabelCode>
+	<dd:ConsumableLifeState>
+		<dd:ConsumableState>ok</dd:ConsumableState>
+		<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+		<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+		<dd:IsSETUP>true</dd:IsSETUP>
+</dd:ConsumableLifeState>
+	<dd:ConsumablePercentageLevelRemaining>70</dd:ConsumablePercentageLevelRemaining>
+	<dd:ConsumableSelectibilityNumber>W2070A</dd:ConsumableSelectibilityNumber>
+	<dd:ConsumableTypeEnum>toner</dd:ConsumableTypeEnum>
+	<dd:ProductNumber>W2070A</dd:ProductNumber>
+	<ccdyn:ConsumablePersistentState>
+		<dd:ConsumableLabelCode>K</dd:ConsumableLabelCode>
+</ccdyn:ConsumablePersistentState>
+	<dd:ConsumableStateAvailableActions>
+		<dd:ConsumableState>newGenuineHP</dd:ConsumableState>
+		<dd:SupportedActions>
+			<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</dd:SupportedActions>
+		<dd:DefaultAction>continue</dd:DefaultAction>
+</dd:ConsumableStateAvailableActions>
+	<dd:ConsumableUniqueID>REDACTED</dd:ConsumableUniqueID>
+</ccdyn:ConsumableInfo>
+<ccdyn:ConsumableInfo>
+	<dd:ConsumableLabelCode>C</dd:ConsumableLabelCode>
+	<dd:ConsumableLifeState>
+		<dd:ConsumableState>ok</dd:ConsumableState>
+		<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+		<dd:Brand>  </dd:Brand>
+		<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+		<dd:IsSETUP>false</dd:IsSETUP>
+</dd:ConsumableLifeState>
+	<dd:ConsumablePercentageLevelRemaining>90</dd:ConsumablePercentageLevelRemaining>
+	<dd:ConsumableSelectibilityNumber>W2071A</dd:ConsumableSelectibilityNumber>
+	<dd:ConsumableTypeEnum>toner</dd:ConsumableTypeEnum>
+	<dd:ProductNumber>W2071A</dd:ProductNumber>
+	<ccdyn:ConsumablePersistentState>
+		<dd:ConsumableLabelCode>C</dd:ConsumableLabelCode>
+</ccdyn:ConsumablePersistentState>
+	<dd:ConsumableStateAvailableActions>
+		<dd:ConsumableState>newGenuineHP</dd:ConsumableState>
+		<dd:SupportedActions>
+			<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</dd:SupportedActions>
+		<dd:DefaultAction>continue</dd:DefaultAction>
+</dd:ConsumableStateAvailableActions>
+	<dd:ConsumableUniqueID>REDACTED</dd:ConsumableUniqueID>
+</ccdyn:ConsumableInfo>
+<ccdyn:ConsumableInfo>
+	<dd:ConsumableLabelCode>M</dd:ConsumableLabelCode>
+	<dd:ConsumableLifeState>
+		<dd:ConsumableState>ok</dd:ConsumableState>
+		<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+		<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+		<dd:IsSETUP>true</dd:IsSETUP>
+</dd:ConsumableLifeState>
+	<dd:ConsumablePercentageLevelRemaining>80</dd:ConsumablePercentageLevelRemaining>
+	<dd:ConsumableSelectibilityNumber>W2073A</dd:ConsumableSelectibilityNumber>
+	<dd:ConsumableTypeEnum>toner</dd:ConsumableTypeEnum>
+	<dd:ProductNumber>W2073A</dd:ProductNumber>
+	<ccdyn:ConsumablePersistentState>
+		<dd:ConsumableLabelCode>M</dd:ConsumableLabelCode>
+</ccdyn:ConsumablePersistentState>
+	<dd:ConsumableStateAvailableActions>
+		<dd:ConsumableState>newGenuineHP</dd:ConsumableState>
+		<dd:SupportedActions>
+			<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</dd:SupportedActions>
+		<dd:DefaultAction>continue</dd:DefaultAction>
+</dd:ConsumableStateAvailableActions>
+	<dd:ConsumableUniqueID>REDACTED</dd:ConsumableUniqueID>
+</ccdyn:ConsumableInfo>
+<ccdyn:ConsumableInfo>
+	<dd:ConsumableLabelCode>Y</dd:ConsumableLabelCode>
+	<dd:ConsumableLifeState>
+		<dd:ConsumableState>low</dd:ConsumableState>
+		<dd:MeasuredQuantityState>low</dd:MeasuredQuantityState>
+		<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+		<dd:IsSETUP>true</dd:IsSETUP>
+</dd:ConsumableLifeState>
+	<dd:ConsumablePercentageLevelRemaining>10</dd:ConsumablePercentageLevelRemaining>
+	<dd:ConsumableSelectibilityNumber>W2072A</dd:ConsumableSelectibilityNumber>
+	<dd:ConsumableTypeEnum>toner</dd:ConsumableTypeEnum>
+	<dd:ProductNumber>W2072A</dd:ProductNumber>
+	<ccdyn:ConsumablePersistentState>
+		<dd:ConsumableLabelCode>Y</dd:ConsumableLabelCode>
+</ccdyn:ConsumablePersistentState>
+	<dd:ConsumableStateAvailableActions>
+		<dd:ConsumableState>newGenuineHP</dd:ConsumableState>
+		<dd:SupportedActions>
+			<dd:ConsumableStateAction>stop</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>continue</dd:ConsumableStateAction>
+			<dd:ConsumableStateAction>acknowledge</dd:ConsumableStateAction>
+</dd:SupportedActions>
+		<dd:DefaultAction>continue</dd:DefaultAction>
+</dd:ConsumableStateAvailableActions>
+	<dd:ConsumableUniqueID>REDACTED</dd:ConsumableUniqueID>
+</ccdyn:ConsumableInfo>
+</ccdyn:ConsumableConfigDyn>
