@@ -35,16 +35,16 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aiohttp", specifier = ">=3.14.0" },
+    { name = "aiohttp", specifier = ">=3.14.5" },
     { name = "defusedxml", specifier = ">=0.7.1,<1" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "colorlog" },
-    { name = "pytest", specifier = ">=9.0,<10" },
+    { name = "pytest", specifier = ">=9.1.1,<10" },
     { name = "pytest-anyio" },
-    { name = "pytest-cov", specifier = ">=5,<8" },
+    { name = "pytest-cov", specifier = ">=7.1.0,<8" },
     { name = "types-defusedxml" },
 ]
 
