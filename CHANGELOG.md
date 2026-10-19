@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0 (2026-10-19)
+
+### Refactoring
+
+- Move hpprinterdata.consumables to dict ([`837d249`](https://github.com/chemelli74/aiohpprinter/commit/837d249bb6bdb933c8477998aa003f1dc28f351d))
+
+
 ## v1.1.0 (2026-10-19)
 
 ### Features
