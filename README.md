@@ -65,7 +65,7 @@ async def main() -> None:
         print(data.online)
         if data.device:
             print(data.device.make_and_model)
-        for consumable in data.consumables:
+        for consumable in data.consumables.values():
             print(consumable.consumable_id, consumable.percentage_level_remaining)
 
 

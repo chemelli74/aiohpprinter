@@ -369,7 +369,7 @@ async def test_update_tolerates_missing_optional_endpoints(
     assert data.online is True
     assert to_json_safe(data.device) == expected["device"]
     assert to_json_safe(data.status) == expected["status"]
-    assert data.consumables == []
+    assert data.consumables == {}
     assert data.printer_usage is None
     assert data.scanner_usage is None
     assert data.copy_usage is None

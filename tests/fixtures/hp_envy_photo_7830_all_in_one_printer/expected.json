@@ -11,8 +11,8 @@
   "status": {
     "device_status": "trayempty"
   },
-  "consumables": [
-    {
+  "consumables": {
+    "CMY": {
       "consumable_id": "CMY",
       "consumable_type": "inkCartridge",
       "marker_color": "CyanMagentaYellow",
@@ -37,7 +37,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     },
-    {
+    "K": {
       "consumable_id": "K",
       "consumable_type": "inkCartridge",
       "marker_color": "Black",
@@ -62,7 +62,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     }
-  ],
+  },
   "printer_usage": {
     "total_impressions": 4053,
     "monochrome_impressions": 0,

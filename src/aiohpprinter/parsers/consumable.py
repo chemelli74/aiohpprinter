@@ -41,8 +41,8 @@ _USAGE_ROOT_PATH = "ProductUsageDyn.ConsumableSubunit.Consumable"
 def parse_consumables(
     config_document: dict[str, Any] | None,
     usage_document: dict[str, Any] | None,
-) -> list[HpConsumable]:
-    """Build the merged list of consumables from the two source documents."""
+) -> dict[str, HpConsumable]:
+    """Build the merged consumables, keyed by `consumable_id`, from both documents."""
     consumables: dict[str, HpConsumable] = {}
 
     for item in _as_list(get_path(config_document, _CONFIG_ROOT_PATH)):
@@ -60,7 +60,7 @@ def parse_consumables(
             _merge(existing, usage) if existing is not None else usage
         )
 
-    return [consumables[key] for key in sorted(consumables)]
+    return {key: consumables[key] for key in sorted(consumables)}
 
 
 def _as_list(value: Any) -> list[Any]:  # noqa: ANN401
