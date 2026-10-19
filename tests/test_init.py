@@ -5,6 +5,8 @@
 
 from __future__ import annotations
 
+from enum import StrEnum
+
 import aiohpprinter
 
 
@@ -12,6 +14,8 @@ def test_public_api_is_importable() -> None:
     """The documented public objects are importable from the package root."""
     assert isinstance(aiohpprinter.__version__, str)
     assert aiohpprinter.HpPrinter is not None
+    assert issubclass(aiohpprinter.HpDeviceStatus, StrEnum)
+    assert issubclass(aiohpprinter.HpConsumableColor, StrEnum)
     assert issubclass(aiohpprinter.HpPrinterError, Exception)
     errors = aiohpprinter.HpPrinterError
     assert issubclass(aiohpprinter.HpPrinterConnectionError, errors)
