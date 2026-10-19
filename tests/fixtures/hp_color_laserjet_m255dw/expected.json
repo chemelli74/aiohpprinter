@@ -138,7 +138,10 @@
     "color_impressions": null
   },
   "fax_usage": {
-    "total_impressions": null
+    "total_impressions": null,
+    "adf_images": null,
+    "flatbed_images": null,
+    "images_received_from_pc": null
   },
   "adapters": [
     {

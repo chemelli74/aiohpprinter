@@ -88,7 +88,10 @@
     "color_impressions": 62
   },
   "fax_usage": {
-    "total_impressions": 0
+    "total_impressions": 0,
+    "adf_images": 0,
+    "flatbed_images": 0,
+    "images_received_from_pc": 0
   },
   "adapters": [
     {

@@ -64,4 +64,7 @@ def parse_fax_usage(document: dict[str, Any]) -> HpFaxUsage:
 
     return HpFaxUsage(
         total_impressions=integer(subunit, "TotalImpressions"),
+        adf_images=integer(subunit, "AdfImages"),
+        flatbed_images=integer(subunit, "FlatbedImages"),
+        images_received_from_pc=integer(subunit, "ImagesReceivedFromPC"),
     )

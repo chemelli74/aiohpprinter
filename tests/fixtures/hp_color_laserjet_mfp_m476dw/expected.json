@@ -1,0 +1,172 @@
+{
+  "device": {
+    "make_and_model": "HP Color LaserJet MFP M476dw",
+    "make_and_model_family": null,
+    "sku_identifier": null,
+    "serial_number": "REDACTED",
+    "product_number": "CF387A",
+    "manufacturer_name": null,
+    "manufactured_at": null
+  },
+  "status": {
+    "device_status": "inpowersave"
+  },
+  "consumables": {
+    "C": {
+      "consumable_id": "C",
+      "consumable_type": "toner",
+      "marker_color": "Cyan",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": null,
+      "percentage_level_remaining": 50.0,
+      "raw_percentage_level_remaining": 53.0,
+      "estimated_pages_remaining": 600,
+      "max_capacity": 20.0,
+      "selectibility_number": "312A",
+      "manufacturer_name": null,
+      "manufactured_at": "2018-08-08T00:00:00",
+      "installed_at": "2020-01-13T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "CF381A",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 537
+    },
+    "K": {
+      "consumable_id": "K",
+      "consumable_type": "toner",
+      "marker_color": "Black",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": null,
+      "percentage_level_remaining": 10.0,
+      "raw_percentage_level_remaining": 15.0,
+      "estimated_pages_remaining": 200,
+      "max_capacity": 21.0,
+      "selectibility_number": "312A",
+      "manufacturer_name": null,
+      "manufactured_at": "2017-08-01T00:00:00",
+      "installed_at": "2018-03-31T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "CF380A",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 1211
+    },
+    "M": {
+      "consumable_id": "M",
+      "consumable_type": "toner",
+      "marker_color": "Magenta",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": null,
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 41.0,
+      "estimated_pages_remaining": 400,
+      "max_capacity": 20.0,
+      "selectibility_number": "312A",
+      "manufacturer_name": null,
+      "manufactured_at": "2018-07-31T00:00:00",
+      "installed_at": "2019-01-31T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "CF383A",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 627
+    },
+    "Y": {
+      "consumable_id": "Y",
+      "consumable_type": "toner",
+      "marker_color": "Yellow",
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": null,
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 44.0,
+      "estimated_pages_remaining": 450,
+      "max_capacity": 20.0,
+      "selectibility_number": "312A",
+      "manufacturer_name": null,
+      "manufactured_at": "2018-08-01T00:00:00",
+      "installed_at": "2019-03-05T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": "REDACTED",
+      "product_number": "CF382A",
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": 626
+    }
+  },
+  "printer_usage": {
+    "total_impressions": 1547,
+    "monochrome_impressions": 569,
+    "color_impressions": 978,
+    "simplex_sheets": null,
+    "duplex_sheets": 272,
+    "jam_events": 0,
+    "mispick_events": 2
+  },
+  "scanner_usage": {
+    "scan_images": null,
+    "adf_images": 401,
+    "duplex_sheets": null,
+    "flatbed_images": 217,
+    "jam_events": 5,
+    "mispick_events": null
+  },
+  "copy_usage": {
+    "total_impressions": 288,
+    "adf_images": 123,
+    "flatbed_images": 135,
+    "monochrome_impressions": 164,
+    "color_impressions": 124
+  },
+  "fax_usage": {
+    "total_impressions": 2,
+    "adf_images": 57,
+    "flatbed_images": 0,
+    "images_received_from_pc": 0
+  },
+  "adapters": [
+    {
+      "name": "eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": true
+    },
+    {
+      "name": "wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": false
+    },
+    {
+      "name": "wifiUAP",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": null
+    }
+  ],
+  "eprint": {
+    "printer_id": null,
+    "is_registered": true,
+    "cloud_services_enabled": null
+  },
+  "wifi": {
+    "ssid_prefix": null,
+    "connection_method": null
+  }
+}

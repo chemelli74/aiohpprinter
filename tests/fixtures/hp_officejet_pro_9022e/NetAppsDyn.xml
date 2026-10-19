@@ -7,7 +7,7 @@
 	</dd:Version>
 	<nadyn:DNSSDConfig>
 		<dd:MDNSSupport>enabled</dd:MDNSSupport>
-		<dd:ApplicationServiceName>HP OfficeJet Pro 9020 series [CB9AB2]</dd:ApplicationServiceName>
+		<dd:ApplicationServiceName>REDACTED</dd:ApplicationServiceName>
 		<dd3:DomainName>REDACTED</dd3:DomainName>
 		<dd:DNSSDPrintPreferredService>IPP</dd:DNSSDPrintPreferredService>
 	</nadyn:DNSSDConfig>
