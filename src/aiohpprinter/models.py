@@ -193,6 +193,9 @@ class HpFaxUsage:
     """Cumulative page counters for the fax application."""
 
     total_impressions: int | None = None
+    adf_images: int | None = None
+    flatbed_images: int | None = None
+    images_received_from_pc: int | None = None
 
 
 @dataclass(frozen=True, slots=True)

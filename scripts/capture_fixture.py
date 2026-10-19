@@ -76,8 +76,8 @@ SENSITIVE_NAMES = re.compile(
     r"\w*SerialNumber|PrinterID|\w*UUID|\w*Unique\w*ID|"
     r"ConsumableID|ConsumableRawData|\w*Signature|"
     r"MacAddress|HardwareAddress|\w*BSSID|SSID|"
-    r"IP(v[46])?Address|\w*Gateway|DNSServer\w*|"
-    r"Host[Nn]ame|DomainName|FQDN|BonjourServiceName|"
+    r"\w*IP(v[46])?Address|\w*Gateway|DNSServer\w*|ConfigurationServer|"
+    r"\w*Hostname|DomainName|FQDN|\w*ServiceName|"
     r"\w*UserID|\w*UserName|\w*JobName|"
     r"\w*EmailAddress|Email|(?!Show)\w*Passphrase|\w*Password|PreSharedKey|PIN|"
     r"FriendlyName|\w*Contact\w*|Location|DeviceLocation|AssetNumber|CompanyName|"
@@ -85,6 +85,9 @@ SENSITIVE_NAMES = re.compile(
     r"\w*PhoneNumber|FaxForwardingNumber"
     r")$"
 )
+#: A `ResourceURI` value that is a bare host rather than a path or URL
+#: (e.g. the proxy entries in `NetAppsDyn.xml`).
+BARE_HOST_URI = re.compile(r"^(?!/)(?![\w+.-]*://)\S+$")
 #: IP-literal hosts in URLs (e.g. the EWS `ResourceURI` entries).
 URL_IP_HOST = re.compile(r"(?i)(?<=://)(\[[0-9a-f:.%]+\]|(?:\d{1,3}\.){3}\d{1,3})")
 #: Compressed IPv6 addresses; link-local ones embed the printer's MAC.
@@ -96,6 +99,9 @@ XML_ELEMENT = re.compile(
     r"(?P<value>(?:[^<]|<!\[CDATA\[.*?\]\]>)+)(</)",
     re.DOTALL,
 )
+#: A CDATA section, whose body some documents use to embed whole XML
+#: documents (e.g. `ShopForSupplies.xml`'s `DeviceInfoData`).
+XML_CDATA = re.compile(r"<!\[CDATA\[(?P<body>.*?)\]\]>", re.DOTALL)
 #: Opening/self-closing tags, excluding closing tags, comments and CDATA.
 XML_TAG = re.compile(r"<[^!?/][^>]*>")
 #: A `name="value"` attribute assignment inside a tag.
@@ -187,7 +193,11 @@ def sanitize_xml(content: str) -> str:
     """Redact identifying element values and attributes, keeping the structure."""
 
     def _replace_element(match: re.Match[str]) -> str:
-        if not SENSITIVE_NAMES.match(match["name"]) or not match["value"].strip():
+        if not (value := match["value"].strip()):
+            return match[0]
+        if not SENSITIVE_NAMES.match(match["name"]) and not (
+            match["name"] == "ResourceURI" and BARE_HOST_URI.match(value)
+        ):
             return match[0]
         return f"{match[1]}{REDACTED}{match[4]}"
 
@@ -199,6 +209,10 @@ def sanitize_xml(content: str) -> str:
     def _replace_tag_attributes(match: re.Match[str]) -> str:
         return XML_ATTRIBUTE.sub(_replace_attribute, match[0])
 
+    def _replace_cdata(match: re.Match[str]) -> str:
+        return f"<![CDATA[{sanitize_xml(match['body'])}]]>"
+
+    content = XML_CDATA.sub(_replace_cdata, content)
     content = XML_ELEMENT.sub(_replace_element, content)
     content = XML_TAG.sub(_replace_tag_attributes, content)
     return redact_addresses(content)
