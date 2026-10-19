@@ -12,10 +12,58 @@ generation determine which elements a given model actually reports.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from enum import StrEnum
 from typing import TYPE_CHECKING
+
+from .const import _LOGGER
 
 if TYPE_CHECKING:
     from datetime import datetime
+
+
+class HpDeviceStatus(StrEnum):
+    """Known printer status categories, as snake_case values."""
+
+    CANCEL_JOB = "cancel_job"
+    COPYING = "copying"
+    IN_POWER_SAVE = "in_power_save"
+    OFF = "off"
+    PROCESSING = "processing"
+    READY = "ready"
+    SCAN_PROCESSING = "scan_processing"
+    TRAY_EMPTY = "tray_empty"
+
+
+class HpConsumableColor(StrEnum):
+    """Colors of the ink/toner consumables, as snake_case values."""
+
+    CYAN = "cyan"
+    MAGENTA = "magenta"
+    YELLOW = "yellow"
+    BLACK = "black"
+    TRI_COLOR = "tri_color"
+
+
+# Raw `StatusCategory` values, lowercased by the status parser.
+_DEVICE_STATUSES = {
+    "canceljob": HpDeviceStatus.CANCEL_JOB,
+    "copying": HpDeviceStatus.COPYING,
+    "inpowersave": HpDeviceStatus.IN_POWER_SAVE,
+    "off": HpDeviceStatus.OFF,
+    "processing": HpDeviceStatus.PROCESSING,
+    "ready": HpDeviceStatus.READY,
+    "scanprocessing": HpDeviceStatus.SCAN_PROCESSING,
+    "trayempty": HpDeviceStatus.TRAY_EMPTY,
+}
+
+# Consumable label codes, see `const.MARKER_COLOR_TO_LABEL_CODE`.
+_CONSUMABLE_COLORS = {
+    "C": HpConsumableColor.CYAN,
+    "M": HpConsumableColor.MAGENTA,
+    "Y": HpConsumableColor.YELLOW,
+    "K": HpConsumableColor.BLACK,
+    "CMY": HpConsumableColor.TRI_COLOR,
+}
 
 
 @dataclass(frozen=True, slots=True)
@@ -46,6 +94,15 @@ class HpPrinterStatus:
     def is_off(self) -> bool:
         """Return whether the printer is powered off or unreachable."""
         return self.device_status is None or self.device_status == "off"
+
+    @property
+    def status(self) -> HpDeviceStatus | None:
+        """Return the status as a known category, or `None` if unknown."""
+        if self.device_status is None:
+            return None
+        if (status := _DEVICE_STATUSES.get(self.device_status)) is None:
+            _LOGGER.debug("Unknown device status: %s", self.device_status)
+        return status
 
 
 @dataclass(frozen=True, slots=True)
@@ -85,6 +142,14 @@ class HpConsumable:
     def is_ok(self) -> bool:
         """Return whether the consumable reports a healthy life state."""
         return self.state in {"ok", "newGenuineHP"}
+
+    @property
+    def color(self) -> HpConsumableColor | None:
+        """Return the color of an ink/toner consumable, `None` for others.
+
+        Consumables without a color, such as printheads, return `None`.
+        """
+        return _CONSUMABLE_COLORS.get(self.consumable_id)
 
 
 @dataclass(frozen=True, slots=True)

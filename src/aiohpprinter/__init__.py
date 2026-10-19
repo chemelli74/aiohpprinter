@@ -15,7 +15,9 @@ from .exceptions import (
 from .models import (
     HpAdapter,
     HpConsumable,
+    HpConsumableColor,
     HpCopyUsage,
+    HpDeviceStatus,
     HpEPrint,
     HpFaxUsage,
     HpPrinterData,
@@ -31,7 +33,9 @@ __version__ = "1.0.1"
 __all__ = [
     "HpAdapter",
     "HpConsumable",
+    "HpConsumableColor",
     "HpCopyUsage",
+    "HpDeviceStatus",
     "HpEPrint",
     "HpFaxUsage",
     "HpPrinter",
