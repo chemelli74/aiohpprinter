@@ -11,8 +11,8 @@
   "status": {
     "device_status": "inpowersave"
   },
-  "consumables": [
-    {
+  "consumables": {
+    "C": {
       "consumable_id": "C",
       "consumable_type": "toner",
       "marker_color": "Cyan",
@@ -37,7 +37,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 1552
     },
-    {
+    "K": {
       "consumable_id": "K",
       "consumable_type": "toner",
       "marker_color": "Black",
@@ -62,7 +62,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 2220
     },
-    {
+    "M": {
       "consumable_id": "M",
       "consumable_type": "toner",
       "marker_color": "Magenta",
@@ -87,7 +87,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 1376
     },
-    {
+    "Y": {
       "consumable_id": "Y",
       "consumable_type": "toner",
       "marker_color": "Yellow",
@@ -112,7 +112,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 1552
     }
-  ],
+  },
   "printer_usage": {
     "total_impressions": 1344,
     "monochrome_impressions": 452,

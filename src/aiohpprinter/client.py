@@ -147,8 +147,8 @@ class HpPrinter:
 
         return parse_status(document)
 
-    async def consumables(self) -> list[HpConsumable]:
-        """Fetch the merged list of ink/toner consumables."""
+    async def consumables(self) -> dict[str, HpConsumable]:
+        """Fetch the merged ink/toner consumables, keyed by `consumable_id`."""
         config_document = await self._request(ENDPOINT_CONSUMABLE_CONFIG)
         usage_document = await self._request(ENDPOINT_PRODUCT_USAGE)
 

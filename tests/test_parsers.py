@@ -141,8 +141,8 @@ def test_consumables_merges_config_only_entry() -> None:
 
     consumables = parse_consumables(config, None)
 
-    assert [c.consumable_id for c in consumables] == ["K"]
-    assert consumables[0].marker_color is None
+    assert list(consumables) == ["K"]
+    assert consumables["K"].marker_color is None
 
 
 def test_consumables_merges_usage_only_entry() -> None:
@@ -155,8 +155,8 @@ def test_consumables_merges_usage_only_entry() -> None:
 
     consumables = parse_consumables(None, usage)
 
-    assert [c.consumable_id for c in consumables] == ["K"]
-    assert consumables[0].consumable_type is None
+    assert list(consumables) == ["K"]
+    assert consumables["K"].consumable_type is None
 
 
 def test_consumables_falls_back_to_raw_marker_color_when_unmapped() -> None:
@@ -169,12 +169,12 @@ def test_consumables_falls_back_to_raw_marker_color_when_unmapped() -> None:
 
     consumables = parse_consumables(None, usage)
 
-    assert [c.consumable_id for c in consumables] == ["LightCyan"]
+    assert list(consumables) == ["LightCyan"]
 
 
 def test_consumables_with_no_documents_is_empty() -> None:
-    """Both consumable endpoints missing yields an empty list, not an error."""
-    assert parse_consumables(None, None) == []
+    """Both consumable endpoints missing yields an empty mapping, not an error."""
+    assert parse_consumables(None, None) == {}
 
 
 def test_consumables_skips_usage_item_without_marker_color() -> None:
@@ -185,7 +185,7 @@ def test_consumables_skips_usage_item_without_marker_color() -> None:
         "</ConsumableSubunit></ProductUsageDyn>"
     )
 
-    assert parse_consumables(None, usage) == []
+    assert parse_consumables(None, usage) == {}
 
 
 def test_consumables_skips_config_item_without_label_code() -> None:
@@ -196,14 +196,14 @@ def test_consumables_skips_config_item_without_label_code() -> None:
         "</ConsumableConfigDyn>"
     )
 
-    assert parse_consumables(config, None) == []
+    assert parse_consumables(config, None) == {}
 
 
 def test_consumables_skips_non_dict_config_entries() -> None:
     """A malformed, non-object `ConsumableInfo` entry is skipped, not raised."""
     config = {"ConsumableConfigDyn": {"ConsumableInfo": ["not-an-object"]}}
 
-    assert parse_consumables(config, None) == []
+    assert parse_consumables(config, None) == {}
 
 
 def test_adapters_returns_empty_list_when_section_is_absent() -> None:

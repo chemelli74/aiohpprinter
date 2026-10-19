@@ -26,8 +26,8 @@
   "fax_usage": {
     "total_impressions": null
   },
-  "consumables": [
-    {
+  "consumables": {
+    "C": {
       "consumable_id": "C",
       "consumable_type": "toner",
       "marker_color": "Cyan",
@@ -52,7 +52,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 339
     },
-    {
+    "K": {
       "consumable_id": "K",
       "consumable_type": "toner",
       "marker_color": "Black",
@@ -77,7 +77,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 844
     },
-    {
+    "M": {
       "consumable_id": "M",
       "consumable_type": "toner",
       "marker_color": "Magenta",
@@ -102,7 +102,7 @@
       "genuine_refilled_count": null,
       "total_impressions": 339
     },
-    {
+    "Y": {
       "consumable_id": "Y",
       "consumable_type": "toner",
       "marker_color": "Yellow",
@@ -127,5 +127,5 @@
       "genuine_refilled_count": null,
       "total_impressions": 339
     }
-  ]
+  }
 }

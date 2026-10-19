@@ -225,7 +225,7 @@ class HpWifi:
 class HpPrinterData:
     """Aggregate snapshot of everything :meth:`HpPrinter.update` collected.
 
-    Every section besides ``online`` is `None` (or an empty list) when its
+    Every section besides ``online`` is `None` (or empty) when its
     endpoint is not supported by this printer model, or could not be
     retrieved on this update cycle - see the client's optional-endpoint
     handling for details.
@@ -234,7 +234,7 @@ class HpPrinterData:
     online: bool
     device: HpPrinterDevice | None = None
     status: HpPrinterStatus | None = None
-    consumables: list[HpConsumable] = field(default_factory=list)
+    consumables: dict[str, HpConsumable] = field(default_factory=dict)
     printer_usage: HpPrinterUsage | None = None
     scanner_usage: HpScannerUsage | None = None
     copy_usage: HpCopyUsage | None = None

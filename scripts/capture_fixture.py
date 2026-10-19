@@ -285,6 +285,9 @@ def to_json_safe(value: Any) -> Any:  # noqa: ANN401
         }
     if isinstance(value, list):
         return [to_json_safe(item) for item in value]
+
+    if isinstance(value, dict):
+        return {key: to_json_safe(item) for key, item in value.items()}
     if isinstance(value, datetime):
         return value.isoformat()
     return value

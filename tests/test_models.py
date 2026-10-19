@@ -96,7 +96,7 @@ def test_printer_data_defaults_to_empty_optional_sections() -> None:
 
     assert data.device is None
     assert data.status is None
-    assert data.consumables == []
+    assert data.consumables == {}
     assert data.printer_usage is None
     assert data.scanner_usage is None
     assert data.copy_usage is None

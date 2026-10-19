@@ -11,8 +11,8 @@
   "status": {
     "device_status": "inpowersave"
   },
-  "consumables": [
-    {
+  "consumables": {
+    "C": {
       "consumable_id": "C",
       "consumable_type": "ink",
       "marker_color": "Cyan",
@@ -37,7 +37,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     },
-    {
+    "CMYK": {
       "consumable_id": "CMYK",
       "consumable_type": "printhead",
       "marker_color": null,
@@ -62,7 +62,7 @@
       "genuine_refilled_count": null,
       "total_impressions": null
     },
-    {
+    "K": {
       "consumable_id": "K",
       "consumable_type": "ink",
       "marker_color": "Black",
@@ -87,7 +87,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     },
-    {
+    "M": {
       "consumable_id": "M",
       "consumable_type": "ink",
       "marker_color": "Magenta",
@@ -112,7 +112,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     },
-    {
+    "Y": {
       "consumable_id": "Y",
       "consumable_type": "ink",
       "marker_color": "Yellow",
@@ -137,7 +137,7 @@
       "genuine_refilled_count": 0,
       "total_impressions": null
     }
-  ],
+  },
   "printer_usage": {
     "total_impressions": 875,
     "monochrome_impressions": 226,
