@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.0 (2026-10-19)
+
+### Features
+
+- Add snake_case status and consumable color enums ([`bc8fb9d`](https://github.com/chemelli74/aiohpprinter/commit/bc8fb9dea7d876511d0a0c446d4242306e7ba165))
+
+
+### Build system
+
+- Stop bumping the python minor/major version ([`58edf7e`](https://github.com/chemelli74/aiohpprinter/commit/58edf7e4636c4faa8305a553930fda3c8662fc83))
+- Bump multidict from 6.9.0 to 6.9.1 in the uv group across 1 directory ([`46cd85e`](https://github.com/chemelli74/aiohpprinter/commit/46cd85eb88be6c3acc961fef6e1a98d276291fdb))
+
+
 ## v1.0.1 (2026-10-18)
 
 ### Bug fixes
