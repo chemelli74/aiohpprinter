@@ -173,7 +173,7 @@ def test_consumables_falls_back_to_raw_marker_color_when_unmapped() -> None:
 
 
 def test_consumables_with_no_documents_is_empty() -> None:
-    """Both consumable endpoints missing yields an empty list, not an error."""
+    """Both consumable endpoints missing yields an empty mapping, not an error."""
     assert parse_consumables(None, None) == {}
 
 
