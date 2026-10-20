@@ -55,11 +55,14 @@ Install this via pip (or your favourite package manager):
 ```python
 import asyncio
 
+import aiohttp
+
 from aiohpprinter import HpPrinter
 
 
 async def main() -> None:
-    async with HpPrinter("192.168.1.100") as printer:
+    async with aiohttp.ClientSession() as session:
+        printer = HpPrinter("192.168.1.100", session)
         data = await printer.update()
 
         print(data.online)
@@ -83,25 +86,10 @@ of data, or that want failures raised instead of absorbed (see
 
 ## Session handling
 
-`HpPrinter` accepts an optional `session: aiohttp.ClientSession`:
-
-- **No session given**: `HpPrinter` creates its own `aiohttp.ClientSession`
-  when entering `async with`, and closes it automatically on exit (or when
-  `close()` is called explicitly). Use this for a standalone script.
-- **Session injected**: the caller owns that session and is responsible for
-  closing it - `HpPrinter` never closes a session it did not create. This is
-  the recommended mode for an application such as Home Assistant that
-  manages one shared session and its connection pooling itself.
-
-```python
-import aiohttp
-
-async with aiohttp.ClientSession() as session:
-    async with HpPrinter("192.168.1.100", session=session) as printer:
-        device = await printer.device()
-
-    # `session` is still open here; `printer`'s own state was released.
-```
+`HpPrinter` requires an `aiohttp.ClientSession`, and the caller owns it:
+create it, share it between clients if you like (e.g. Home Assistant's
+shared session) and close it when done. `HpPrinter` never closes it and
+holds no other resources, so it needs no `close()` or `async with`.
 
 ## Supported HP functionality
 

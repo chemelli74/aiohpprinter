@@ -46,8 +46,7 @@ from .xml import parse_document, parse_json_document
 
 if TYPE_CHECKING:
     from collections.abc import Awaitable, Callable
-    from types import TracebackType
-    from typing import Any, Self
+    from typing import Any
 
     from .models import (
         HpAdapter,
@@ -66,19 +65,14 @@ if TYPE_CHECKING:
 class HpPrinter:
     """Async client for an HP printer's embedded web server (EWS).
 
-    Session ownership: when no `session` is given, `HpPrinter` creates and
-    owns an `aiohttp.ClientSession` for the lifetime of the `async with`
-    block (or until :meth:`close` is called). When a `session` is injected
-    - the recommended approach for applications such as Home Assistant that
-    manage their own connection pooling - the caller owns it and remains
-    responsible for closing it; `HpPrinter` never closes a session it did
-    not create.
+    The caller owns `session`: create it, share it if you like (e.g. Home
+    Assistant's shared session) and close it. `HpPrinter` never closes it.
     """
 
     def __init__(
         self,
         host: str,
-        session: aiohttp.ClientSession | None = None,
+        session: aiohttp.ClientSession,
         *,
         port: int = DEFAULT_PORT,
         ssl: bool = False,
@@ -90,35 +84,12 @@ class HpPrinter:
         self._ssl = ssl
         self._timeout = timeout
         self._session = session
-        self._owns_session = session is None
 
     @property
     def base_url(self) -> str:
         """Return the printer's EWS base URL."""
         protocol = "https" if self._ssl else "http"
         return f"{protocol}://{self._host}:{self._port}"
-
-    async def __aenter__(self) -> Self:
-        """Open the client, creating a session if none was injected."""
-        if self._session is None:
-            self._session = aiohttp.ClientSession()
-
-        return self
-
-    async def __aexit__(
-        self,
-        exc_type: type[BaseException] | None,
-        exc: BaseException | None,
-        traceback: TracebackType | None,
-    ) -> None:
-        """Close the client, releasing only a session it created itself."""
-        await self.close()
-
-    async def close(self) -> None:
-        """Close the underlying session, if this client owns it."""
-        if self._owns_session and self._session is not None:
-            await self._session.close()
-            self._session = None
 
     async def is_online(self) -> bool:
         """Return whether the printer currently responds to status requests.
@@ -287,13 +258,6 @@ class HpPrinter:
 
     async def _request(self, endpoint: str) -> dict[str, Any]:
         """Fetch `endpoint` and parse it into a nested dict document."""
-        if self._session is None:
-            message = (
-                "HpPrinter has no active session; "
-                "use it as an async context manager or inject one"
-            )
-            raise HpPrinterConnectionError(message)
-
         url = f"{self.base_url}{endpoint}"
 
         try:
