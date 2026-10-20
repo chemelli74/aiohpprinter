@@ -72,7 +72,7 @@ async def main() -> None:
         if data.status:
             print(f"{'Status:':>24} {data.status.device_status}")
 
-        for consumable in data.consumables:
+        for consumable in data.consumables.values():
             print("-" * 20)
             print(f"{'Consumable:':>24} {consumable.consumable_id}")
             print(f"{'Type:':>24} {consumable.consumable_type}")
