@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.0.0 (2026-10-20)
+
+### Refactoring
+
+- Require an injected aiohttp session ([`d6d629c`](https://github.com/chemelli74/aiohpprinter/commit/d6d629cf8fae825801307d4fd82cb97b06dea922))
+
+
+### Testing
+
+- Add hp color laserjet mfp m476dw fixtures ([`5972dc9`](https://github.com/chemelli74/aiohpprinter/commit/5972dc9ad656989d238e81e3a38ffcaeb55dee5f))
+
+
 ## v2.0.0 (2026-10-19)
 
 ### Refactoring
