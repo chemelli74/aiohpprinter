@@ -10,6 +10,7 @@ from aiohttp import ClientTimeout
 _LOGGER = logging.getLogger(__package__)
 
 DEFAULT_PORT = 80
+DEFAULT_SSL_PORT = 443
 DEFAULT_TIMEOUT = ClientTimeout(total=10)
 
 # HP embedded web server (EWS) DevMgmt/ePrint/IoMgmt endpoints. These are the

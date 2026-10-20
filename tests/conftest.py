@@ -8,12 +8,13 @@ from __future__ import annotations
 import asyncio
 import dataclasses
 import json
+import ssl
 from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, cast
 
 import pytest
-from aiohttp import ClientSession, ClientTimeout, web
+from aiohttp import ClientSession, ClientTimeout, TCPConnector, web
 from aiohttp.test_utils import TestServer
 
 from aiohpprinter.client import HpPrinter
@@ -33,6 +34,10 @@ if TYPE_CHECKING:
     from collections.abc import AsyncGenerator, Awaitable, Callable
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
+#: A test CA and a `127.0.0.1` server certificate it signed. The CA key was
+#: discarded; regenerate both with `openssl` if they ever need to change.
+CERTS_DIR = Path(__file__).parent / "certs"
+CA_CERT = CERTS_DIR / "ca.pem"
 
 #: Endpoint URI to the filename a fixture directory stores its response
 #: under. Used both by fixture-driven parser tests and by tests that need
@@ -163,6 +168,34 @@ async def mock_session() -> AsyncGenerator[ClientSession]:
     await session.close()
 
 
+@pytest.fixture
+async def make_session() -> AsyncGenerator[Callable[[Path | None], ClientSession]]:
+    """Yield a factory for `ClientSession`s trusting `cafile` on top of the system.
+
+    Trusting `CA_CERT` makes the test server certificate a signed one;
+    without it, the same certificate looks self-signed.
+    """
+    sessions: list[ClientSession] = []
+
+    def _make(cafile: Path | None) -> ClientSession:
+        context = ssl.create_default_context(cafile=cafile)
+        sessions.append(ClientSession(connector=TCPConnector(ssl=context)))
+        return sessions[-1]
+
+    yield _make
+
+    for session in sessions:
+        await session.close()
+
+
+@pytest.fixture
+def server_ssl_context() -> ssl.SSLContext:
+    """Return a server-side TLS context presenting the test certificate."""
+    context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    context.load_cert_chain(CERTS_DIR / "server.pem", CERTS_DIR / "server.key")
+    return context
+
+
 @dataclasses.dataclass
 class RouteResponse:
     """One canned HTTP response for `make_server` to serve at a given path."""
@@ -173,13 +206,15 @@ class RouteResponse:
     delay: float = 0.0
     #: Raw bytes to send instead of `body`, e.g. to test malformed encodings.
     raw_body: bytes | None = None
+    #: Extra response headers, e.g. a `Location` for a redirect.
+    headers: dict[str, str] = dataclasses.field(default_factory=dict)
 
 
 @pytest.fixture
-async def make_server() -> AsyncGenerator[
-    Callable[[dict[str, RouteResponse]], Awaitable[TestServer]]
-]:
+async def make_server() -> AsyncGenerator[Callable[..., Awaitable[TestServer]]]:
     """Yield a factory that starts a local HTTP server serving canned routes.
+
+    Pass `ssl_context` to serve HTTPS instead.
 
     A real (loopback) server is used instead of a transport-level mock:
     `aioresponses` is incompatible with the aiohttp version this project
@@ -190,14 +225,16 @@ async def make_server() -> AsyncGenerator[
     """
     servers: list[TestServer] = []
 
-    async def _make(routes: dict[str, RouteResponse]) -> TestServer:
+    async def _make(
+        routes: dict[str, RouteResponse], ssl_context: ssl.SSLContext | None = None
+    ) -> TestServer:
         app = web.Application()
 
         for path, route in routes.items():
             app.router.add_get(path, _make_handler(route))
 
         server = TestServer(app)
-        await server.start_server()
+        await server.start_server(ssl=ssl_context)
         servers.append(server)
 
         return server
@@ -211,19 +248,29 @@ async def make_server() -> AsyncGenerator[
 @pytest.fixture
 def make_printer(
     mock_session: ClientSession,
-    make_server: Callable[[dict[str, RouteResponse]], Awaitable[TestServer]],
+    make_server: Callable[..., Awaitable[TestServer]],
 ) -> Callable[..., Awaitable[HpPrinter]]:
-    """Return a factory serving `routes` and an `HpPrinter` pointed at them."""
+    """Return a factory serving `routes` and an `HpPrinter` pointed at them.
+
+    `ssl_context` serves HTTPS and points the client at it with `ssl=True`;
+    `session` replaces `mock_session`.
+    """
 
     async def _make(
         routes: dict[str, RouteResponse],
         *,
         client_timeout: ClientTimeout = DEFAULT_TIMEOUT,
+        session: ClientSession | None = None,
+        ssl_context: ssl.SSLContext | None = None,
     ) -> HpPrinter:
-        server = await make_server(routes)
+        server = await make_server(routes, ssl_context)
         assert server.port is not None
         return HpPrinter(
-            server.host, session=mock_session, port=server.port, timeout=client_timeout
+            server.host,
+            session=session or mock_session,
+            port=server.port,
+            ssl=ssl_context is not None,
+            timeout=client_timeout,
         )
 
     return _make
@@ -242,10 +289,14 @@ def _make_handler(
                 body=route.raw_body,
                 content_type=route.content_type,
                 charset="utf-8",
+                headers=route.headers,
             )
 
         return web.Response(
-            status=route.status, text=route.body, content_type=route.content_type
+            status=route.status,
+            text=route.body,
+            content_type=route.content_type,
+            headers=route.headers,
         )
 
     return handler

@@ -22,11 +22,13 @@ from aiohpprinter.exceptions import (
     HpPrinterConnectionError,
     HpPrinterHttpError,
     HpPrinterParseError,
+    HpPrinterSslError,
     HpPrinterTimeoutError,
 )
 from aiohpprinter.models import HpAdapter, HpPrinterData
 from aiohpprinter.xml import parse_document
 from tests.conftest import (
+    CA_CERT,
     RouteResponse,
     discover_fixtures,
     fixture_routes,
@@ -36,13 +38,18 @@ from tests.conftest import (
 )
 
 if TYPE_CHECKING:
+    import ssl
     from collections.abc import Awaitable, Callable
 
     from aiohttp import ClientSession
+    from aiohttp.test_utils import TestServer
 
     MakePrinter = Callable[..., Awaitable[HpPrinter]]
+    MakeServer = Callable[..., Awaitable[TestServer]]
+    MakeSession = Callable[[Path | None], ClientSession]
 
 FULL_FIXTURE = Path(__file__).parent / "fixtures" / "hp_officejet_pro_9022e"
+STATUS_ENDPOINT = "/DevMgmt/ProductStatusDyn.xml"
 
 #: The endpoints every model answers; the rest are optional.
 REQUIRED_ENDPOINTS = ("/DevMgmt/ProductStatusDyn.xml", "/DevMgmt/ProductConfigDyn.xml")
@@ -165,6 +172,92 @@ async def test_request_raises_connection_error(mock_session: ClientSession) -> N
     printer = HpPrinter("127.0.0.1", session=mock_session, port=1)
     with pytest.raises(HpPrinterConnectionError):
         await printer.status()
+
+
+@pytest.mark.parametrize(
+    "cafile",
+    [
+        pytest.param(CA_CERT, id="signed"),
+        pytest.param(None, id="self_signed"),
+    ],
+)
+async def test_https_success(
+    make_printer: MakePrinter,
+    make_session: MakeSession,
+    server_ssl_context: ssl.SSLContext,
+    cafile: Path | None,
+) -> None:
+    """HTTPS works with a signed or a self-signed certificate."""
+    xml = load_xml(FULL_FIXTURE, "ProductStatusDyn.xml")
+    assert xml is not None
+    printer = await make_printer(
+        {STATUS_ENDPOINT: RouteResponse(body=xml)},
+        session=make_session(cafile),
+        ssl_context=server_ssl_context,
+    )
+    status = await printer.status()
+
+    assert to_json_safe(status) == load_expected(FULL_FIXTURE)["status"]
+
+
+async def test_https_to_plain_http_port_raises_ssl_error(
+    mock_session: ClientSession, make_server: MakeServer
+) -> None:
+    """HTTPS against a port that only speaks HTTP raises `HpPrinterSslError`."""
+    server = await make_server({STATUS_ENDPOINT: RouteResponse()})
+    assert server.port is not None
+
+    printer = HpPrinter(server.host, mock_session, port=server.port, ssl=True)
+    with pytest.raises(HpPrinterSslError):
+        await printer.status()
+
+
+@pytest.mark.parametrize(
+    "cafile",
+    [
+        pytest.param(CA_CERT, id="signed"),
+        pytest.param(None, id="self_signed"),
+    ],
+)
+async def test_http_redirect_to_https_success(
+    make_printer: MakePrinter,
+    make_server: MakeServer,
+    make_session: MakeSession,
+    server_ssl_context: ssl.SSLContext,
+    cafile: Path | None,
+) -> None:
+    """Plain HTTP follows the printer's redirect to HTTPS, whatever its cert."""
+    xml = load_xml(FULL_FIXTURE, "ProductStatusDyn.xml")
+    assert xml is not None
+    https_server = await make_server(
+        {STATUS_ENDPOINT: RouteResponse(body=xml)}, server_ssl_context
+    )
+    location = str(https_server.make_url(STATUS_ENDPOINT))
+    printer = await make_printer(
+        {STATUS_ENDPOINT: RouteResponse(status=301, headers={"Location": location})},
+        session=make_session(cafile),
+    )
+    status = await printer.status()
+
+    assert to_json_safe(status) == load_expected(FULL_FIXTURE)["status"]
+
+
+@pytest.mark.parametrize(
+    ("port", "use_ssl", "base_url"),
+    [
+        pytest.param(None, False, "http://printer.local:80", id="http_default"),
+        pytest.param(None, True, "https://printer.local:443", id="https_default"),
+        pytest.param(8080, False, "http://printer.local:8080", id="http_custom"),
+        pytest.param(8443, True, "https://printer.local:8443", id="https_custom"),
+    ],
+)
+async def test_base_url(
+    mock_session: ClientSession, port: int | None, *, use_ssl: bool, base_url: str
+) -> None:
+    """The port defaults to the scheme's standard one unless given."""
+    printer = HpPrinter("printer.local", mock_session, port=port, ssl=use_ssl)
+
+    assert printer.base_url == base_url
 
 
 async def test_request_raises_timeout_error(make_printer: MakePrinter) -> None:

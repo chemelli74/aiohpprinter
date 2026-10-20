@@ -12,6 +12,8 @@ repos:
       - id: check-xml
       - id: check-yaml
       - id: detect-private-key
+        # Throwaway key for the local test HTTPS server.
+        exclude: ^tests/certs/server\.key$
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.13.4 # renovate: customPinnedDependency=uv,datasource=pypi
     hooks:

@@ -91,6 +91,17 @@ create it, share it between clients if you like (e.g. Home Assistant's
 shared session) and close it when done. `HpPrinter` never closes it and
 holds no other resources, so it needs no `close()` or `async with`.
 
+## HTTP and HTTPS
+
+The EWS is reached over plain HTTP on port 80 by default. Pass `ssl=True`
+to use HTTPS instead; `port` then defaults to 443 (pass `port` to override
+either default).
+
+Certificates are never verified, since most printers ship a self-signed
+one; this overrides the session's own setting (e.g. Home Assistant's
+verifying one). Many printers answer some endpoints over HTTP
+and redirect others to HTTPS: redirects are always followed.
+
 ## Supported HP functionality
 
 | Data                              | Endpoint                           | Notes                                           |
@@ -119,6 +130,7 @@ one is missing.
 ```text
 HpPrinterError
 ├── HpPrinterConnectionError   # network/transport failure
+│   └── HpPrinterSslError      # TLS handshake failed, e.g. port without HTTPS
 ├── HpPrinterTimeoutError      # request exceeded the client timeout
 ├── HpPrinterHttpError         # non-2xx HTTP status (`.status` holds it)
 ├── HpPrinterParseError        # response body was not valid XML/JSON

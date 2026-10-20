@@ -9,6 +9,7 @@ from .exceptions import (
     HpPrinterError,
     HpPrinterHttpError,
     HpPrinterParseError,
+    HpPrinterSslError,
     HpPrinterTimeoutError,
     HpPrinterUnsupportedError,
 )
@@ -45,6 +46,7 @@ __all__ = [
     "HpPrinterError",
     "HpPrinterHttpError",
     "HpPrinterParseError",
+    "HpPrinterSslError",
     "HpPrinterStatus",
     "HpPrinterTimeoutError",
     "HpPrinterUnsupportedError",

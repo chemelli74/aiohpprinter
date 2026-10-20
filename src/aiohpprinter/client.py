@@ -12,6 +12,7 @@ import aiohttp
 from .const import (
     _LOGGER,
     DEFAULT_PORT,
+    DEFAULT_SSL_PORT,
     DEFAULT_TIMEOUT,
     ENDPOINT_ADAPTERS,
     ENDPOINT_CONSUMABLE_CONFIG,
@@ -27,6 +28,7 @@ from .exceptions import (
     HpPrinterError,
     HpPrinterHttpError,
     HpPrinterParseError,
+    HpPrinterSslError,
     HpPrinterTimeoutError,
 )
 from .models import HpPrinterData
@@ -67,6 +69,11 @@ class HpPrinter:
 
     The caller owns `session`: create it, share it if you like (e.g. Home
     Assistant's shared session) and close it. `HpPrinter` never closes it.
+
+    Transport: `ssl` selects HTTPS instead of plain HTTP, and `port`
+    defaults to 443 or 80 accordingly. Redirects (e.g. from HTTP to HTTPS)
+    are followed. Certificates are never verified, since most printers ship
+    a self-signed one.
     """
 
     def __init__(
@@ -74,13 +81,13 @@ class HpPrinter:
         host: str,
         session: aiohttp.ClientSession,
         *,
-        port: int = DEFAULT_PORT,
+        port: int | None = None,
         ssl: bool = False,
         timeout: aiohttp.ClientTimeout = DEFAULT_TIMEOUT,
     ) -> None:
         """Initialize the client for the printer at `host`."""
         self._host = host
-        self._port = port
+        self._port = port or (DEFAULT_SSL_PORT if ssl else DEFAULT_PORT)
         self._ssl = ssl
         self._timeout = timeout
         self._session = session
@@ -261,7 +268,10 @@ class HpPrinter:
         url = f"{self.base_url}{endpoint}"
 
         try:
-            async with self._session.get(url, timeout=self._timeout) as response:
+            # Some printers ship self-signed certificates; redirect covered too.
+            async with self._session.get(
+                url, timeout=self._timeout, ssl=False
+            ) as response:
                 if response.status >= 400:  # noqa: PLR2004
                     message = f"{url} returned HTTP {response.status}"
                     raise HpPrinterHttpError(response.status, message)
@@ -276,6 +286,9 @@ class HpPrinter:
         except TimeoutError as ex:
             message = f"Timed out requesting {url}"
             raise HpPrinterTimeoutError(message) from ex
+        except aiohttp.ClientSSLError as ex:
+            message = f"TLS handshake with {url} failed: {ex}"
+            raise HpPrinterSslError(message) from ex
         except aiohttp.ClientError as ex:
             message = f"Could not connect to {url}: {ex}"
             raise HpPrinterConnectionError(message) from ex

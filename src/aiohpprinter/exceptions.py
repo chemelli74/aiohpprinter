@@ -14,6 +14,10 @@ class HpPrinterConnectionError(HpPrinterError):
     """Raised when the printer cannot be reached over the network."""
 
 
+class HpPrinterSslError(HpPrinterConnectionError):
+    """Raised when the TLS handshake fails, e.g. the port does not speak HTTPS."""
+
+
 class HpPrinterTimeoutError(HpPrinterError):
     """Raised when a request to the printer times out."""
 
