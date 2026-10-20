@@ -59,34 +59,32 @@ async def main() -> None:
     session = ClientSession()
 
     try:
-        async with HpPrinter(
-            args.host, session=session, port=port, ssl=args.ssl
-        ) as printer:
-            data = await printer.update()
+        printer = HpPrinter(args.host, session, port=port, ssl=args.ssl)
+        data = await printer.update()
 
+        print("-" * 20)
+        print(f"{'Online:':>24} {data.online}")
+
+        if data.device:
+            print(f"{'Model:':>24} {data.device.make_and_model}")
+            print(f"{'Serial number:':>24} {data.device.serial_number}")
+
+        if data.status:
+            print(f"{'Status:':>24} {data.status.device_status}")
+
+        for consumable in data.consumables.values():
             print("-" * 20)
-            print(f"{'Online:':>24} {data.online}")
+            print(f"{'Consumable:':>24} {consumable.consumable_id}")
+            print(f"{'Type:':>24} {consumable.consumable_type}")
+            level = consumable.percentage_level_remaining
+            print(f"{'Level remaining:':>24} {level}")
 
-            if data.device:
-                print(f"{'Model:':>24} {data.device.make_and_model}")
-                print(f"{'Serial number:':>24} {data.device.serial_number}")
+        if data.printer_usage:
+            print("-" * 20)
+            total = data.printer_usage.total_impressions
+            print(f"{'Total impressions:':>24} {total}")
 
-            if data.status:
-                print(f"{'Status:':>24} {data.status.device_status}")
-
-            for consumable in data.consumables:
-                print("-" * 20)
-                print(f"{'Consumable:':>24} {consumable.consumable_id}")
-                print(f"{'Type:':>24} {consumable.consumable_type}")
-                level = consumable.percentage_level_remaining
-                print(f"{'Level remaining:':>24} {level}")
-
-            if data.printer_usage:
-                print("-" * 20)
-                total = data.printer_usage.total_impressions
-                print(f"{'Total impressions:':>24} {total}")
-
-            print(json.dumps(dataclasses.asdict(data), default=str, indent=2))
+        print(json.dumps(dataclasses.asdict(data), default=str, indent=2))
     except HpPrinterError as ex:
         print(f"Failed to reach printer: {ex}")
         sys.exit(1)

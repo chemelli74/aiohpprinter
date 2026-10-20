@@ -13,10 +13,12 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, cast
 
 import pytest
-from aiohttp import ClientSession, web
+from aiohttp import ClientSession, ClientTimeout, web
 from aiohttp.test_utils import TestServer
 
+from aiohpprinter.client import HpPrinter
 from aiohpprinter.const import (
+    DEFAULT_TIMEOUT,
     ENDPOINT_ADAPTERS,
     ENDPOINT_CONSUMABLE_CONFIG,
     ENDPOINT_EPRINT_CONFIG,
@@ -204,6 +206,27 @@ async def make_server() -> AsyncGenerator[
 
     for server in servers:
         await server.close()
+
+
+@pytest.fixture
+def make_printer(
+    mock_session: ClientSession,
+    make_server: Callable[[dict[str, RouteResponse]], Awaitable[TestServer]],
+) -> Callable[..., Awaitable[HpPrinter]]:
+    """Return a factory serving `routes` and an `HpPrinter` pointed at them."""
+
+    async def _make(
+        routes: dict[str, RouteResponse],
+        *,
+        client_timeout: ClientTimeout = DEFAULT_TIMEOUT,
+    ) -> HpPrinter:
+        server = await make_server(routes)
+        assert server.port is not None
+        return HpPrinter(
+            server.host, session=mock_session, port=server.port, timeout=client_timeout
+        )
+
+    return _make
 
 
 def _make_handler(
