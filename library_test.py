@@ -54,12 +54,11 @@ async def main() -> None:
         parser.print_help()
         sys.exit(1)
 
-    port = args.port if args.port is not None else (443 if args.ssl else 80)
-    print(f"Connecting to {args.host}:{port}")
     session = ClientSession()
 
     try:
-        printer = HpPrinter(args.host, session, port=port, ssl=args.ssl)
+        printer = HpPrinter(args.host, session, port=args.port, ssl=args.ssl)
+        print(f"Connecting to {printer.base_url}")
         data = await printer.update()
 
         print("-" * 20)

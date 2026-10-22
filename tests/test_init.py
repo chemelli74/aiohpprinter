@@ -19,6 +19,9 @@ def test_public_api_is_importable() -> None:
     assert issubclass(aiohpprinter.HpPrinterError, Exception)
     errors = aiohpprinter.HpPrinterError
     assert issubclass(aiohpprinter.HpPrinterConnectionError, errors)
+    assert issubclass(
+        aiohpprinter.HpPrinterSslError, aiohpprinter.HpPrinterConnectionError
+    )
     assert issubclass(aiohpprinter.HpPrinterTimeoutError, errors)
     assert issubclass(aiohpprinter.HpPrinterHttpError, errors)
     assert issubclass(aiohpprinter.HpPrinterParseError, errors)
