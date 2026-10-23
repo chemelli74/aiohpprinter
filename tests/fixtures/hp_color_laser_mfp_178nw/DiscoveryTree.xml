@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ledm:DiscoveryTree xmlns:ledm="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21 ../schemas/LEDM.xsd">
+<dd:Version>
+	<dd:Revision>SVN.1</dd:Revision>
+</dd:Version>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ProductConfigDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmProductConfigDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/productconfigdyn/2009/03/16</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ProductConfigCap.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmProductConfigCap</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/productconfigcap/2009/03/16</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ShopForSupplies.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmShopForSupplies</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/IOConfigCap.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmIoConfigCap</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/ioconfigcap/2009/03/17</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/IOConfigDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmIoConfigDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/ioconfigdyn/2009/03/17</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ProductStatusDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmProductStatusDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/productstatusdyn/2007/10/31</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ConsumableConfigCap.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmConsumableConfigCap</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/consumableconfigcap/2007/11/19</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/ConsumableConfigDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmConsumableConfigDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/consumableconfigdyn/2007/11/19</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/NetAppsDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmNetAppsDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/netappdyn/2009/06/24</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/NetAppsCap.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmNetAppsCap</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/netappcap/2009/06/24</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedTree>
+	<dd:ResourceURI>/DevMgmt/MediaHandlingDyn.xml</dd:ResourceURI>
+	<dd:ResourceType>ledm:hpLedmMediaHandlingDyn</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/mediahandlingdyn/2007/11/21</dd:Revision>
+</ledm:SupportedTree>
+<ledm:SupportedIfc>
+	<ledm:ManifestURI>/eSCL/eSclManifest.xml</ledm:ManifestURI>
+	<dd:ResourceType>eSCL:eSclManifest</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/manifest/2009/03/24</dd:Revision>
+</ledm:SupportedIfc>
+<ledm:SupportedIfc>
+	<ledm:ManifestURI>/IoMgmt/IoMgmtManifest.xml</ledm:ManifestURI>
+	<dd:ResourceType>ledm:hpLedmIoMgmt</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/manifest/2009/03/24</dd:Revision>
+</ledm:SupportedIfc>
+<ledm:SupportedIfc>
+	<ledm:ManifestURI>/Jobs/JobsManifest.xml</ledm:ManifestURI>
+	<dd:ResourceType>ledm:hpLedmJobsManifest</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/manifest/2009/03/24</dd:Revision>
+</ledm:SupportedIfc>
+<ledm:SupportedIfc>
+	<ledm:ManifestURI>/DevMgmt/NetAppsSecureManifest.xml</ledm:ManifestURI>
+	<dd:ResourceType>ledm:hpLedmNetAppsSecureManifest</dd:ResourceType>
+	<dd:Revision>http://www.hp.com/schemas/imaging/con/ledm/manifest/2009/03/24</dd:Revision>
+</ledm:SupportedIfc>
+<ledm:SupportedFeature>
+	<dd:ResourceURI>/ipp/print</dd:ResourceURI>
+	<dd:ResourceType>pwg:hpIPPPrint</dd:ResourceType>
+	<dd:Revision>http://www.pwg.org/ipp/2.0</dd:Revision>
+</ledm:SupportedFeature>
+</ledm:DiscoveryTree>
