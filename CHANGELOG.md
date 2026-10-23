@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.1.0 (2026-10-23)
+
+### Features
+
+- Fully support https and self-signed certs ([`39934d0`](https://github.com/chemelli74/aiohpprinter/commit/39934d0ec024e62c5c0aa6bca40ed13138679eda))
+
+
 ## v3.0.0 (2026-10-20)
 
 ### Refactoring
