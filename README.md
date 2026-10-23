@@ -236,6 +236,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
                     <sub><b>Simone Chemelli</b></sub>
                 </a>
             </td>
+            <td align="center">
+                <a href="https://github.com/tr4nt0r">
+                    <img src="https://avatars.githubusercontent.com/u/4445816?v=4" width="100;" alt="tr4nt0r"/>
+                    <br />
+                    <sub><b>Manu</b></sub>
+                </a>
+            </td>
 		</tr>
 	<tbody>
 </table>
