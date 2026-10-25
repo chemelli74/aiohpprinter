@@ -7,12 +7,12 @@ from __future__ import annotations
 
 import asyncio
 import dataclasses
-import json
 import ssl
 from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, cast
 
+import orjson
 import pytest
 from aiohttp import ClientSession, ClientTimeout, TCPConnector, web
 from aiohttp.test_utils import TestServer
@@ -69,7 +69,7 @@ def load_expected(fixture_dir: Path) -> dict[str, Any]:
     if not expected_path.exists():
         return {}
 
-    return cast("dict[str, Any]", json.loads(expected_path.read_text()))
+    return cast("dict[str, Any]", orjson.loads(expected_path.read_text()))
 
 
 def load_xml(fixture_dir: Path, filename: str) -> str | None:
