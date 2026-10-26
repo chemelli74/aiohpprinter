@@ -17,10 +17,10 @@ under ``#text``), without requiring that dependency.
 
 from __future__ import annotations
 
-import json
 from typing import TYPE_CHECKING, Any
 from xml.etree.ElementTree import ParseError
 
+import orjson
 from defusedxml import DefusedXmlException
 from defusedxml.ElementTree import fromstring
 
@@ -63,8 +63,8 @@ def parse_json_document(content: str) -> dict[str, Any]:
     same path-based parsers read either shape.
     """
     try:
-        document = json.loads(content)
-    except json.JSONDecodeError as ex:
+        document = orjson.loads(content)
+    except orjson.JSONDecodeError as ex:
         message = f"Could not parse printer response as JSON: {ex}"
         raise HpPrinterParseError(message) from ex
 
