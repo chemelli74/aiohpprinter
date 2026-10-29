@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<ss:ShopForSuppliesRequest xsi:schemaLocation="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07 ../schemas/ShopForSupplies.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ss="http://www.hp.com/schemas/imaging/ljs/shopforsuppliesrequest/2007/11/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<ss:RequesterID type="x-inkjet-serial-number">REDACTED</ss:RequesterID>
+	<ss:LocaleInformationSources>
+		<ss:LocaleInformationSource type="printing-device">
+			<dd:Language>en-CA</dd:Language>
+			<dd:TimeStamp>2026-10-28T22:15:28</dd:TimeStamp>
+		</ss:LocaleInformationSource>
+	</ss:LocaleInformationSources>
+	<ss:Devices>
+		<ss:Device>
+			<ss:GloballyUniqueDeviceModelID type="x-hp-device-model-string-with-sku-with-region-code">REDACTED</ss:GloballyUniqueDeviceModelID>
+			<ss:GloballyUniqueDeviceID type="">REDACTED</ss:GloballyUniqueDeviceID>
+			<ss:CompatibleSupplyModels>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:910XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:910</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">black:916XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">color:910XL</ss:GloballyUniqueSupplyModelIDMacro>
+				<ss:GloballyUniqueSupplyModelIDMacro type="x-qualified-selectability-number-set">color:910</ss:GloballyUniqueSupplyModelIDMacro>
+			</ss:CompatibleSupplyModels>
+			<ss:Supplies>
+				<ss:Supply>
+					<dd:ConsumableStation>1</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>20</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>2</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>20</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>3</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>40</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+				<ss:Supply>
+					<dd:ConsumableStation>4</dd:ConsumableStation>
+					<ss:GloballyUniqueSupplyModelID type="x-inkjet-cartridge-series-A.6" filter="true">REDACTED</ss:GloballyUniqueSupplyModelID>
+					<dd:Level>60</dd:Level>
+					<dd:MeasuredQuantityState>ok</dd:MeasuredQuantityState>
+					<ss:UniqueSupplyID>REDACTED</ss:UniqueSupplyID>
+				</ss:Supply>
+			</ss:Supplies>
+			<ss:RewardsRegistrationStatus>
+				<dd:OptedIn>false</dd:OptedIn>
+				<dd:AutoSendData>false</dd:AutoSendData>
+				<dd:PromptAutoSendData>false</dd:PromptAutoSendData>
+			</ss:RewardsRegistrationStatus>
+		</ss:Device>
+	</ss:Devices>
+	<ss:DeviceInfoSets>
+		<ss:DeviceInfoSet type="String">
+			<ss:DeviceInfoDeviceID type="x-inkjet-serial-number">REDACTED</ss:DeviceInfoDeviceID>
+			<ss:DeviceInfoData><![CDATA[MFG:HP;MDL:HP OfficeJet Pro 8030 series;CMD:PCL3GUI,PCL3,PJL,Automatic,JPEG,AppleRaster,PWGRaster,PCLM,DW-PCL,802.11,802.3,DESKJET,DYN;CLS:PRINTER;DES:1L0H6A;CID:HPIJVIPAV9;LEDMDIS:USB#FF#04#01,USB#FF#CC#00;MCT:MF;MCL:DI;MCV:3.2;SN:REDACTED;S:038888C48400000100580c800004500001444000014460000284100003c;Z:05000009000009000009000009000009,12000,17000000000000000000000000000000,180;]]></ss:DeviceInfoData>
+		</ss:DeviceInfoSet>
+	</ss:DeviceInfoSets>
+</ss:ShopForSuppliesRequest>

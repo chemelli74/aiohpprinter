@@ -1,0 +1,202 @@
+{
+  "device": {
+    "make_and_model": "HP OfficeJet Pro 8030 series",
+    "make_and_model_family": "HP OfficeJet Pro 8030 series",
+    "sku_identifier": "8035e",
+    "serial_number": "REDACTED",
+    "product_number": "1L0H6A",
+    "manufacturer_name": "HP",
+    "manufactured_at": "2021-03-09T00:00:00"
+  },
+  "status": {
+    "device_status": "inpowersave"
+  },
+  "consumables": {
+    "C": {
+      "consumable_id": "C",
+      "consumable_type": "ink",
+      "marker_color": "Cyan",
+      "state": "newGenuineHP",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "2",
+      "percentage_level_remaining": 20.0,
+      "raw_percentage_level_remaining": 16.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 109.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-07-02T00:00:00",
+      "installed_at": "2026-01-15T00:00:00",
+      "warranty_expires_at": "2027-07-02T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": null,
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    "CMYK": {
+      "consumable_id": "CMYK",
+      "consumable_type": "printhead",
+      "marker_color": null,
+      "state": "ok",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "0",
+      "percentage_level_remaining": null,
+      "raw_percentage_level_remaining": null,
+      "estimated_pages_remaining": null,
+      "max_capacity": null,
+      "selectibility_number": null,
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": "2021-09-28T00:00:00",
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": null,
+      "counterfeit_refilled_count": null,
+      "genuine_refilled_count": null,
+      "total_impressions": null
+    },
+    "K": {
+      "consumable_id": "K",
+      "consumable_type": "ink",
+      "marker_color": "Black",
+      "state": "newGenuineHP",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "4",
+      "percentage_level_remaining": 60.0,
+      "raw_percentage_level_remaining": 53.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 453.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-06-04T00:00:00",
+      "installed_at": "2026-01-15T00:00:00",
+      "warranty_expires_at": "2027-06-04T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": null,
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    "M": {
+      "consumable_id": "M",
+      "consumable_type": "ink",
+      "marker_color": "Magenta",
+      "state": "newGenuineHP",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "1",
+      "percentage_level_remaining": 20.0,
+      "raw_percentage_level_remaining": 20.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 112.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-06-25T00:00:00",
+      "installed_at": "2026-01-15T00:00:00",
+      "warranty_expires_at": "2027-06-25T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": null,
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    "Y": {
+      "consumable_id": "Y",
+      "consumable_type": "ink",
+      "marker_color": "Yellow",
+      "state": "newGenuineHP",
+      "usage_state": "unknown",
+      "brand": "HP",
+      "station": "3",
+      "percentage_level_remaining": 40.0,
+      "raw_percentage_level_remaining": 31.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 109.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": "HP",
+      "manufactured_at": "2025-07-02T00:00:00",
+      "installed_at": "2026-01-15T00:00:00",
+      "warranty_expires_at": "2027-07-02T00:00:00",
+      "serial_number": "REDACTED",
+      "product_number": null,
+      "supply_serial_number": "REDACTED",
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    }
+  },
+  "printer_usage": {
+    "total_impressions": 3920,
+    "monochrome_impressions": 806,
+    "color_impressions": 3114,
+    "simplex_sheets": 3633,
+    "duplex_sheets": 130,
+    "jam_events": 3,
+    "mispick_events": 39
+  },
+  "scanner_usage": {
+    "scan_images": 276,
+    "adf_images": 240,
+    "duplex_sheets": null,
+    "flatbed_images": 34,
+    "jam_events": 4,
+    "mispick_events": 0
+  },
+  "copy_usage": {
+    "total_impressions": 5,
+    "adf_images": 5,
+    "flatbed_images": 2,
+    "monochrome_impressions": 0,
+    "color_impressions": 5
+  },
+  "fax_usage": {
+    "total_impressions": 0,
+    "adf_images": 0,
+    "flatbed_images": 0,
+    "images_received_from_pc": 0
+  },
+  "adapters": [
+    {
+      "name": "Eth0",
+      "connectivity_port_type": "ethernet",
+      "is_connected": false
+    },
+    {
+      "name": "Wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "Wifi1",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "Usb0",
+      "connectivity_port_type": "usb",
+      "is_connected": false
+    }
+  ],
+  "eprint": {
+    "printer_id": null,
+    "is_registered": true,
+    "cloud_services_enabled": true
+  },
+  "wifi": {
+    "ssid_prefix": "DIRECT-1C-HP",
+    "connection_method": "manual"
+  }
+}
