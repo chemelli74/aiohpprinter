@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<cid:CallerIdList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:cid="http://www.hp.com/schemas/imaging/con/rest/calleridlist/2009/08/17" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/rest/calleridlist/2009/08/17 ../schemas/CallerIdList.xsd">
+	<dd:Version>
+		<dd:Revision>SVN.4160</dd:Revision>
+	</dd:Version>
+</cid:CallerIdList>

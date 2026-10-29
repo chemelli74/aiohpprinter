@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<faxblklistcap:FaxBlockListCap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:faxblklistcap="http://www.hp.com/schemas/imaging/con/ledm/faxblklistcap/2008/04/03" xmlns:faxblklistdyn="http://www.hp.com/schemas/imaging/con/ledm/faxblklistdyn/2008/04/03" xmlns:fax="http://www.hp.com/schemas/imaging/con/fax/2008/06/13" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/faxblklistcap/2008/04/03 ../schemas/FaxBlockListCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<faxblklistcap:BlockedFaxNumberSupport elementXPath="faxblklistdyn:FaxBlockListDyn/faxblklistdyn:BlockedFaxNumbers/dd:BlockedFaxNumber" typeof="dd:String" length="24" access="readWrite"></faxblklistcap:BlockedFaxNumberSupport>
+	<faxblklistcap:BlockedFaxMatchSupport access="readWrite">
+		<fax:BlockedFaxMatch>matchCID</fax:BlockedFaxMatch>
+	</faxblklistcap:BlockedFaxMatchSupport>
+	<faxblklistcap:IDNumberSupport elementXPath="faxblklistdyn:FaxBlockListDyn/faxblklistdyn:BlockedFaxNumbers/dd:IDNumber" typeof="dd:Int" min="1" max="100" step="1" access="readWrite"></faxblklistcap:IDNumberSupport>
+	<faxblklistcap:FaxBlockListMaxSize elementXPath="faxblklistdyn:FaxBlockListDyn/faxblklistdyn:BlockedFaxNumbers" typeof="dd:Int" min="1" max="100" step="1" access="readOnly"></faxblklistcap:FaxBlockListMaxSize>
+</faxblklistcap:FaxBlockListCap>
