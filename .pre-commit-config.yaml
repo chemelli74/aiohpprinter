@@ -53,7 +53,7 @@ repos:
         # Fixtures are verbatim printer responses (e.g. `OptIn`).
         exclude: ^tests/fixtures/
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.4.0
+    rev: v2.4.1
     hooks:
       - id: mypy
         pass_filenames: false
