@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seccap:SecurityCap
+      xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/securitycap/2008/02/01 ../schemas/SecurityCap.xsd" 
+      xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" 
+      xmlns:seccap="http://www.hp.com/schemas/imaging/con/ledm/securitycap/2008/02/01" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <dd:Version>
+      <dd:Revision>SVN-IPG-LEDM.802</dd:Revision>
+      <dd:Date>2014-08-05</dd:Date>
+   </dd:Version>
+   <seccap:Password typeof="String" length="16" access="readWrite" elementXPath="String"/>
+   <seccap:PasswordEncodingSupport access="readOnly">
+      <seccap:Encoding>base64</seccap:Encoding>
+   </seccap:PasswordEncodingSupport>
+   <seccap:AccessHistorySupport>
+      <seccap:DetailsSupport>
+         <seccap:StatusSupport access="readOnly">
+            <seccap:Status>AuthenticationFailure</seccap:Status>
+            <seccap:Status>BlankPassword</seccap:Status>
+            <seccap:Status>InvalidPassword</seccap:Status>
+            <seccap:Status>TimedOut</seccap:Status>
+         </seccap:StatusSupport>
+         <seccap:Client typeof="dd:IPAddress" length="64" access="readOnly" elementXPath="secdyn:AccessHistory/secdyn:Details/security:Client"/>
+         <seccap:UserAgent typeof="dd:Name" length="79" access="readOnly" elementXPath="secdyn:AccessHistory/secdyn:Details/security:UserAgent"/>
+         <seccap:TimeStamp typeof="dd:TimeStamp" length="10" access="readOnly" elementXPath="secdyn:AccessHistory/secdyn:Details/security:TimeStamp"/>
+         <seccap:WhichIfc typeof="dd:Name" length="59" access="readOnly" elementXPath="secdyn:AccessHistory/secdyn:Details/security:WhichIfc"/>
+      </seccap:DetailsSupport>
+   </seccap:AccessHistorySupport>
+   <seccap:FailsafeOptionSupport access="readOnly">
+      <seccap:FailsafeOption>enabled</seccap:FailsafeOption>
+      <seccap:FailsafeOption>disabled</seccap:FailsafeOption>
+   </seccap:FailsafeOptionSupport>
+   <seccap:FailsafeDetailsSupport>
+      <seccap:StateSupport access="readOnly">
+         <seccap:State>on</seccap:State>
+         <seccap:State>off</seccap:State>
+      </seccap:StateSupport>
+      <seccap:Attempts typeof="dd:Int" max="10" step="1" access="readOnly" elementXPath="secdyn:FailsafeDetails/security:AccessAttempts" min="0"/>
+      <seccap:TimeRemaining typeof="dd:Duration" length="13" access="readOnly" elementXPath="secdyn:FailsafeDetails/security:TimeRemaining"/>
+   </seccap:FailsafeDetailsSupport>
+	  <seccap:StrictSecureConnectSupport typeof="dd:OnOff" selected="on" deselected="off" elementXPath="secdyn:SecurityDyn/secdyn:StrictSecureConnect"/>
+   <seccap:EncryptionStrengthSupport access="readOnly">
+     <seccap:EncryptionStrength>high</seccap:EncryptionStrength>
+     <seccap:EncryptionStrength>medium</seccap:EncryptionStrength>
+     <seccap:EncryptionStrength>low</seccap:EncryptionStrength>
+   </seccap:EncryptionStrengthSupport>
+   <seccap:CipherSuiteSupport>
+      <seccap:SslTlsLow>
+         <seccap:Name>EDH-RSA-DES-CBC-SHA</seccap:Name>
+         <seccap:Name>DES-CBC-SHA</seccap:Name>
+         <seccap:Name>EXP-EDH-RSA-DES-CBC-SHA</seccap:Name>
+         <seccap:Name>EXP-DES-CBC-SHA</seccap:Name>
+         <seccap:Name>EXP-RC2-CBC-MD5</seccap:Name>
+         <seccap:Name>EXP-RC4-MD5</seccap:Name>
+      </seccap:SslTlsLow>
+      <seccap:SslTlsMedium>
+         <seccap:Name>RC4-SHA</seccap:Name>
+         <seccap:Name>RC4-MD5</seccap:Name>
+         <seccap:Name>PSK-RC4-SHA</seccap:Name>
+      </seccap:SslTlsMedium>
+      <seccap:SslTlsHigh>
+         <seccap:Name>DHE-RSA-AES256-GCM-SHA384</seccap:Name>
+         <seccap:Name>DHE-RSA-AES256-SHA256</seccap:Name>
+         <seccap:Name>DHE-RSA-AES256-SHA</seccap:Name>
+         <seccap:Name>AES256-GCM-SHA384</seccap:Name>
+         <seccap:Name>AES256-SHA256</seccap:Name>
+         <seccap:Name>AES256-SHA</seccap:Name>
+         <seccap:Name>PSK-AES256-CBC-SHA</seccap:Name>
+         <seccap:Name>DHE-RSA-AES128-GCM-SHA256</seccap:Name>
+         <seccap:Name>DHE-RSA-AES128-SHA256</seccap:Name>
+         <seccap:Name>DHE-RSA-AES128-SHA</seccap:Name>
+         <seccap:Name>AES128-GCM-SHA256</seccap:Name>
+         <seccap:Name>AES128-SHA256</seccap:Name>
+         <seccap:Name>AES128-SHA</seccap:Name>
+         <seccap:Name>PSK-AES128-CBC-SHA</seccap:Name>
+         <seccap:Name>EDH-RSA-DES-CBC3-SHA</seccap:Name>
+         <seccap:Name>DES-CBC3-SHA</seccap:Name>
+         <seccap:Name>PSK-3DES-EDE-CBC-SHA</seccap:Name>
+      </seccap:SslTlsHigh>
+   </seccap:CipherSuiteSupport>
+</seccap:SecurityCap>
