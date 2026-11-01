@@ -245,8 +245,8 @@ async def test_http_redirect_to_https_success(
 @pytest.mark.parametrize(
     ("port", "use_ssl", "base_url"),
     [
-        pytest.param(None, False, "http://printer.local:80", id="http_default"),
-        pytest.param(None, True, "https://printer.local:443", id="https_default"),
+        pytest.param(None, False, "http://printer.local", id="http_default"),
+        pytest.param(None, True, "https://printer.local", id="https_default"),
         pytest.param(8080, False, "http://printer.local:8080", id="http_custom"),
         pytest.param(8443, True, "https://printer.local:8443", id="https_custom"),
     ],
