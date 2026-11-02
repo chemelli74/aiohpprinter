@@ -243,6 +243,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
                     <sub><b>Manu</b></sub>
                 </a>
             </td>
+            <td align="center">
+                <a href="https://github.com/neyzm">
+                    <img src="https://avatars.githubusercontent.com/u/3879349?v=4" width="100;" alt="neyzm"/>
+                    <br />
+                    <sub><b>neyzm</b></sub>
+                </a>
+            </td>
 		</tr>
 	<tbody>
 </table>
