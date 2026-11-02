@@ -260,6 +260,20 @@ async def test_base_url(
     assert printer.base_url == base_url
 
 
+@pytest.mark.parametrize(
+    "host",
+    [
+        pytest.param("2001:db8::1", id="unbracketed"),
+        pytest.param("[2001:db8::1]", id="bracketed"),
+    ],
+)
+async def test_base_url_ipv6(mock_session: ClientSession, host: str) -> None:
+    """An IPv6 host is accepted with or without brackets."""
+    printer = HpPrinter(host, mock_session, port=8080)
+
+    assert printer.base_url == "http://[2001:db8::1]:8080"
+
+
 async def test_request_raises_timeout_error(make_printer: MakePrinter) -> None:
     """A request slower than the client timeout raises `HpPrinterTimeoutError`."""
     printer = await make_printer(

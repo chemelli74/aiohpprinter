@@ -89,7 +89,7 @@ class HpPrinter:
         """Initialize the client for the printer at `host`."""
         self._base_url = URL.build(
             scheme="https" if ssl else "http",
-            host=host,
+            host=host.strip("[]"),
             port=port or (DEFAULT_SSL_PORT if ssl else DEFAULT_PORT),
         )
         self._timeout = timeout
