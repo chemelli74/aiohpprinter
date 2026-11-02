@@ -1,0 +1,122 @@
+{
+  "device": {
+    "make_and_model": "ENVY 4520 All-in-One Printer series",
+    "make_and_model_family": "ENVY 4520 series",
+    "sku_identifier": "4524",
+    "serial_number": "REDACTED",
+    "product_number": "F0V72B",
+    "manufacturer_name": "HP",
+    "manufactured_at": "2016-08-27T00:00:00"
+  },
+  "status": {
+    "device_status": "genuinehp"
+  },
+  "consumables": {
+    "CMY": {
+      "consumable_id": "CMY",
+      "consumable_type": "inkCartridge",
+      "marker_color": "CyanMagentaYellow",
+      "state": "newGenuineHP",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "0",
+      "percentage_level_remaining": 70.0,
+      "raw_percentage_level_remaining": 84.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 0.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    },
+    "K": {
+      "consumable_id": "K",
+      "consumable_type": "inkCartridge",
+      "marker_color": "Black",
+      "state": "newGenuineHP",
+      "usage_state": null,
+      "brand": "HP",
+      "station": "1",
+      "percentage_level_remaining": 70.0,
+      "raw_percentage_level_remaining": 72.0,
+      "estimated_pages_remaining": null,
+      "max_capacity": 0.0,
+      "selectibility_number": "INSTANT INK",
+      "manufacturer_name": null,
+      "manufactured_at": null,
+      "installed_at": null,
+      "warranty_expires_at": null,
+      "serial_number": null,
+      "product_number": null,
+      "supply_serial_number": null,
+      "unique_id": "REDACTED",
+      "counterfeit_refilled_count": 0,
+      "genuine_refilled_count": 0,
+      "total_impressions": null
+    }
+  },
+  "printer_usage": {
+    "total_impressions": 2942,
+    "monochrome_impressions": null,
+    "color_impressions": null,
+    "simplex_sheets": null,
+    "duplex_sheets": 199,
+    "jam_events": 0,
+    "mispick_events": 82
+  },
+  "scanner_usage": {
+    "scan_images": 447,
+    "adf_images": null,
+    "duplex_sheets": null,
+    "flatbed_images": 447,
+    "jam_events": null,
+    "mispick_events": null
+  },
+  "copy_usage": {
+    "total_impressions": 34,
+    "adf_images": 0,
+    "flatbed_images": 34,
+    "monochrome_impressions": 27,
+    "color_impressions": 7
+  },
+  "fax_usage": {
+    "total_impressions": null,
+    "adf_images": null,
+    "flatbed_images": null,
+    "images_received_from_pc": null
+  },
+  "adapters": [
+    {
+      "name": "Wifi0",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "Wifi1",
+      "connectivity_port_type": "wifiEmbedded",
+      "is_connected": true
+    },
+    {
+      "name": "usb0",
+      "connectivity_port_type": "usb",
+      "is_connected": false
+    }
+  ],
+  "eprint": {
+    "printer_id": "REDACTED",
+    "is_registered": true,
+    "cloud_services_enabled": true
+  },
+  "wifi": {
+    "ssid_prefix": "DIRECT-4B-",
+    "connection_method": null
+  }
+}
