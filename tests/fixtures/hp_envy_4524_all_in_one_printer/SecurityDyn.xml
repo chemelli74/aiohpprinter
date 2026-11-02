@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secdyn:SecurityDyn 
+      xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/securitydyn/2008/02/01 ../schemas/SecurityDyn.xsd" 
+      xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" 
+      xmlns:secdyn="http://www.hp.com/schemas/imaging/con/ledm/securitydyn/2008/02/01" 
+      xmlns:security="http://www.hp.com/schemas/imaging/con/security/2009/02/11" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <dd:Version>
+      <dd:Revision>SVN-IPG-LEDM.715</dd:Revision>
+      <dd:Date>2014-01-17</dd:Date>
+   </dd:Version>
+   <secdyn:FailsafeOption>enabled</secdyn:FailsafeOption>
+   <secdyn:FailsafeDetails>
+      <security:State>off</security:State>
+      <security:AccessAttempts>0</security:AccessAttempts>
+      <security:TimeRemaining>PT0S</security:TimeRemaining>
+   </secdyn:FailsafeDetails>
+   	<secdyn:StrictSecureConnect>off</secdyn:StrictSecureConnect>
+     <secdyn:EncryptionStrength>high</secdyn:EncryptionStrength>
+</secdyn:SecurityDyn>
