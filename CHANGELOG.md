@@ -1,5 +1,36 @@
 # Changelog
 
+## v3.1.1 (2026-11-02)
+
+### Bug fixes
+
+- Update dependency yarl to >=1.25.1 ([`49ccf6d`](https://github.com/chemelli74/aiohpprinter/commit/49ccf6dadc600f5e9c6fc9f88151069e251220f3))
+
+
+### Refactoring
+
+- Build printer urls with yarl ([`33e60ba`](https://github.com/chemelli74/aiohpprinter/commit/33e60ba15127be8d38601fc65ffb1d0367e95c26))
+- Use orjson for json encoding and decoding ([`2747cdd`](https://github.com/chemelli74/aiohpprinter/commit/2747cddd70c3de3e5f6cbf71b26359a978f58952))
+
+
+### Documentation
+
+- Contrib-readme-action has updated readme ([`4105761`](https://github.com/chemelli74/aiohpprinter/commit/4105761e249d1762c0a12096f1e694393281af86))
+- Contrib-readme-action has updated readme ([`d35f901`](https://github.com/chemelli74/aiohpprinter/commit/d35f901ea80a1a5b550557e45dfa03e529dc086c))
+
+
+### Testing
+
+- Add hp envy 4524 fixtures ([`a370e47`](https://github.com/chemelli74/aiohpprinter/commit/a370e47c687e7a08b42771032f4f7bf2f270d173))
+- Add hp officejet pro 8035e fixtures ([`49cc85c`](https://github.com/chemelli74/aiohpprinter/commit/49cc85c052a25671b6b4124fd119dbd8ce6e9d3a))
+- Add hp color laser mfp 178nw fixtures ([`bcf8b43`](https://github.com/chemelli74/aiohpprinter/commit/bcf8b435019356c88c721869ccd12773584f5442))
+
+
+### Build system
+
+- Target python 3.12 in pyupgrade ([`632f78a`](https://github.com/chemelli74/aiohpprinter/commit/632f78a357800c8024ca4aa49dfb87250d2a553e))
+
+
 ## v3.1.0 (2026-10-23)
 
 ### Features
