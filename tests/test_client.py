@@ -245,8 +245,8 @@ async def test_http_redirect_to_https_success(
 @pytest.mark.parametrize(
     ("port", "use_ssl", "base_url"),
     [
-        pytest.param(None, False, "http://printer.local:80", id="http_default"),
-        pytest.param(None, True, "https://printer.local:443", id="https_default"),
+        pytest.param(None, False, "http://printer.local", id="http_default"),
+        pytest.param(None, True, "https://printer.local", id="https_default"),
         pytest.param(8080, False, "http://printer.local:8080", id="http_custom"),
         pytest.param(8443, True, "https://printer.local:8443", id="https_custom"),
     ],
@@ -258,6 +258,20 @@ async def test_base_url(
     printer = HpPrinter("printer.local", mock_session, port=port, ssl=use_ssl)
 
     assert printer.base_url == base_url
+
+
+@pytest.mark.parametrize(
+    "host",
+    [
+        pytest.param("2001:db8::1", id="unbracketed"),
+        pytest.param("[2001:db8::1]", id="bracketed"),
+    ],
+)
+async def test_base_url_ipv6(mock_session: ClientSession, host: str) -> None:
+    """An IPv6 host is accepted with or without brackets."""
+    printer = HpPrinter(host, mock_session, port=8080)
+
+    assert printer.base_url == "http://[2001:db8::1]:8080"
 
 
 async def test_request_raises_timeout_error(make_printer: MakePrinter) -> None:

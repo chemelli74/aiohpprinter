@@ -8,6 +8,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import aiohttp
+from yarl import URL
 
 from .const import (
     _LOGGER,
@@ -86,17 +87,18 @@ class HpPrinter:
         timeout: aiohttp.ClientTimeout = DEFAULT_TIMEOUT,
     ) -> None:
         """Initialize the client for the printer at `host`."""
-        self._host = host
-        self._port = port or (DEFAULT_SSL_PORT if ssl else DEFAULT_PORT)
-        self._ssl = ssl
+        self._base_url = URL.build(
+            scheme="https" if ssl else "http",
+            host=host.strip("[]"),
+            port=port or (DEFAULT_SSL_PORT if ssl else DEFAULT_PORT),
+        )
         self._timeout = timeout
         self._session = session
 
     @property
     def base_url(self) -> str:
         """Return the printer's EWS base URL."""
-        protocol = "https" if self._ssl else "http"
-        return f"{protocol}://{self._host}:{self._port}"
+        return str(self._base_url)
 
     async def is_online(self) -> bool:
         """Return whether the printer currently responds to status requests.
@@ -265,7 +267,7 @@ class HpPrinter:
 
     async def _request(self, endpoint: str) -> dict[str, Any]:
         """Fetch `endpoint` and parse it into a nested dict document."""
-        url = f"{self.base_url}{endpoint}"
+        url = self._base_url.with_path(endpoint)
 
         try:
             # Some printers ship self-signed certificates; redirect covered too.
