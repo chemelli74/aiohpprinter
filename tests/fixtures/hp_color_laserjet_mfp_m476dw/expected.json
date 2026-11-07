@@ -168,5 +168,17 @@
   "wifi": {
     "ssid_prefix": null,
     "connection_method": null
+  },
+  "io_config": {
+    "connectivity_port_type": "ethernet",
+    "network_status": "ready",
+    "speed_duplex_negotiation_mode": "100TX_FULL",
+    "total_packets_received": 36970,
+    "total_packets_transmitted": 3814,
+    "bad_packets_received": 0,
+    "framing_errors_received": 0,
+    "transmit_collisions": 0,
+    "transmit_late_collisions": 0,
+    "unsendable_packets": 0
   }
 }

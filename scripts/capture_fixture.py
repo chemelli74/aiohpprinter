@@ -33,6 +33,7 @@ from aiohpprinter.const import (
     ENDPOINT_ADAPTERS,
     ENDPOINT_CONSUMABLE_CONFIG,
     ENDPOINT_EPRINT_CONFIG,
+    ENDPOINT_IO_CONFIG,
     ENDPOINT_NET_APPS_SECURE,
     ENDPOINT_PRODUCT_CONFIG,
     ENDPOINT_PRODUCT_STATUS,
@@ -47,6 +48,7 @@ from aiohpprinter.parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_io_config,
     parse_printer_usage,
     parse_scanner_usage,
     parse_status,
@@ -65,6 +67,7 @@ LIBRARY_ENDPOINTS = (
     ENDPOINT_ADAPTERS,
     ENDPOINT_EPRINT_CONFIG,
     ENDPOINT_NET_APPS_SECURE,
+    ENDPOINT_IO_CONFIG,
 )
 
 REDACTED = "REDACTED"
@@ -335,6 +338,8 @@ def build_expected(captures: dict[str, Capture]) -> dict[str, Any]:
         expected["eprint"] = parse_eprint(document)
     if document := documents.get(ENDPOINT_NET_APPS_SECURE):
         expected["wifi"] = parse_wifi(document)
+    if document := documents.get(ENDPOINT_IO_CONFIG):
+        expected["io_config"] = parse_io_config(document)
 
     return {key: to_json_safe(value) for key, value in expected.items()}
 

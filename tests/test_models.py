@@ -104,3 +104,4 @@ def test_printer_data_defaults_to_empty_optional_sections() -> None:
     assert data.adapters == []
     assert data.eprint is None
     assert data.wifi is None
+    assert data.io_config is None

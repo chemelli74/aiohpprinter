@@ -49,6 +49,7 @@ if TYPE_CHECKING:
     MakeSession = Callable[[Path | None], ClientSession]
 
 FULL_FIXTURE = Path(__file__).parent / "fixtures" / "hp_officejet_pro_9022e"
+IO_CONFIG_FIXTURE = Path(__file__).parent / "fixtures" / "hp_color_laserjet_mfp_m476dw"
 STATUS_ENDPOINT = "/DevMgmt/ProductStatusDyn.xml"
 
 #: The endpoints every model answers; the rest are optional.
@@ -131,6 +132,18 @@ async def test_usage_methods_fetch_live_when_no_document_given(
     result = await method()
 
     assert to_json_safe(result) == load_expected(FULL_FIXTURE)[method_name]
+
+
+async def test_io_config_method(make_printer: MakePrinter) -> None:
+    """`io_config()` fetches and parses its own endpoint."""
+    xml = load_xml(IO_CONFIG_FIXTURE, "IOConfigDyn.xml")
+    assert xml is not None
+    printer = await make_printer({"/DevMgmt/IOConfigDyn.xml": RouteResponse(body=xml)})
+
+    assert (
+        to_json_safe(await printer.io_config())
+        == load_expected(IO_CONFIG_FIXTURE)["io_config"]
+    )
 
 
 @pytest.mark.parametrize("content_type", ["application/javascript", "application/json"])
@@ -388,3 +401,4 @@ async def test_update_tolerates_missing_optional_endpoints(
     assert data.adapters == []
     assert data.eprint is None
     assert data.wifi is None
+    assert data.io_config is None
