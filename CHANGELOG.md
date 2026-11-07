@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.5.0 (2026-11-07)
+
+### Features
+
+- Add scan application and original hp page counters ([`8a7ff23`](https://github.com/chemelli74/aiohpprinter/commit/8a7ff23a3779e71365e06b953547e1312dc6ccf5))
+
+
 ## v3.4.0 (2026-11-07)
 
 ### Features
