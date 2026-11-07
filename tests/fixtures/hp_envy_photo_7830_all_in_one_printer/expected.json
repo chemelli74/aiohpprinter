@@ -47,7 +47,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "TIJ2",
+      "previous_cartridge": null
     },
     "K": {
       "consumable_id": "K",
@@ -72,7 +76,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "TIJ2",
+      "previous_cartridge": null
     }
   },
   "printer_usage": {
@@ -144,5 +152,6 @@
     "scan_to_host_images": 642,
     "images_sent_to_email": null,
     "images_sent_to_folder": null
-  }
+  },
+  "genuine_supplies_only": false
 }

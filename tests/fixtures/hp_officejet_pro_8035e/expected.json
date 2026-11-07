@@ -47,7 +47,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "PROHAN",
+      "previous_cartridge": null
     },
     "CMYK": {
       "consumable_id": "CMYK",
@@ -72,7 +76,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": null,
+      "family_name": "MARLEY",
+      "previous_cartridge": null
     },
     "K": {
       "consumable_id": "K",
@@ -97,7 +105,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "PROHAN",
+      "previous_cartridge": null
     },
     "M": {
       "consumable_id": "M",
@@ -122,7 +134,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "PROHAN",
+      "previous_cartridge": null
     },
     "Y": {
       "consumable_id": "Y",
@@ -147,7 +163,11 @@
       "unique_id": "REDACTED",
       "counterfeit_refilled_count": 0,
       "genuine_refilled_count": 0,
-      "total_impressions": null
+      "total_impressions": null,
+      "low_threshold": null,
+      "measured_quantity_state": "ok",
+      "family_name": "PROHAN",
+      "previous_cartridge": null
     }
   },
   "printer_usage": {
@@ -219,5 +239,6 @@
     "scan_to_host_images": 244,
     "images_sent_to_email": null,
     "images_sent_to_folder": null
-  }
+  },
+  "genuine_supplies_only": null
 }

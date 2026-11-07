@@ -48,6 +48,7 @@ from aiohpprinter.parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_genuine_supplies_only,
     parse_io_config,
     parse_printer_usage,
     parse_scan_usage,
@@ -328,6 +329,8 @@ def build_expected(captures: dict[str, Capture]) -> dict[str, Any]:
     usage = documents.get(ENDPOINT_PRODUCT_USAGE)
     if config or usage:
         expected["consumables"] = parse_consumables(config, usage)
+    if config:
+        expected["genuine_supplies_only"] = parse_genuine_supplies_only(config)
     if usage:
         expected["printer_usage"] = parse_printer_usage(usage)
         expected["scanner_usage"] = parse_scanner_usage(usage)

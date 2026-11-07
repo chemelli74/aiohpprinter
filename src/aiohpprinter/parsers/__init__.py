@@ -12,7 +12,7 @@ functions are plain synchronous callables. Each takes the dict produced by
 from __future__ import annotations
 
 from .adapter import parse_adapters
-from .consumable import parse_consumables
+from .consumable import parse_consumables, parse_genuine_supplies_only
 from .device import parse_device
 from .eprint import parse_eprint
 from .io_config import parse_io_config
@@ -33,6 +33,7 @@ __all__ = [
     "parse_device",
     "parse_eprint",
     "parse_fax_usage",
+    "parse_genuine_supplies_only",
     "parse_io_config",
     "parse_printer_usage",
     "parse_scan_usage",

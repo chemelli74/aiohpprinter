@@ -126,6 +126,17 @@ class HpPrinterStatus:
 
 
 @dataclass(frozen=True, slots=True)
+class HpPreviousCartridge:
+    """Wear data the printer kept about the previously installed cartridge."""
+
+    product_number: str | None = None
+    serial_number: str | None = None
+    drum_life: int | None = None
+    developer_life: int | None = None
+    engine_toner_remaining: int | None = None
+
+
+@dataclass(frozen=True, slots=True)
 class HpConsumable:
     """A single ink/toner consumable, merged from config and usage data.
 
@@ -157,6 +168,10 @@ class HpConsumable:
     counterfeit_refilled_count: int | None = None
     genuine_refilled_count: int | None = None
     total_impressions: int | None = None
+    low_threshold: float | None = None
+    measured_quantity_state: str | None = None
+    family_name: str | None = None
+    previous_cartridge: HpPreviousCartridge | None = None
 
     @property
     def is_ok(self) -> bool:
@@ -287,6 +302,7 @@ class HpPrinterData:
     device: HpPrinterDevice | None = None
     status: HpPrinterStatus | None = None
     consumables: dict[str, HpConsumable] = field(default_factory=dict)
+    genuine_supplies_only: bool | None = None
     printer_usage: HpPrinterUsage | None = None
     scanner_usage: HpScannerUsage | None = None
     scan_usage: HpScanUsage | None = None
