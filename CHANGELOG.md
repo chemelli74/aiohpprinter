@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.4.0 (2026-11-07)
+
+### Features
+
+- Parse firmware and settings details from product config ([`4fb2e05`](https://github.com/chemelli74/aiohpprinter/commit/4fb2e055ac67e43c3e0c0b90b77d2f44bb1b59b2))
+
+
 ## v3.3.0 (2026-11-07)
 
 ### Features
