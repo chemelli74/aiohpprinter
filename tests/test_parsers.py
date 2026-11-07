@@ -107,9 +107,9 @@ def test_fixture_endpoints_parse_without_error(fixture_dir: Path) -> None:
     assert xml_files or json_files, f"{fixture_dir.name} has no fixture documents"
 
     for xml_path in xml_files:
-        assert parse_document(xml_path.read_text())
+        assert parse_document(xml_path.read_text(encoding="utf-8"))
     for json_path in json_files:
-        assert parse_json_document(json_path.read_text())
+        assert parse_json_document(json_path.read_text(encoding="utf-8"))
 
 
 def test_status_uses_first_entry_when_the_printer_reports_several() -> None:
