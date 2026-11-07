@@ -21,6 +21,21 @@ if TYPE_CHECKING:
     from typing import Any
 
 
+def as_list(value: Any) -> list[Any]:  # noqa: ANN401
+    """Return `value` as a list: XML repeats an element only when it occurs twice."""
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return value
+    return [value]
+
+
+def first(value: Any) -> Any:  # noqa: ANN401
+    """Return the first item of a repeated element, or `value` itself."""
+    items = as_list(value)
+    return items[0] if items else None
+
+
 def text(data: Mapping[str, Any] | None, path: str) -> str | None:
     """Return the string found at `path`, or `None` if missing/blank.
 

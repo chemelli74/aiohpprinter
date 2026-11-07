@@ -80,7 +80,7 @@ answers and returns an `HpPrinterData` snapshot. Each endpoint is also
 available individually - `printer.device()`, `printer.status()`,
 `printer.consumables()`, `printer.printer_usage()`, `printer.scanner_usage()`,
 `printer.copy_usage()`, `printer.fax_usage()`, `printer.adapters()`,
-`printer.eprint()`, `printer.wifi()` - for callers that only need one piece
+`printer.eprint()`, `printer.wifi()`, `printer.io_config()` - for callers that only need one piece
 of data, or that want failures raised instead of absorbed (see
 **Exception handling** below).
 
@@ -117,6 +117,7 @@ and redirect others to HTTPS: redirects are always followed.
 | Network adapters                  | `/IoMgmt/Adapters`                 | May reply as JSON instead of XML on some models |
 | HP ePrint / cloud printing        | `/ePrint/ePrintConfigDyn.xml`      | Registration and cloud services state           |
 | Wireless Direct                   | `/DevMgmt/NetAppsSecureDyn.xml`    | SSID prefix, connection method                  |
+| Network adaptor statistics        | `/DevMgmt/IOConfigDyn.xml`         | Link status, speed/duplex, packet counters      |
 
 Only the status endpoint is treated as required (it is what `is_online()`
 and `update()` use to decide whether the printer is reachable at all).

@@ -15,6 +15,7 @@ from .adapter import parse_adapters
 from .consumable import parse_consumables
 from .device import parse_device
 from .eprint import parse_eprint
+from .io_config import parse_io_config
 from .status import parse_status
 from .usage import (
     parse_copy_usage,
@@ -31,6 +32,7 @@ __all__ = [
     "parse_device",
     "parse_eprint",
     "parse_fax_usage",
+    "parse_io_config",
     "parse_printer_usage",
     "parse_scanner_usage",
     "parse_status",

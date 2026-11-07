@@ -133,5 +133,17 @@
   "wifi": {
     "ssid_prefix": null,
     "connection_method": null
+  },
+  "io_config": {
+    "connectivity_port_type": "wifiEmbedded",
+    "network_status": null,
+    "speed_duplex_negotiation_mode": null,
+    "total_packets_received": null,
+    "total_packets_transmitted": null,
+    "bad_packets_received": null,
+    "framing_errors_received": null,
+    "transmit_collisions": null,
+    "transmit_late_collisions": null,
+    "unsendable_packets": null
   }
 }

@@ -18,6 +18,7 @@ from .const import (
     ENDPOINT_ADAPTERS,
     ENDPOINT_CONSUMABLE_CONFIG,
     ENDPOINT_EPRINT_CONFIG,
+    ENDPOINT_IO_CONFIG,
     ENDPOINT_NET_APPS_SECURE,
     ENDPOINT_PRODUCT_CONFIG,
     ENDPOINT_PRODUCT_STATUS,
@@ -40,6 +41,7 @@ from .parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_io_config,
     parse_printer_usage,
     parse_scanner_usage,
     parse_status,
@@ -57,6 +59,7 @@ if TYPE_CHECKING:
         HpCopyUsage,
         HpEPrint,
         HpFaxUsage,
+        HpIOConfig,
         HpPrinterDevice,
         HpPrinterStatus,
         HpPrinterUsage,
@@ -205,6 +208,12 @@ class HpPrinter:
 
         return parse_wifi(document)
 
+    async def io_config(self) -> HpIOConfig:
+        """Fetch the network adaptor configuration and statistics."""
+        document = await self._request(ENDPOINT_IO_CONFIG)
+
+        return parse_io_config(document)
+
     async def update(self) -> HpPrinterData:
         """Fetch everything the printer currently supports.
 
@@ -247,6 +256,7 @@ class HpPrinter:
             adapters=await self._safe(self.adapters) or [],
             eprint=await self._safe(self.eprint),
             wifi=await self._safe(self.wifi),
+            io_config=await self._safe(self.io_config),
         )
 
     async def _safe[T](self, func: Callable[[], Awaitable[T]]) -> T | None:

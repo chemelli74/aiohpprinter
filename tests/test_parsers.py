@@ -22,6 +22,7 @@ from aiohpprinter.parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_io_config,
     parse_printer_usage,
     parse_scanner_usage,
     parse_status,
@@ -53,6 +54,7 @@ _SINGLE_DOCUMENT_PARSERS: dict[str, tuple[str, Callable[[dict[str, Any]], Any]]]
     "scanner_usage": ("ProductUsageDyn.xml", parse_scanner_usage),
     "copy_usage": ("ProductUsageDyn.xml", parse_copy_usage),
     "fax_usage": ("ProductUsageDyn.xml", parse_fax_usage),
+    "io_config": ("IOConfigDyn.xml", parse_io_config),
 }
 
 
@@ -129,6 +131,38 @@ def test_status_missing_document_section_is_none() -> None:
     status = parse_status(parse_document("<ProductStatusDyn/>"))
 
     assert status.device_status is None
+
+
+def test_io_config_without_network_adaptor_is_empty() -> None:
+    """Only a USB port reported: there is no network adaptor data."""
+    document = parse_document(
+        "<IOConfigDyn><IOAdaptorConfig>"
+        "<DeviceConnectivityPortType>usb</DeviceConnectivityPortType>"
+        "</IOAdaptorConfig></IOConfigDyn>"
+    )
+
+    io_config = parse_io_config(document)
+
+    assert io_config.connectivity_port_type is None
+    assert io_config.total_packets_received is None
+
+
+def test_io_config_network_status_uses_first_ip_version() -> None:
+    """With IPv4 and IPv6 entries, the network status is the IPv4 one."""
+    document = parse_document(
+        "<IOConfigDyn><IOAdaptorConfig>"
+        "<DeviceConnectivityPortType>ethernet</DeviceConnectivityPortType>"
+        "<NetworkAdaptorConfig>"
+        "<IPVersionConfig><NetworkStatus>ready</NetworkStatus></IPVersionConfig>"
+        "<IPVersionConfig><NetworkStatus>notReady</NetworkStatus></IPVersionConfig>"
+        "</NetworkAdaptorConfig>"
+        "</IOAdaptorConfig></IOConfigDyn>"
+    )
+
+    io_config = parse_io_config(document)
+
+    assert io_config.connectivity_port_type == "ethernet"
+    assert io_config.network_status == "ready"
 
 
 def test_consumables_merges_config_only_entry() -> None:

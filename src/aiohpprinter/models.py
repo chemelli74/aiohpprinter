@@ -208,6 +208,22 @@ class HpAdapter:
 
 
 @dataclass(frozen=True, slots=True)
+class HpIOConfig:
+    """Configuration and statistics of the printer's network adaptor."""
+
+    connectivity_port_type: str | None = None
+    network_status: str | None = None
+    speed_duplex_negotiation_mode: str | None = None
+    total_packets_received: int | None = None
+    total_packets_transmitted: int | None = None
+    bad_packets_received: int | None = None
+    framing_errors_received: int | None = None
+    transmit_collisions: int | None = None
+    transmit_late_collisions: int | None = None
+    unsendable_packets: int | None = None
+
+
+@dataclass(frozen=True, slots=True)
 class HpEPrint:
     """HP ePrint cloud printing configuration."""
 
@@ -245,3 +261,4 @@ class HpPrinterData:
     adapters: list[HpAdapter] = field(default_factory=list)
     eprint: HpEPrint | None = None
     wifi: HpWifi | None = None
+    io_config: HpIOConfig | None = None
