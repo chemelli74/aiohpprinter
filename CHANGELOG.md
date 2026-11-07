@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.7.0 (2026-11-07)
+
+### Features
+
+- Add product logs endpoint ([`84670a8`](https://github.com/chemelli74/aiohpprinter/commit/84670a8617ae63da383cf7d48f07c92b556f1f0d))
+
+
 ## v3.6.0 (2026-11-07)
 
 ### Features
