@@ -20,6 +20,9 @@ if TYPE_CHECKING:
     from collections.abc import Mapping
     from typing import Any
 
+# Printers without a real-time clock report dates around the Unix epoch.
+_UNSET_CLOCK_MAX_YEAR = 1976
+
 
 def as_list(value: Any) -> list[Any]:  # noqa: ANN401
     """Return `value` as a list: XML repeats an element only when it occurs twice."""
@@ -83,6 +86,16 @@ def number(data: Mapping[str, Any] | None, path: str) -> float | None:
         return None
 
 
+def percentage(data: Mapping[str, Any] | None, path: str) -> float | None:
+    """Return the 0-100 percentage at `path`, `None` for out-of-range sentinels."""
+    value = number(data, path)
+
+    if value is None or not 0 <= value <= 100:  # noqa: PLR2004
+        return None
+
+    return value
+
+
 def boolean(
     data: Mapping[str, Any] | None,
     path: str,
@@ -105,6 +118,8 @@ def timestamp(data: Mapping[str, Any] | None, path: str) -> datetime | None:
         return None
 
     try:
-        return datetime.fromisoformat(value)
+        parsed = datetime.fromisoformat(value)
     except ValueError:
         return None
+
+    return parsed if parsed.year > _UNSET_CLOCK_MAX_YEAR else None
