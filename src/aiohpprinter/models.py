@@ -25,13 +25,17 @@ class HpDeviceStatus(StrEnum):
     """Known printer status categories, as snake_case values."""
 
     CANCEL_JOB = "cancel_job"
+    CLOSE_DOOR_OR_COVER = "close_door_or_cover"
     COPYING = "copying"
+    INITIALIZING = "initializing"
     IN_POWER_SAVE = "in_power_save"
     OFF = "off"
     PROCESSING = "processing"
     READY = "ready"
     SCAN_PROCESSING = "scan_processing"
+    SHUTTING_DOWN = "shutting_down"
     TRAY_EMPTY = "tray_empty"
+    UNKNOWN = "unknown"
 
 
 class HpConsumableColor(StrEnum):
@@ -47,13 +51,17 @@ class HpConsumableColor(StrEnum):
 # Raw `StatusCategory` values, lowercased by the status parser.
 _DEVICE_STATUSES = {
     "canceljob": HpDeviceStatus.CANCEL_JOB,
+    "closedoororcover": HpDeviceStatus.CLOSE_DOOR_OR_COVER,
     "copying": HpDeviceStatus.COPYING,
+    "initializing": HpDeviceStatus.INITIALIZING,
     "inpowersave": HpDeviceStatus.IN_POWER_SAVE,
     "off": HpDeviceStatus.OFF,
     "processing": HpDeviceStatus.PROCESSING,
     "ready": HpDeviceStatus.READY,
     "scanprocessing": HpDeviceStatus.SCAN_PROCESSING,
+    "shuttingdown": HpDeviceStatus.SHUTTING_DOWN,
     "trayempty": HpDeviceStatus.TRAY_EMPTY,
+    "unknown": HpDeviceStatus.UNKNOWN,
 }
 
 # Consumable label codes, see `const.MARKER_COLOR_TO_LABEL_CODE`.
@@ -84,6 +92,7 @@ class HpPrinterStatus:
     """The printer's current operational status."""
 
     device_status: str | None = None
+    message: str | None = None
 
     @property
     def is_ready(self) -> bool:

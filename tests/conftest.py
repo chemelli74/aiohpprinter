@@ -71,7 +71,9 @@ def load_expected(fixture_dir: Path) -> dict[str, Any]:
     if not expected_path.exists():
         return {}
 
-    return cast("dict[str, Any]", orjson.loads(expected_path.read_text()))
+    return cast(
+        "dict[str, Any]", orjson.loads(expected_path.read_text(encoding="utf-8"))
+    )
 
 
 def load_xml(fixture_dir: Path, filename: str) -> str | None:
@@ -81,7 +83,7 @@ def load_xml(fixture_dir: Path, filename: str) -> str | None:
     if not xml_path.exists():
         return None
 
-    return xml_path.read_text()
+    return xml_path.read_text(encoding="utf-8")
 
 
 def load_document(fixture_dir: Path, filename: str) -> dict[str, Any] | None:
@@ -96,7 +98,7 @@ def load_document(fixture_dir: Path, filename: str) -> dict[str, Any] | None:
     if (xml := load_xml(fixture_dir, filename)) is not None:
         document = parse_document(xml)
     elif json_path.exists():
-        document = parse_json_document(json_path.read_text())
+        document = parse_json_document(json_path.read_text(encoding="utf-8"))
 
     return document
 
@@ -121,7 +123,8 @@ def fixture_routes(
             routes[endpoint] = RouteResponse(body=xml)
         elif json_path.exists():
             routes[endpoint] = RouteResponse(
-                body=json_path.read_text(), content_type="application/javascript"
+                body=json_path.read_text(encoding="utf-8"),
+                content_type="application/javascript",
             )
         elif missing_status is not None:
             routes[endpoint] = RouteResponse(status=missing_status)

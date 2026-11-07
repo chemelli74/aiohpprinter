@@ -9,7 +9,8 @@
     "manufactured_at": "2023-03-13T00:00:00"
   },
   "status": {
-    "device_status": "inpowersave"
+    "device_status": "inpowersave",
+    "message": null
   },
   "consumables": {
     "C": {

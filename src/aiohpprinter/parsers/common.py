@@ -60,6 +60,11 @@ def text(data: Mapping[str, Any] | None, path: str) -> str | None:
     return None
 
 
+def first_text(data: Mapping[str, Any] | None, path: str) -> str | None:
+    """Return the text of the first element at `path`, which may repeat."""
+    return text({"value": first(get_path(data, path))}, "value")
+
+
 def integer(data: Mapping[str, Any] | None, path: str) -> int | None:
     """Return the integer found at `path`, or `None` if missing/invalid."""
     value = text(data, path)

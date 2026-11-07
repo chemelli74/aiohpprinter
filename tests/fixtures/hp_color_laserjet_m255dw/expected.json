@@ -9,7 +9,8 @@
     "manufactured_at": null
   },
   "status": {
-    "device_status": "inpowersave"
+    "device_status": "inpowersave",
+    "message": "Modalit\u00e0 Pausa attiva."
   },
   "consumables": {
     "C": {

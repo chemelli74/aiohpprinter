@@ -9,7 +9,8 @@
     "manufactured_at": "2016-08-27T00:00:00"
   },
   "status": {
-    "device_status": "genuinehp"
+    "device_status": "genuinehp",
+    "message": null
   },
   "consumables": {
     "CMY": {
