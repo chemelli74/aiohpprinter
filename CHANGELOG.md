@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.6.0 (2026-11-07)
+
+### Features
+
+- Parse more consumable details ([`8d86194`](https://github.com/chemelli74/aiohpprinter/commit/8d861945013e0ae1eef06838831f226ad6bb6b36))
+
+
 ## v3.5.0 (2026-11-07)
 
 ### Features
