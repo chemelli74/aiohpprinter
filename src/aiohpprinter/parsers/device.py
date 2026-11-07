@@ -10,12 +10,14 @@ from typing import TYPE_CHECKING
 from aiohpprinter.models import HpPrinterDevice
 from aiohpprinter.xml import get_path
 
-from .common import boolean, text, timestamp
+from .common import text, timestamp
 
 if TYPE_CHECKING:
     from typing import Any
 
 _ROOT_PATH = "ProductConfigDyn"
+# Any other `PasswordStatus` value is unknown, not "no password".
+_PASSWORD_STATUSES = {"set": True, "notset": False}
 
 
 def parse_device(document: dict[str, Any]) -> HpPrinterDevice:
@@ -35,7 +37,9 @@ def parse_device(document: dict[str, Any]) -> HpPrinterDevice:
         firmware_revision=text(info, "Version.Revision"),
         firmware_date=timestamp(info, "Version.Date"),
         language_pack_version=text(info, "LanguagePackVersion.Revision"),
-        admin_password_set=boolean(info, "PasswordStatus", ("set",)),
+        admin_password_set=_PASSWORD_STATUSES.get(
+            (text(info, "PasswordStatus") or "").lower()
+        ),
         uuid=text(info, "UUID"),
         service_id=text(info, "ServiceID"),
         duplex_unit=text(info, "DuplexUnit"),
