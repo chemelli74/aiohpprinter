@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.2.0 (2026-11-07)
+
+### Features
+
+- Add network adaptor statistics endpoint ([`3bee2a8`](https://github.com/chemelli74/aiohpprinter/commit/3bee2a89adde75848d664a01b97f083041fefe5f))
+
+
+### Build system
+
+- Anchor the uv version lookup in pyproject.toml ([`910f14c`](https://github.com/chemelli74/aiohpprinter/commit/910f14c11f337c87f3813d65a5cfc6c22bd21cbb))
+- Make cleanup scripts safer to run ([`98262e1`](https://github.com/chemelli74/aiohpprinter/commit/98262e167b42a6e0d162de2706220d9385de21cb))
+- Stop grouping python dependency bumps ([`6c6d481`](https://github.com/chemelli74/aiohpprinter/commit/6c6d4813ebcb0b29330f86e6186e0ec8f0b48b39))
+
+
 ## v3.1.1 (2026-11-02)
 
 ### Bug fixes
