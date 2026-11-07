@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.3.0 (2026-11-07)
+
+### Features
+
+- Add status message and more status categories ([`0c434c9`](https://github.com/chemelli74/aiohpprinter/commit/0c434c9c30a67a0dbec24a4010595d9da87105e6))
+
+
 ## v3.2.1 (2026-11-07)
 
 ### Bug fixes
