@@ -96,7 +96,7 @@ async def test_consumables_success(make_printer: MakePrinter) -> None:
 
 @pytest.mark.parametrize(
     "method_name",
-    ["printer_usage", "scanner_usage", "copy_usage", "fax_usage"],
+    ["printer_usage", "scanner_usage", "scan_usage", "copy_usage", "fax_usage"],
 )
 async def test_usage_methods_reuse_supplied_document(
     make_printer: MakePrinter, method_name: str
@@ -117,7 +117,7 @@ async def test_usage_methods_reuse_supplied_document(
 
 @pytest.mark.parametrize(
     "method_name",
-    ["printer_usage", "scanner_usage", "copy_usage", "fax_usage"],
+    ["printer_usage", "scanner_usage", "scan_usage", "copy_usage", "fax_usage"],
 )
 async def test_usage_methods_fetch_live_when_no_document_given(
     make_printer: MakePrinter, method_name: str
@@ -396,6 +396,7 @@ async def test_update_tolerates_missing_optional_endpoints(
     assert data.consumables == {}
     assert data.printer_usage is None
     assert data.scanner_usage is None
+    assert data.scan_usage is None
     assert data.copy_usage is None
     assert data.fax_usage is None
     assert data.adapters == []

@@ -50,6 +50,7 @@ from aiohpprinter.parsers import (
     parse_fax_usage,
     parse_io_config,
     parse_printer_usage,
+    parse_scan_usage,
     parse_scanner_usage,
     parse_status,
     parse_wifi,
@@ -330,6 +331,7 @@ def build_expected(captures: dict[str, Capture]) -> dict[str, Any]:
     if usage:
         expected["printer_usage"] = parse_printer_usage(usage)
         expected["scanner_usage"] = parse_scanner_usage(usage)
+        expected["scan_usage"] = parse_scan_usage(usage)
         expected["copy_usage"] = parse_copy_usage(usage)
         expected["fax_usage"] = parse_fax_usage(usage)
     if document := documents.get(ENDPOINT_ADAPTERS):

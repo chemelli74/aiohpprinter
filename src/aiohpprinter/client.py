@@ -43,6 +43,7 @@ from .parsers import (
     parse_fax_usage,
     parse_io_config,
     parse_printer_usage,
+    parse_scan_usage,
     parse_scanner_usage,
     parse_status,
     parse_wifi,
@@ -64,6 +65,7 @@ if TYPE_CHECKING:
         HpPrinterStatus,
         HpPrinterUsage,
         HpScannerUsage,
+        HpScanUsage,
         HpWifi,
     )
 
@@ -164,6 +166,19 @@ class HpPrinter:
 
         return parse_scanner_usage(document)
 
+    async def scan_usage(
+        self,
+        document: dict[str, Any] | None = None,
+    ) -> HpScanUsage:
+        """Fetch cumulative scan application page counters.
+
+        See :meth:`printer_usage` for the meaning of `document`.
+        """
+        if document is None:
+            document = await self._request(ENDPOINT_PRODUCT_USAGE)
+
+        return parse_scan_usage(document)
+
     async def copy_usage(
         self,
         document: dict[str, Any] | None = None,
@@ -246,6 +261,9 @@ class HpPrinter:
                 parse_scanner_usage(usage_document)
                 if usage_document is not None
                 else None
+            ),
+            scan_usage=(
+                parse_scan_usage(usage_document) if usage_document is not None else None
             ),
             copy_usage=(
                 parse_copy_usage(usage_document) if usage_document is not None else None

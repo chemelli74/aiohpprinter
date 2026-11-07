@@ -7,7 +7,13 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from aiohpprinter.models import HpCopyUsage, HpFaxUsage, HpPrinterUsage, HpScannerUsage
+from aiohpprinter.models import (
+    HpCopyUsage,
+    HpFaxUsage,
+    HpPrinterUsage,
+    HpScannerUsage,
+    HpScanUsage,
+)
 from aiohpprinter.xml import get_path
 
 from .common import integer
@@ -28,6 +34,10 @@ def parse_printer_usage(document: dict[str, Any]) -> HpPrinterUsage:
         duplex_sheets=integer(subunit, "DuplexSheets"),
         jam_events=integer(subunit, "JamEvents"),
         mispick_events=integer(subunit, "MispickEvents"),
+        original_hp_color_impressions=integer(subunit, "OriginalHPColorImpressions"),
+        original_hp_monochrome_impressions=integer(
+            subunit, "OriginalHPMonochromeImpressions"
+        ),
     )
 
 
@@ -42,6 +52,19 @@ def parse_scanner_usage(document: dict[str, Any]) -> HpScannerUsage:
         flatbed_images=integer(subunit, "FlatbedImages"),
         jam_events=integer(subunit, "JamEvents"),
         mispick_events=integer(subunit, "MispickEvents"),
+    )
+
+
+def parse_scan_usage(document: dict[str, Any]) -> HpScanUsage:
+    """Build scan application counters from a `ProductUsageDyn` document."""
+    subunit = get_path(document, "ProductUsageDyn.ScanApplicationSubunit")
+
+    return HpScanUsage(
+        adf_images=integer(subunit, "AdfImages"),
+        flatbed_images=integer(subunit, "FlatbedImages"),
+        scan_to_host_images=integer(subunit, "ScanToHostImages"),
+        images_sent_to_email=integer(subunit, "ImagesSentToEmail"),
+        images_sent_to_folder=integer(subunit, "ImagesSentToFolder"),
     )
 
 

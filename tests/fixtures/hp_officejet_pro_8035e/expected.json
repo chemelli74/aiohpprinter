@@ -157,7 +157,9 @@
     "simplex_sheets": 3633,
     "duplex_sheets": 130,
     "jam_events": 3,
-    "mispick_events": 39
+    "mispick_events": 39,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": 276,
@@ -210,5 +212,12 @@
   "wifi": {
     "ssid_prefix": "DIRECT-1C-HP",
     "connection_method": "manual"
+  },
+  "scan_usage": {
+    "adf_images": 222,
+    "flatbed_images": 22,
+    "scan_to_host_images": 244,
+    "images_sent_to_email": null,
+    "images_sent_to_folder": null
   }
 }

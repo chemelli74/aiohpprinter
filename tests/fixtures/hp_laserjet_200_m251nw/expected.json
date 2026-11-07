@@ -6,7 +6,9 @@
     "simplex_sheets": null,
     "duplex_sheets": null,
     "jam_events": 4,
-    "mispick_events": 1
+    "mispick_events": 1,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": null,
@@ -130,5 +132,12 @@
       "genuine_refilled_count": null,
       "total_impressions": 339
     }
+  },
+  "scan_usage": {
+    "adf_images": null,
+    "flatbed_images": null,
+    "scan_to_host_images": null,
+    "images_sent_to_email": null,
+    "images_sent_to_folder": null
   }
 }
