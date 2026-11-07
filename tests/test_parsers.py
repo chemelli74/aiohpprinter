@@ -112,6 +112,26 @@ def test_fixture_endpoints_parse_without_error(fixture_dir: Path) -> None:
         assert parse_json_document(json_path.read_text(encoding="utf-8"))
 
 
+@pytest.mark.parametrize(
+    ("element", "expected"),
+    [
+        pytest.param("<PasswordStatus>set</PasswordStatus>", True, id="set"),
+        pytest.param("<PasswordStatus>notSet</PasswordStatus>", False, id="not_set"),
+        pytest.param("<PasswordStatus>other</PasswordStatus>", None, id="unexpected"),
+        pytest.param("", None, id="missing"),
+    ],
+)
+def test_device_admin_password_set(element: str, expected: bool | None) -> None:
+    """Only `set`/`notSet` map to a bool; anything else stays unknown."""
+    document = parse_document(
+        "<ProductConfigDyn><ProductInformation>"
+        f"{element}"
+        "</ProductInformation></ProductConfigDyn>"
+    )
+
+    assert parse_device(document).admin_password_set is expected
+
+
 def test_status_uses_first_entry_when_the_printer_reports_several() -> None:
     """Multiple `Status` entries: the overall category is the first one."""
     document = parse_document(

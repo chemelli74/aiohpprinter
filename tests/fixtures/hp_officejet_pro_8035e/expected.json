@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "1L0H6A",
     "manufacturer_name": "HP",
-    "manufactured_at": "2021-03-09T00:00:00"
+    "manufactured_at": "2021-03-09T00:00:00",
+    "firmware_revision": "MALBECPP1N004.2623B.00",
+    "firmware_date": "2026-06-03T00:00:00",
+    "language_pack_version": null,
+    "admin_password_set": true,
+    "uuid": "REDACTED",
+    "service_id": "31268",
+    "duplex_unit": "Installed",
+    "power_save": "on",
+    "friendly_name": null,
+    "power_save_timeout": "5minutes",
+    "shutdown_delay": null
   },
   "status": {
     "device_status": "inpowersave",

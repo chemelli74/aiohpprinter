@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "6HU08A",
     "manufacturer_name": null,
-    "manufactured_at": null
+    "manufactured_at": null,
+    "firmware_revision": "V3.82.01.14",
+    "firmware_date": null,
+    "language_pack_version": null,
+    "admin_password_set": false,
+    "uuid": "REDACTED",
+    "service_id": "00000",
+    "duplex_unit": "NotInstalled",
+    "power_save": null,
+    "friendly_name": null,
+    "power_save_timeout": null,
+    "shutdown_delay": null
   },
   "status": {
     "device_status": "inpowersave",
