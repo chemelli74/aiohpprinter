@@ -146,6 +146,17 @@ async def test_io_config_method(make_printer: MakePrinter) -> None:
     )
 
 
+async def test_logs_method(make_printer: MakePrinter) -> None:
+    """`logs()` fetches and parses its own endpoint."""
+    xml = load_xml(FULL_FIXTURE, "ProductLogsDyn.xml")
+    assert xml is not None
+    printer = await make_printer(
+        {"/DevMgmt/ProductLogsDyn.xml": RouteResponse(body=xml)}
+    )
+
+    assert to_json_safe(await printer.logs()) == load_expected(FULL_FIXTURE)["logs"]
+
+
 @pytest.mark.parametrize("content_type", ["application/javascript", "application/json"])
 async def test_adapters_via_json_content_type(
     make_printer: MakePrinter, content_type: str
@@ -404,3 +415,4 @@ async def test_update_tolerates_missing_optional_endpoints(
     assert data.eprint is None
     assert data.wifi is None
     assert data.io_config is None
+    assert data.logs is None

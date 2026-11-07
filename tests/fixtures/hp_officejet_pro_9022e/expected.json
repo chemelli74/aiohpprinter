@@ -240,5 +240,373 @@
     "images_sent_to_email": null,
     "images_sent_to_folder": 4128
   },
-  "genuine_supplies_only": false
+  "genuine_supplies_only": false,
+  "logs": {
+    "events": [
+      {
+        "sequence_number": 67,
+        "event_code": "71.00.ED",
+        "total_impressions": 486
+      },
+      {
+        "sequence_number": 66,
+        "event_code": "17.00.90",
+        "total_impressions": 480
+      },
+      {
+        "sequence_number": 65,
+        "event_code": "31.13.02",
+        "total_impressions": 411
+      },
+      {
+        "sequence_number": 64,
+        "event_code": "31.13.01",
+        "total_impressions": 411
+      },
+      {
+        "sequence_number": 63,
+        "event_code": "17.03.80",
+        "total_impressions": 336
+      },
+      {
+        "sequence_number": 62,
+        "event_code": "17.02.80",
+        "total_impressions": 336
+      },
+      {
+        "sequence_number": 61,
+        "event_code": "00.00.00",
+        "total_impressions": 336
+      },
+      {
+        "sequence_number": 60,
+        "event_code": "31.13.02",
+        "total_impressions": 172
+      },
+      {
+        "sequence_number": 59,
+        "event_code": "01.48.06",
+        "total_impressions": 115
+      },
+      {
+        "sequence_number": 58,
+        "event_code": "31.13.01",
+        "total_impressions": 99
+      },
+      {
+        "sequence_number": 57,
+        "event_code": "31.13.02",
+        "total_impressions": 99
+      },
+      {
+        "sequence_number": 56,
+        "event_code": "31.13.01",
+        "total_impressions": 99
+      },
+      {
+        "sequence_number": 55,
+        "event_code": "31.13.02",
+        "total_impressions": 99
+      },
+      {
+        "sequence_number": 54,
+        "event_code": "31.13.02",
+        "total_impressions": 36
+      },
+      {
+        "sequence_number": 53,
+        "event_code": "17.00.65",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 52,
+        "event_code": "17.03.65",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 51,
+        "event_code": "17.02.65",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 50,
+        "event_code": "17.01.65",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 49,
+        "event_code": "62.80.A0",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 48,
+        "event_code": "00.00.00",
+        "total_impressions": 0
+      }
+    ],
+    "error_log": "#0Error Code: B80BD2F4\nFile: .\nLine:   0\nWhen: 11/19/2023 19:29:20Page:      0\nSUB TYPE: 8\nEXECUTION ADDRESS: 410BD2F4",
+    "jobs": [
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 2,
+        "total_impressions": 2,
+        "submitted_at": "2026-09-26T16:58:21+00:00"
+      },
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 2,
+        "total_impressions": 2,
+        "submitted_at": "2026-09-26T16:58:07+00:00"
+      },
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 1,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-26T15:12:24+00:00"
+      },
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 3,
+        "total_impressions": 3,
+        "submitted_at": "2026-09-26T15:09:36+00:00"
+      },
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 2,
+        "total_impressions": 2,
+        "submitted_at": "2026-09-26T15:09:15+00:00"
+      },
+      {
+        "application_id": "Spooler Subsystem App",
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 3,
+        "total_impressions": 3,
+        "submitted_at": "2026-09-26T15:09:00+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-26T15:01:39+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-26T14:42:52+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T14:23:02+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 4,
+        "color_impressions": 0,
+        "total_impressions": 4,
+        "submitted_at": "2026-09-22T13:56:43+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T13:43:58+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T13:43:41+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T13:42:28+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T13:41:30+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-22T13:39:22+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 11,
+        "total_impressions": 11,
+        "submitted_at": "2026-09-09T19:21:14+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 3,
+        "total_impressions": 3,
+        "submitted_at": "2026-09-09T15:53:52+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-08T10:37:53+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-08T10:37:36+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 2,
+        "total_impressions": 2,
+        "submitted_at": "2026-09-07T20:12:49+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 4,
+        "color_impressions": 0,
+        "total_impressions": 4,
+        "submitted_at": "2026-09-04T15:54:22+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 1,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-01T15:41:08+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 1,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-01T15:35:46+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 1,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-01T15:31:54+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 1,
+        "total_impressions": 1,
+        "submitted_at": "2026-09-01T15:31:16+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 0,
+        "color_impressions": 7,
+        "total_impressions": 7,
+        "submitted_at": "2026-09-01T13:26:20+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 1,
+        "color_impressions": 0,
+        "total_impressions": 1,
+        "submitted_at": "2026-08-30T23:10:05+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 2,
+        "color_impressions": 0,
+        "total_impressions": 2,
+        "submitted_at": "2026-08-13T15:44:10+00:00"
+      },
+      {
+        "application_id": null,
+        "user_id": "REDACTED",
+        "name": "REDACTED",
+        "monochrome_impressions": 4,
+        "color_impressions": 0,
+        "total_impressions": 4,
+        "submitted_at": "2026-08-13T10:50:45+00:00"
+      }
+    ]
+  }
 }

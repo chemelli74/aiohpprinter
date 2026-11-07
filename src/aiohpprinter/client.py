@@ -21,6 +21,7 @@ from .const import (
     ENDPOINT_IO_CONFIG,
     ENDPOINT_NET_APPS_SECURE,
     ENDPOINT_PRODUCT_CONFIG,
+    ENDPOINT_PRODUCT_LOGS,
     ENDPOINT_PRODUCT_STATUS,
     ENDPOINT_PRODUCT_USAGE,
     JSON_CONTENT_TYPES,
@@ -43,6 +44,7 @@ from .parsers import (
     parse_fax_usage,
     parse_genuine_supplies_only,
     parse_io_config,
+    parse_logs,
     parse_printer_usage,
     parse_scan_usage,
     parse_scanner_usage,
@@ -65,6 +67,7 @@ if TYPE_CHECKING:
         HpPrinterDevice,
         HpPrinterStatus,
         HpPrinterUsage,
+        HpProductLogs,
         HpScannerUsage,
         HpScanUsage,
         HpWifi,
@@ -230,6 +233,12 @@ class HpPrinter:
 
         return parse_io_config(document)
 
+    async def logs(self) -> HpProductLogs:
+        """Fetch the printer's event, error and job logs."""
+        document = await self._request(ENDPOINT_PRODUCT_LOGS)
+
+        return parse_logs(document)
+
     async def update(self) -> HpPrinterData:
         """Fetch everything the printer currently supports.
 
@@ -281,6 +290,7 @@ class HpPrinter:
             eprint=await self._safe(self.eprint),
             wifi=await self._safe(self.wifi),
             io_config=await self._safe(self.io_config),
+            logs=await self._safe(self.logs),
         )
 
     async def _safe[T](self, func: Callable[[], Awaitable[T]]) -> T | None:

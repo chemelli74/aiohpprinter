@@ -272,6 +272,41 @@ class HpIOConfig:
 
 
 @dataclass(frozen=True, slots=True)
+class HpLogEvent:
+    """One entry of the printer's event log."""
+
+    sequence_number: int | None = None
+    event_code: str | None = None
+    total_impressions: int | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class HpJob:
+    """One entry of the printer's color usage job log.
+
+    ``user_id`` and ``name`` come from the print driver and may identify a
+    person or a document.
+    """
+
+    application_id: str | None = None
+    user_id: str | None = None
+    name: str | None = None
+    monochrome_impressions: int | None = None
+    color_impressions: int | None = None
+    total_impressions: int | None = None
+    submitted_at: datetime | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class HpProductLogs:
+    """The printer's event, error and job logs."""
+
+    events: list[HpLogEvent] = field(default_factory=list)
+    error_log: str | None = None
+    jobs: list[HpJob] = field(default_factory=list)
+
+
+@dataclass(frozen=True, slots=True)
 class HpEPrint:
     """HP ePrint cloud printing configuration."""
 
@@ -312,3 +347,4 @@ class HpPrinterData:
     eprint: HpEPrint | None = None
     wifi: HpWifi | None = None
     io_config: HpIOConfig | None = None
+    logs: HpProductLogs | None = None

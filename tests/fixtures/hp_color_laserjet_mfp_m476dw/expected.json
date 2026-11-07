@@ -218,5 +218,61 @@
     "images_sent_to_email": 2,
     "images_sent_to_folder": 311
   },
-  "genuine_supplies_only": null
+  "genuine_supplies_only": null,
+  "logs": {
+    "events": [
+      {
+        "sequence_number": 10,
+        "event_code": "30.0023",
+        "total_impressions": 1478
+      },
+      {
+        "sequence_number": 9,
+        "event_code": "20.0000",
+        "total_impressions": 1104
+      },
+      {
+        "sequence_number": 8,
+        "event_code": "54.1103",
+        "total_impressions": 1055
+      },
+      {
+        "sequence_number": 7,
+        "event_code": "54.2100",
+        "total_impressions": 926
+      },
+      {
+        "sequence_number": 6,
+        "event_code": "54.2100",
+        "total_impressions": 910
+      },
+      {
+        "sequence_number": 5,
+        "event_code": "54.2100",
+        "total_impressions": 909
+      },
+      {
+        "sequence_number": 4,
+        "event_code": "30.0023",
+        "total_impressions": 839
+      },
+      {
+        "sequence_number": 3,
+        "event_code": "54.2100",
+        "total_impressions": 798
+      },
+      {
+        "sequence_number": 2,
+        "event_code": "54.2100",
+        "total_impressions": 758
+      },
+      {
+        "sequence_number": 1,
+        "event_code": "10.8100",
+        "total_impressions": 756
+      }
+    ],
+    "error_log": "Abort\nTask: POSTSCRIPT\nView:leslelx18:/work/jenkins/gitbuilder3/workspace/phx@@7ce1ed7\nBuilt:20180201_2230\nAddr: 0xea408bdc\nPg:562\n0x003111b0\n0x00340b08\n0x00342d54\n0x0033cd28\n0x00340a98\n0x00342d\n\nAbort\nTask: POSTSCRIPT\nView:leslelx18:/work/jenkins/gitbuilder3/workspace/phx@@7ce1ed7\nBuilt:20180201_2230\nAddr: 0xea408bdc\nPg:562\n0x003111b0\n0x00340b08\n0x00342d54\n0x0033cd28\n0x00340a98\n0x00342d\n\nAbort\nTask: POSTSCRIPT\nView:leslelx18:/work/jenkins/gitbuilder3/workspace/phx@@7ce1ed7\nBuilt:20180201_2230\nAddr: 0xea408bdc\nPg:562\n0x003111b0\n0x00340b08\n0x00342d54\n0x0033cd28\n0x00340a98\n0x00342d\n\nAbort\nTask: POSTSCRIPT\nView:leslelx18:/work/jenkins/gitbuilder3/workspace/phx@@7ce1ed7\nBuilt:20180201_2230\nAddr: 0xea408bdc\nPg:562\n0x003111b0\n0x00340b08\n0x00342d54\n0x0033cd28\n0x00340a98\n0x00342d\n\nASIC FAULT\nTask: IO_kern_ip_timer\nView:leslelx18:/work/jenkins/gitbuilder3/workspace/phx@@7ce1ed7\nBuilt:20180201_2230\nAddr: 0x616e6f24\nAXI: 00\nPg:909\n0x00c2cec8\n0x00c2ceac\n0x00c2ce7c\n0x00c2a184",
+    "jobs": []
+  }
 }

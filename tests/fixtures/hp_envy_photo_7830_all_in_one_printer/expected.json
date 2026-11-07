@@ -153,5 +153,46 @@
     "images_sent_to_email": null,
     "images_sent_to_folder": null
   },
-  "genuine_supplies_only": false
+  "genuine_supplies_only": false,
+  "logs": {
+    "events": [
+      {
+        "sequence_number": 2372,
+        "event_code": "69962",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2371,
+        "event_code": "69962",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2370,
+        "event_code": "69666",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2364,
+        "event_code": "69962",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2363,
+        "event_code": "70350",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2361,
+        "event_code": "69962",
+        "total_impressions": null
+      },
+      {
+        "sequence_number": 2360,
+        "event_code": "69552",
+        "total_impressions": null
+      }
+    ],
+    "error_log": "#0Error Code: 89E60250\nFile: hw_pll_app_PUFF.c\nLine: 411\nWhen: 09/28/2026 00:39:42Page:      0\nFILE CRC:  250\nCOMP_ID: 9E6  ERRNO:  250",
+    "jobs": []
+  }
 }

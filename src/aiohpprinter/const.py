@@ -23,6 +23,7 @@ ENDPOINT_ADAPTERS = "/IoMgmt/Adapters"
 ENDPOINT_EPRINT_CONFIG = "/ePrint/ePrintConfigDyn.xml"
 ENDPOINT_NET_APPS_SECURE = "/DevMgmt/NetAppsSecureDyn.xml"
 ENDPOINT_IO_CONFIG = "/DevMgmt/IOConfigDyn.xml"
+ENDPOINT_PRODUCT_LOGS = "/DevMgmt/ProductLogsDyn.xml"
 
 # A small number of endpoints (observed on `/IoMgmt/Adapters`) answer with a
 # JSON body instead of XML, using either of these content types.
