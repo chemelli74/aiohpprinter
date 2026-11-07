@@ -85,6 +85,17 @@ class HpPrinterDevice:
     product_number: str | None = None
     manufacturer_name: str | None = None
     manufactured_at: datetime | None = None
+    firmware_revision: str | None = None
+    firmware_date: datetime | None = None
+    language_pack_version: str | None = None
+    admin_password_set: bool | None = None
+    uuid: str | None = None
+    service_id: str | None = None
+    duplex_unit: str | None = None
+    power_save: str | None = None
+    friendly_name: str | None = None
+    power_save_timeout: str | None = None
+    shutdown_delay: str | None = None
 
 
 @dataclass(frozen=True, slots=True)

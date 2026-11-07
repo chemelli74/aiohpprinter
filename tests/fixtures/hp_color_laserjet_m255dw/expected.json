@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "7KW64A",
     "manufacturer_name": null,
-    "manufactured_at": null
+    "manufactured_at": null,
+    "firmware_revision": null,
+    "firmware_date": "2026-06-22T00:00:00",
+    "language_pack_version": "20250729",
+    "admin_password_set": false,
+    "uuid": "REDACTED",
+    "service_id": "31208",
+    "duplex_unit": "Installed",
+    "power_save": "on",
+    "friendly_name": "REDACTED",
+    "power_save_timeout": "1minute",
+    "shutdown_delay": "4hours"
   },
   "status": {
     "device_status": "inpowersave",

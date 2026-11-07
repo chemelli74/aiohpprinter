@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "Y0G50B",
     "manufacturer_name": "HP",
-    "manufactured_at": "2017-07-14T00:00:00"
+    "manufactured_at": "2017-07-14T00:00:00",
+    "firmware_revision": "PALSUPPPXN003.2420A.00",
+    "firmware_date": "2024-05-17T00:00:00",
+    "language_pack_version": null,
+    "admin_password_set": true,
+    "uuid": "REDACTED",
+    "service_id": "28043",
+    "duplex_unit": "Installed",
+    "power_save": "on",
+    "friendly_name": null,
+    "power_save_timeout": "10minutes",
+    "shutdown_delay": null
   },
   "status": {
     "device_status": "trayempty",

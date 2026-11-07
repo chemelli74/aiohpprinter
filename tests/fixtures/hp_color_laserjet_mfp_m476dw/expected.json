@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "CF387A",
     "manufacturer_name": null,
-    "manufactured_at": null
+    "manufactured_at": null,
+    "firmware_revision": null,
+    "firmware_date": "2021-04-08T00:00:00",
+    "language_pack_version": "20180912",
+    "admin_password_set": false,
+    "uuid": "REDACTED",
+    "service_id": "10001",
+    "duplex_unit": "Installed",
+    "power_save": "on",
+    "friendly_name": "REDACTED",
+    "power_save_timeout": "15minutes",
+    "shutdown_delay": "never"
   },
   "status": {
     "device_status": "inpowersave",

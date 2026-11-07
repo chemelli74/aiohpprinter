@@ -6,7 +6,18 @@
     "serial_number": "REDACTED",
     "product_number": "F0V72B",
     "manufacturer_name": "HP",
-    "manufactured_at": "2016-08-27T00:00:00"
+    "manufactured_at": "2016-08-27T00:00:00",
+    "firmware_revision": "CFP1FN2023BR",
+    "firmware_date": "2020-06-02T00:00:00",
+    "language_pack_version": null,
+    "admin_password_set": false,
+    "uuid": "REDACTED",
+    "service_id": "26330",
+    "duplex_unit": "Installed",
+    "power_save": "on",
+    "friendly_name": null,
+    "power_save_timeout": "5minutes",
+    "shutdown_delay": null
   },
   "status": {
     "device_status": "genuinehp",
