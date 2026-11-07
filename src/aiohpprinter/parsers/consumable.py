@@ -26,16 +26,23 @@ from dataclasses import replace
 from typing import TYPE_CHECKING
 
 from aiohpprinter.const import MARKER_COLOR_TO_LABEL_CODE
-from aiohpprinter.models import HpConsumable
+from aiohpprinter.models import HpConsumable, HpPreviousCartridge
 from aiohpprinter.xml import get_path
 
-from .common import integer, number, percentage, text, timestamp
+from .common import as_list, integer, number, percentage, text, timestamp
 
 if TYPE_CHECKING:
     from typing import Any
 
 _CONFIG_ROOT_PATH = "ConsumableConfigDyn.ConsumableInfo"
 _USAGE_ROOT_PATH = "ProductUsageDyn.ConsumableSubunit.Consumable"
+_GENUINE_SUPPLIES_ONLY_PATH = (
+    "ConsumableConfigDyn.ProductConsumableInfo.GenuineHPSuppliesOnly"
+)
+# Any other `GenuineHPSuppliesOnly` value is unknown, not "not enforced".
+_GENUINE_SUPPLIES_ONLY = {"enabled": True, "disabled": False}
+# Wear counters of a previous cartridge report this when unknown.
+_UNKNOWN_WEAR = 127
 
 
 def parse_consumables(
@@ -45,12 +52,12 @@ def parse_consumables(
     """Build the merged consumables, keyed by `consumable_id`, from both documents."""
     consumables: dict[str, HpConsumable] = {}
 
-    for item in _as_list(get_path(config_document, _CONFIG_ROOT_PATH)):
+    for item in as_list(get_path(config_document, _CONFIG_ROOT_PATH)):
         parsed = _parse_config_item(item)
         if parsed is not None:
             consumables[parsed.consumable_id] = parsed
 
-    for item in _as_list(get_path(usage_document, _USAGE_ROOT_PATH)):
+    for item in as_list(get_path(usage_document, _USAGE_ROOT_PATH)):
         consumable_id, usage = _parse_usage_item(item)
         if consumable_id is None:
             continue
@@ -63,12 +70,11 @@ def parse_consumables(
     return {key: consumables[key] for key in sorted(consumables)}
 
 
-def _as_list(value: Any) -> list[Any]:  # noqa: ANN401
-    if value is None:
-        return []
-    if isinstance(value, list):
-        return value
-    return [value]
+def parse_genuine_supplies_only(document: dict[str, Any]) -> bool | None:
+    """Return whether a `ConsumableConfigDyn` document enforces genuine HP supplies."""
+    return _GENUINE_SUPPLIES_ONLY.get(
+        (text(document, _GENUINE_SUPPLIES_ONLY_PATH) or "").lower()
+    )
 
 
 def _parse_config_item(item: Any) -> HpConsumable | None:  # noqa: ANN401
@@ -95,7 +101,31 @@ def _parse_config_item(item: Any) -> HpConsumable | None:  # noqa: ANN401
         serial_number=text(item, "SerialNumber"),
         product_number=text(item, "ProductNumber"),
         unique_id=text(item, "ConsumableUniqueID"),
+        low_threshold=number(item, "ConsumableLowThreshold"),
+        measured_quantity_state=text(item, "ConsumableLifeState.MeasuredQuantityState"),
+        family_name=text(item, "ConsumableFamilyName"),
+        previous_cartridge=_parse_previous_cartridge(
+            get_path(item, "PreviousCartridgeData")
+        ),
     )
+
+
+def _parse_previous_cartridge(item: Any) -> HpPreviousCartridge | None:  # noqa: ANN401
+    if not isinstance(item, dict):
+        return None
+
+    return HpPreviousCartridge(
+        product_number=text(item, "ProductNumber"),
+        serial_number=text(item, "SerialNumber"),
+        drum_life=_wear(item, "DrumLife"),
+        developer_life=_wear(item, "DeveloperLife"),
+        engine_toner_remaining=_wear(item, "EngineTonerRemaining"),
+    )
+
+
+def _wear(item: dict[str, Any], path: str) -> int | None:
+    value = integer(item, path)
+    return None if value == _UNKNOWN_WEAR else value
 
 
 def _parse_usage_item(item: Any) -> tuple[str | None, HpConsumable]:  # noqa: ANN401

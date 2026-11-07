@@ -41,6 +41,7 @@ from .parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_genuine_supplies_only,
     parse_io_config,
     parse_printer_usage,
     parse_scan_usage,
@@ -252,6 +253,11 @@ class HpPrinter:
             device=await self._safe(self.device),
             status=status,
             consumables=parse_consumables(config_document, usage_document),
+            genuine_supplies_only=(
+                parse_genuine_supplies_only(config_document)
+                if config_document is not None
+                else None
+            ),
             printer_usage=(
                 parse_printer_usage(usage_document)
                 if usage_document is not None

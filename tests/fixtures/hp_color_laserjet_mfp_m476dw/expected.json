@@ -47,7 +47,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 537
+      "total_impressions": 537,
+      "low_threshold": 7.0,
+      "measured_quantity_state": "ok",
+      "family_name": "Cyan toner supply",
+      "previous_cartridge": null
     },
     "K": {
       "consumable_id": "K",
@@ -72,7 +76,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 1211
+      "total_impressions": 1211,
+      "low_threshold": 11.0,
+      "measured_quantity_state": "ok",
+      "family_name": "Black toner supply",
+      "previous_cartridge": null
     },
     "M": {
       "consumable_id": "M",
@@ -97,7 +105,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 627
+      "total_impressions": 627,
+      "low_threshold": 7.0,
+      "measured_quantity_state": "ok",
+      "family_name": "Magenta toner supply",
+      "previous_cartridge": null
     },
     "Y": {
       "consumable_id": "Y",
@@ -122,7 +134,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 626
+      "total_impressions": 626,
+      "low_threshold": 7.0,
+      "measured_quantity_state": "ok",
+      "family_name": "Yellow toner supply",
+      "previous_cartridge": null
     }
   },
   "printer_usage": {
@@ -201,5 +217,6 @@
     "scan_to_host_images": null,
     "images_sent_to_email": 2,
     "images_sent_to_folder": 311
-  }
+  },
+  "genuine_supplies_only": null
 }

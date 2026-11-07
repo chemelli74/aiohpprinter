@@ -55,7 +55,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 339
+      "total_impressions": 339,
+      "low_threshold": null,
+      "measured_quantity_state": null,
+      "family_name": null,
+      "previous_cartridge": null
     },
     "K": {
       "consumable_id": "K",
@@ -80,7 +84,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 844
+      "total_impressions": 844,
+      "low_threshold": null,
+      "measured_quantity_state": null,
+      "family_name": null,
+      "previous_cartridge": null
     },
     "M": {
       "consumable_id": "M",
@@ -105,7 +113,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 339
+      "total_impressions": 339,
+      "low_threshold": null,
+      "measured_quantity_state": null,
+      "family_name": null,
+      "previous_cartridge": null
     },
     "Y": {
       "consumable_id": "Y",
@@ -130,7 +142,11 @@
       "unique_id": null,
       "counterfeit_refilled_count": null,
       "genuine_refilled_count": null,
-      "total_impressions": 339
+      "total_impressions": 339,
+      "low_threshold": null,
+      "measured_quantity_state": null,
+      "family_name": null,
+      "previous_cartridge": null
     }
   },
   "scan_usage": {

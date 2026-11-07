@@ -15,6 +15,7 @@ from typing import TYPE_CHECKING, Any
 
 import pytest
 
+from aiohpprinter.models import HpPreviousCartridge
 from aiohpprinter.parsers import (
     parse_adapters,
     parse_consumables,
@@ -22,6 +23,7 @@ from aiohpprinter.parsers import (
     parse_device,
     parse_eprint,
     parse_fax_usage,
+    parse_genuine_supplies_only,
     parse_io_config,
     parse_printer_usage,
     parse_scan_usage,
@@ -57,6 +59,7 @@ _SINGLE_DOCUMENT_PARSERS: dict[str, tuple[str, Callable[[dict[str, Any]], Any]]]
     "copy_usage": ("ProductUsageDyn.xml", parse_copy_usage),
     "fax_usage": ("ProductUsageDyn.xml", parse_fax_usage),
     "io_config": ("IOConfigDyn.xml", parse_io_config),
+    "genuine_supplies_only": ("ConsumableConfigDyn.xml", parse_genuine_supplies_only),
 }
 
 
@@ -241,6 +244,111 @@ def test_consumables_raw_level_outside_percentage_range_is_none(
     assert parse_consumables(None, usage)["K"].raw_percentage_level_remaining == (
         expected
     )
+
+
+@pytest.mark.parametrize(
+    ("element", "attribute"),
+    [
+        pytest.param("DrumLife", "drum_life", id="drum"),
+        pytest.param("DeveloperLife", "developer_life", id="developer"),
+        pytest.param(
+            "EngineTonerRemaining", "engine_toner_remaining", id="engine_toner"
+        ),
+    ],
+)
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        pytest.param("127", None, id="unknown"),
+        pytest.param("72", 72, id="known"),
+        pytest.param("-7", -7, id="negative"),
+    ],
+)
+def test_previous_cartridge_unknown_wear_is_none(
+    element: str, attribute: str, value: str, expected: int | None
+) -> None:
+    """A previous cartridge wear value of 127 means unknown."""
+    config = parse_document(
+        "<ConsumableConfigDyn><ConsumableInfo>"
+        "<ConsumableLabelCode>K</ConsumableLabelCode>"
+        f"<PreviousCartridgeData><{element}>{value}</{element}>"
+        "</PreviousCartridgeData>"
+        "</ConsumableInfo></ConsumableConfigDyn>"
+    )
+
+    previous = parse_consumables(config, None)["K"].previous_cartridge
+
+    assert previous is not None
+    assert getattr(previous, attribute) == expected
+
+
+def test_previous_cartridge_does_not_shadow_installed_cartridge() -> None:
+    """Fields repeated inside `PreviousCartridgeData` stay with the previous one."""
+    config = parse_document(
+        "<ConsumableConfigDyn><ConsumableInfo>"
+        "<ConsumableLabelCode>K</ConsumableLabelCode>"
+        "<PreviousCartridgeData>"
+        "<ProductNumber>OLD-PN</ProductNumber>"
+        "<SerialNumber>OLD-SN</SerialNumber>"
+        "<Manufacturer><Date>2020-01-01</Date></Manufacturer>"
+        "</PreviousCartridgeData>"
+        "<ProductNumber>NEW-PN</ProductNumber>"
+        "<SerialNumber>NEW-SN</SerialNumber>"
+        "<Manufacturer><Date>2024-02-06</Date></Manufacturer>"
+        "</ConsumableInfo></ConsumableConfigDyn>"
+    )
+
+    consumable = parse_consumables(config, None)["K"]
+
+    assert consumable.product_number == "NEW-PN"
+    assert consumable.serial_number == "NEW-SN"
+    assert to_json_safe(consumable.manufactured_at) == "2024-02-06T00:00:00"
+    assert consumable.previous_cartridge == HpPreviousCartridge(
+        product_number="OLD-PN", serial_number="OLD-SN"
+    )
+
+
+def test_previous_cartridge_is_none_when_absent() -> None:
+    """A consumable without `PreviousCartridgeData` has no previous cartridge."""
+    config = parse_document(
+        "<ConsumableConfigDyn><ConsumableInfo>"
+        "<ConsumableLabelCode>K</ConsumableLabelCode>"
+        "</ConsumableInfo></ConsumableConfigDyn>"
+    )
+
+    assert parse_consumables(config, None)["K"].previous_cartridge is None
+
+
+@pytest.mark.parametrize(
+    ("element", "expected"),
+    [
+        pytest.param(
+            "<GenuineHPSuppliesOnly>enabled</GenuineHPSuppliesOnly>",
+            True,
+            id="enabled",
+        ),
+        pytest.param(
+            "<GenuineHPSuppliesOnly>disabled</GenuineHPSuppliesOnly>",
+            False,
+            id="disabled",
+        ),
+        pytest.param(
+            "<GenuineHPSuppliesOnly>unknown</GenuineHPSuppliesOnly>",
+            None,
+            id="unexpected",
+        ),
+        pytest.param("", None, id="missing"),
+    ],
+)
+def test_genuine_supplies_only(element: str, expected: bool | None) -> None:
+    """`GenuineHPSuppliesOnly` maps to a bool, `None` when not reported."""
+    config = parse_document(
+        "<ConsumableConfigDyn><ProductConsumableInfo>"
+        f"{element}<StoreUsageData>disabled</StoreUsageData>"
+        "</ProductConsumableInfo></ConsumableConfigDyn>"
+    )
+
+    assert parse_genuine_supplies_only(config) is expected
 
 
 def test_consumables_merges_config_only_entry() -> None:
