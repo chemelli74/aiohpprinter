@@ -15,7 +15,7 @@ from typing import TYPE_CHECKING, Any
 
 import pytest
 
-from aiohpprinter.models import HpPreviousCartridge
+from aiohpprinter.models import HpLogEvent, HpPreviousCartridge
 from aiohpprinter.parsers import (
     parse_adapters,
     parse_consumables,
@@ -25,6 +25,7 @@ from aiohpprinter.parsers import (
     parse_fax_usage,
     parse_genuine_supplies_only,
     parse_io_config,
+    parse_logs,
     parse_printer_usage,
     parse_scan_usage,
     parse_scanner_usage,
@@ -60,6 +61,7 @@ _SINGLE_DOCUMENT_PARSERS: dict[str, tuple[str, Callable[[dict[str, Any]], Any]]]
     "fax_usage": ("ProductUsageDyn.xml", parse_fax_usage),
     "io_config": ("IOConfigDyn.xml", parse_io_config),
     "genuine_supplies_only": ("ConsumableConfigDyn.xml", parse_genuine_supplies_only),
+    "logs": ("ProductLogsDyn.xml", parse_logs),
 }
 
 
@@ -349,6 +351,53 @@ def test_genuine_supplies_only(element: str, expected: bool | None) -> None:
     )
 
     assert parse_genuine_supplies_only(config) is expected
+
+
+def test_logs_sorts_events_newest_first() -> None:
+    """Events are returned by descending sequence number, whatever the order."""
+    document = parse_document(
+        "<ProductLogsDyn><EventLog>"
+        "<Event><SequenceNumber>1</SequenceNumber><EventCode>13.A</EventCode></Event>"
+        "<Event><SequenceNumber>3</SequenceNumber><EventCode>13.C</EventCode></Event>"
+        "<Event><SequenceNumber>2</SequenceNumber><EventCode>13.B</EventCode></Event>"
+        "</EventLog></ProductLogsDyn>"
+    )
+
+    assert [event.event_code for event in parse_logs(document).events] == [
+        "13.C",
+        "13.B",
+        "13.A",
+    ]
+
+
+def test_logs_single_event_and_job() -> None:
+    """A lone `Event`/`JobEntry` (not a repeated element) is still a list item."""
+    document = parse_document(
+        "<ProductLogsDyn>"
+        "<EventLog><Event><SequenceNumber>5</SequenceNumber>"
+        "<EventCode>13.B2</EventCode><TotalImpressions>42</TotalImpressions>"
+        "</Event></EventLog>"
+        "<ColorUsageJobLog><JobList><JobEntry>"
+        "<DriverJobName>report.pdf</DriverJobName>"
+        "</JobEntry></JobList></ColorUsageJobLog>"
+        "</ProductLogsDyn>"
+    )
+
+    logs = parse_logs(document)
+
+    assert logs.events == [
+        HpLogEvent(sequence_number=5, event_code="13.B2", total_impressions=42)
+    ]
+    assert [job.name for job in logs.jobs] == ["report.pdf"]
+
+
+def test_logs_empty_document() -> None:
+    """A `ProductLogsDyn` document without logs yields empty logs."""
+    logs = parse_logs(parse_document("<ProductLogsDyn/>"))
+
+    assert logs.events == []
+    assert logs.error_log is None
+    assert logs.jobs == []
 
 
 def test_consumables_merges_config_only_entry() -> None:

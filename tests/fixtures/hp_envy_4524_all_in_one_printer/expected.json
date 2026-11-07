@@ -148,5 +148,41 @@
     "images_sent_to_email": null,
     "images_sent_to_folder": null
   },
-  "genuine_supplies_only": null
+  "genuine_supplies_only": null,
+  "logs": {
+    "events": [
+      {
+        "sequence_number": 8438,
+        "event_code": "74740",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 8437,
+        "event_code": "74740",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 8421,
+        "event_code": "74740",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 8420,
+        "event_code": "69962",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 8419,
+        "event_code": "69962",
+        "total_impressions": 0
+      },
+      {
+        "sequence_number": 8409,
+        "event_code": "74740",
+        "total_impressions": 0
+      }
+    ],
+    "error_log": "#0Error Code: B90C06A4\nFile: .\nLine:  0\nType:ASSERT_TYPE_MEM\nPage:   2327\nSUB TYPE: 9\nEXECUTION ADDRESS: A00C06A4\n\n#1Error Code: B39FF018\nFile: .\nLine:  0\nType:ASSERT_TYPE_MEM\nPage:   2313\nSUB TYPE: 3\nEXECUTION ADDRESS: E59FF018",
+    "jobs": []
+  }
 }

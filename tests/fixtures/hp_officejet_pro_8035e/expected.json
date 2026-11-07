@@ -240,5 +240,111 @@
     "images_sent_to_email": null,
     "images_sent_to_folder": null
   },
-  "genuine_supplies_only": null
+  "genuine_supplies_only": null,
+  "logs": {
+    "events": [
+      {
+        "sequence_number": 26,
+        "event_code": "31.13.02",
+        "total_impressions": 3670
+      },
+      {
+        "sequence_number": 25,
+        "event_code": "00.00.00",
+        "total_impressions": 3380
+      },
+      {
+        "sequence_number": 24,
+        "event_code": "17.03.69",
+        "total_impressions": 3299
+      },
+      {
+        "sequence_number": 23,
+        "event_code": "17.00.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 22,
+        "event_code": "17.03.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 21,
+        "event_code": "17.01.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 20,
+        "event_code": "17.02.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 19,
+        "event_code": "17.00.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 18,
+        "event_code": "17.03.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 17,
+        "event_code": "17.01.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 16,
+        "event_code": "17.02.65",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 15,
+        "event_code": "31.13.02",
+        "total_impressions": 3144
+      },
+      {
+        "sequence_number": 14,
+        "event_code": "00.00.00",
+        "total_impressions": 2840
+      },
+      {
+        "sequence_number": 13,
+        "event_code": "17.03.69",
+        "total_impressions": 2649
+      },
+      {
+        "sequence_number": 12,
+        "event_code": "17.02.69",
+        "total_impressions": 2649
+      },
+      {
+        "sequence_number": 11,
+        "event_code": "17.01.69",
+        "total_impressions": 1875
+      },
+      {
+        "sequence_number": 10,
+        "event_code": "00.00.00",
+        "total_impressions": 1307
+      },
+      {
+        "sequence_number": 9,
+        "event_code": "17.01.69",
+        "total_impressions": 1300
+      },
+      {
+        "sequence_number": 8,
+        "event_code": "31.13.02",
+        "total_impressions": 425
+      },
+      {
+        "sequence_number": 7,
+        "event_code": "17.01.69",
+        "total_impressions": 420
+      }
+    ],
+    "error_log": null,
+    "jobs": []
+  }
 }

@@ -26,6 +26,7 @@ from aiohpprinter.const import (
     ENDPOINT_IO_CONFIG,
     ENDPOINT_NET_APPS_SECURE,
     ENDPOINT_PRODUCT_CONFIG,
+    ENDPOINT_PRODUCT_LOGS,
     ENDPOINT_PRODUCT_STATUS,
     ENDPOINT_PRODUCT_USAGE,
 )
@@ -52,6 +53,7 @@ ENDPOINT_FILENAMES: dict[str, str] = {
     ENDPOINT_EPRINT_CONFIG: "ePrintConfigDyn.xml",
     ENDPOINT_NET_APPS_SECURE: "NetAppsSecureDyn.xml",
     ENDPOINT_IO_CONFIG: "IOConfigDyn.xml",
+    ENDPOINT_PRODUCT_LOGS: "ProductLogsDyn.xml",
 }
 
 
