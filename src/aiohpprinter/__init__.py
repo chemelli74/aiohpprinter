@@ -35,7 +35,7 @@ from .models import (
     HpWifi,
 )
 
-__version__ = "3.5.0"
+__version__ = "3.6.0"
 
 __all__ = [
     "HpAdapter",
