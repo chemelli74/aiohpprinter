@@ -35,7 +35,13 @@ def test_printer_status_is_off_for_off_and_unknown() -> None:
     ("device_status", "expected"),
     [
         pytest.param("canceljob", HpDeviceStatus.CANCEL_JOB, id="canceljob"),
+        pytest.param(
+            "closedoororcover",
+            HpDeviceStatus.CLOSE_DOOR_OR_COVER,
+            id="closedoororcover",
+        ),
         pytest.param("copying", HpDeviceStatus.COPYING, id="copying"),
+        pytest.param("initializing", HpDeviceStatus.INITIALIZING, id="initializing"),
         pytest.param("inpowersave", HpDeviceStatus.IN_POWER_SAVE, id="inpowersave"),
         pytest.param("off", HpDeviceStatus.OFF, id="off"),
         pytest.param("processing", HpDeviceStatus.PROCESSING, id="processing"),
@@ -43,7 +49,9 @@ def test_printer_status_is_off_for_off_and_unknown() -> None:
         pytest.param(
             "scanprocessing", HpDeviceStatus.SCAN_PROCESSING, id="scanprocessing"
         ),
+        pytest.param("shuttingdown", HpDeviceStatus.SHUTTING_DOWN, id="shuttingdown"),
         pytest.param("trayempty", HpDeviceStatus.TRAY_EMPTY, id="trayempty"),
+        pytest.param("unknown", HpDeviceStatus.UNKNOWN, id="unknown"),
         pytest.param(None, None, id="missing"),
     ],
 )

@@ -131,6 +131,20 @@ def test_status_missing_document_section_is_none() -> None:
     status = parse_status(parse_document("<ProductStatusDyn/>"))
 
     assert status.device_status is None
+    assert status.message is None
+
+
+def test_status_message_uses_first_loc_string() -> None:
+    """Several `LocString` entries: the message is the first one."""
+    document = parse_document(
+        "<ProductStatusDyn><Status>"
+        "<StatusCategory>ready</StatusCategory>"
+        '<LocString lang="en">Ready</LocString>'
+        '<LocString lang="it">Pronto</LocString>'
+        "</Status></ProductStatusDyn>"
+    )
+
+    assert parse_status(document).message == "Ready"
 
 
 def test_io_config_without_network_adaptor_is_empty() -> None:
