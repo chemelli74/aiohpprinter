@@ -332,6 +332,11 @@ def test_previous_cartridge_is_none_when_absent() -> None:
             False,
             id="disabled",
         ),
+        pytest.param(
+            "<GenuineHPSuppliesOnly>unknown</GenuineHPSuppliesOnly>",
+            None,
+            id="unexpected",
+        ),
         pytest.param("", None, id="missing"),
     ],
 )

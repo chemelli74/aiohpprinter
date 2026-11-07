@@ -29,7 +29,7 @@ from aiohpprinter.const import MARKER_COLOR_TO_LABEL_CODE
 from aiohpprinter.models import HpConsumable, HpPreviousCartridge
 from aiohpprinter.xml import get_path
 
-from .common import as_list, boolean, integer, number, percentage, text, timestamp
+from .common import as_list, integer, number, percentage, text, timestamp
 
 if TYPE_CHECKING:
     from typing import Any
@@ -39,6 +39,8 @@ _USAGE_ROOT_PATH = "ProductUsageDyn.ConsumableSubunit.Consumable"
 _GENUINE_SUPPLIES_ONLY_PATH = (
     "ConsumableConfigDyn.ProductConsumableInfo.GenuineHPSuppliesOnly"
 )
+# Any other `GenuineHPSuppliesOnly` value is unknown, not "not enforced".
+_GENUINE_SUPPLIES_ONLY = {"enabled": True, "disabled": False}
 # Wear counters of a previous cartridge report this when unknown.
 _UNKNOWN_WEAR = 127
 
@@ -70,7 +72,9 @@ def parse_consumables(
 
 def parse_genuine_supplies_only(document: dict[str, Any]) -> bool | None:
     """Return whether a `ConsumableConfigDyn` document enforces genuine HP supplies."""
-    return boolean(document, _GENUINE_SUPPLIES_ONLY_PATH, ("enabled",))
+    return _GENUINE_SUPPLIES_ONLY.get(
+        (text(document, _GENUINE_SUPPLIES_ONLY_PATH) or "").lower()
+    )
 
 
 def _parse_config_item(item: Any) -> HpConsumable | None:  # noqa: ANN401
