@@ -21,6 +21,7 @@ from .usage import (
     parse_copy_usage,
     parse_fax_usage,
     parse_printer_usage,
+    parse_scan_usage,
     parse_scanner_usage,
 )
 from .wifi import parse_wifi
@@ -34,6 +35,7 @@ __all__ = [
     "parse_fax_usage",
     "parse_io_config",
     "parse_printer_usage",
+    "parse_scan_usage",
     "parse_scanner_usage",
     "parse_status",
     "parse_wifi",

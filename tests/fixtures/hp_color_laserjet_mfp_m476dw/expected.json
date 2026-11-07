@@ -132,7 +132,9 @@
     "simplex_sheets": null,
     "duplex_sheets": 272,
     "jam_events": 0,
-    "mispick_events": 2
+    "mispick_events": 2,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": null,
@@ -192,5 +194,12 @@
     "transmit_collisions": 0,
     "transmit_late_collisions": 0,
     "unsendable_packets": 0
+  },
+  "scan_usage": {
+    "adf_images": 0,
+    "flatbed_images": 0,
+    "scan_to_host_images": null,
+    "images_sent_to_email": 2,
+    "images_sent_to_folder": 311
   }
 }

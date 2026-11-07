@@ -79,8 +79,9 @@ asyncio.run(main())
 answers and returns an `HpPrinterData` snapshot. Each endpoint is also
 available individually - `printer.device()`, `printer.status()`,
 `printer.consumables()`, `printer.printer_usage()`, `printer.scanner_usage()`,
-`printer.copy_usage()`, `printer.fax_usage()`, `printer.adapters()`,
-`printer.eprint()`, `printer.wifi()`, `printer.io_config()` - for callers that only need one piece
+`printer.scan_usage()`, `printer.copy_usage()`, `printer.fax_usage()`,
+`printer.adapters()`, `printer.eprint()`, `printer.wifi()`, `printer.io_config()` -
+for callers that only need one piece
 of data, or that want failures raised instead of absorbed (see
 **Exception handling** below).
 
@@ -112,6 +113,7 @@ and redirect others to HTTPS: redirects are always followed.
 | Consumable usage                  | `/DevMgmt/ProductUsageDyn.xml`     | Merged into the same consumable, by label code  |
 | Printer engine usage              | `/DevMgmt/ProductUsageDyn.xml`     | Page counters                                   |
 | Scanner engine usage              | `/DevMgmt/ProductUsageDyn.xml`     | Page counters                                   |
+| Scan application usage            | `/DevMgmt/ProductUsageDyn.xml`     | Page counters                                   |
 | Copy application usage            | `/DevMgmt/ProductUsageDyn.xml`     | Page counters                                   |
 | Fax application usage             | `/DevMgmt/ProductUsageDyn.xml`     | Page counters                                   |
 | Network adapters                  | `/IoMgmt/Adapters`                 | May reply as JSON instead of XML on some models |

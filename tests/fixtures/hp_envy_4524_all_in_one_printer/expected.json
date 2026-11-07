@@ -82,7 +82,9 @@
     "simplex_sheets": null,
     "duplex_sheets": 199,
     "jam_events": 0,
-    "mispick_events": 82
+    "mispick_events": 82,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": 447,
@@ -130,5 +132,12 @@
   "wifi": {
     "ssid_prefix": "DIRECT-4B-",
     "connection_method": null
+  },
+  "scan_usage": {
+    "adf_images": 0,
+    "flatbed_images": 408,
+    "scan_to_host_images": 408,
+    "images_sent_to_email": null,
+    "images_sent_to_folder": null
   }
 }

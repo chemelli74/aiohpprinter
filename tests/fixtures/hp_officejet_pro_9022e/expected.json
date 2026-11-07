@@ -157,7 +157,9 @@
     "simplex_sheets": 697,
     "duplex_sheets": 83,
     "jam_events": 2,
-    "mispick_events": 24
+    "mispick_events": 24,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": 4279,
@@ -210,5 +212,12 @@
   "wifi": {
     "ssid_prefix": "DIRECT-B3-HP",
     "connection_method": "auto"
+  },
+  "scan_usage": {
+    "adf_images": 2886,
+    "flatbed_images": 1270,
+    "scan_to_host_images": 4156,
+    "images_sent_to_email": null,
+    "images_sent_to_folder": 4128
   }
 }

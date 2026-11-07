@@ -82,7 +82,9 @@
     "simplex_sheets": 3431,
     "duplex_sheets": 279,
     "jam_events": 13,
-    "mispick_events": 59
+    "mispick_events": 59,
+    "original_hp_color_impressions": null,
+    "original_hp_monochrome_impressions": null
   },
   "scanner_usage": {
     "scan_images": 792,
@@ -135,5 +137,12 @@
   "wifi": {
     "ssid_prefix": "DIRECT-62-HP",
     "connection_method": "manual"
+  },
+  "scan_usage": {
+    "adf_images": 222,
+    "flatbed_images": 420,
+    "scan_to_host_images": 642,
+    "images_sent_to_email": null,
+    "images_sent_to_folder": null
   }
 }

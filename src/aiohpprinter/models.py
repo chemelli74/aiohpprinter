@@ -183,6 +183,8 @@ class HpPrinterUsage:
     duplex_sheets: int | None = None
     jam_events: int | None = None
     mispick_events: int | None = None
+    original_hp_color_impressions: int | None = None
+    original_hp_monochrome_impressions: int | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -195,6 +197,17 @@ class HpScannerUsage:
     flatbed_images: int | None = None
     jam_events: int | None = None
     mispick_events: int | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class HpScanUsage:
+    """Cumulative page counters for the scan application."""
+
+    adf_images: int | None = None
+    flatbed_images: int | None = None
+    scan_to_host_images: int | None = None
+    images_sent_to_email: int | None = None
+    images_sent_to_folder: int | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -276,6 +289,7 @@ class HpPrinterData:
     consumables: dict[str, HpConsumable] = field(default_factory=dict)
     printer_usage: HpPrinterUsage | None = None
     scanner_usage: HpScannerUsage | None = None
+    scan_usage: HpScanUsage | None = None
     copy_usage: HpCopyUsage | None = None
     fax_usage: HpFaxUsage | None = None
     adapters: list[HpAdapter] = field(default_factory=list)

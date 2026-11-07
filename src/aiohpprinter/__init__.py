@@ -27,6 +27,7 @@ from .models import (
     HpPrinterStatus,
     HpPrinterUsage,
     HpScannerUsage,
+    HpScanUsage,
     HpWifi,
 )
 
@@ -53,6 +54,7 @@ __all__ = [
     "HpPrinterTimeoutError",
     "HpPrinterUnsupportedError",
     "HpPrinterUsage",
+    "HpScanUsage",
     "HpScannerUsage",
     "HpWifi",
     "__version__",
