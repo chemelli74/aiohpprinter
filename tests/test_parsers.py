@@ -165,6 +165,48 @@ def test_io_config_network_status_uses_first_ip_version() -> None:
     assert io_config.network_status == "ready"
 
 
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        pytest.param("1970-01-01", None, id="epoch"),
+        pytest.param("1976-12-31", None, id="last-unset-year"),
+        pytest.param("1977-01-01", "1977-01-01T00:00:00", id="first-valid-year"),
+    ],
+)
+def test_timestamp_treats_unset_clock_dates_as_missing(
+    value: str, expected: str | None
+) -> None:
+    """Printers without a real-time clock report dates up to 1976; those are unset."""
+    assert to_json_safe(timestamp({"Value": value}, "Value")) == expected
+
+
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        pytest.param("-128", None, id="unknown"),
+        pytest.param("-1", None, id="below-range"),
+        pytest.param("0", 0.0, id="empty"),
+        pytest.param("100", 100.0, id="full"),
+        pytest.param("101", None, id="above-range"),
+    ],
+)
+def test_consumables_raw_level_outside_percentage_range_is_none(
+    value: str, expected: float | None
+) -> None:
+    """Raw levels outside 0-100 (such as the -128 sentinel) resolve to `None`."""
+    usage = parse_document(
+        "<ProductUsageDyn><ConsumableSubunit><Consumable>"
+        "<MarkerColor>Black</MarkerColor>"
+        f"<ConsumableRawPercentageLevelRemaining>{value}"
+        "</ConsumableRawPercentageLevelRemaining>"
+        "</Consumable></ConsumableSubunit></ProductUsageDyn>"
+    )
+
+    assert parse_consumables(None, usage)["K"].raw_percentage_level_remaining == (
+        expected
+    )
+
+
 def test_consumables_merges_config_only_entry() -> None:
     """A consumable reported only by the config endpoint is still returned."""
     config = parse_document(

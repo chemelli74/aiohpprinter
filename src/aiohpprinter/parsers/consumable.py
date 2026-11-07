@@ -29,7 +29,7 @@ from aiohpprinter.const import MARKER_COLOR_TO_LABEL_CODE
 from aiohpprinter.models import HpConsumable
 from aiohpprinter.xml import get_path
 
-from .common import integer, number, text, timestamp
+from .common import integer, number, percentage, text, timestamp
 
 if TYPE_CHECKING:
     from typing import Any
@@ -112,7 +112,8 @@ def _parse_usage_item(item: Any) -> tuple[str | None, HpConsumable]:  # noqa: AN
         marker_color=marker_color,
         usage_state=text(item, "ConsumableState"),
         station=text(item, "ConsumableStation"),
-        raw_percentage_level_remaining=number(
+        # -128 is reported when the level is unknown.
+        raw_percentage_level_remaining=percentage(
             item, "ConsumableRawPercentageLevelRemaining"
         ),
         estimated_pages_remaining=integer(item, "EstimatedPagesRemaining"),
