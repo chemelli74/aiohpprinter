@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.2.1 (2026-11-07)
+
+### Bug fixes
+
+- Treat unset-clock dates and out-of-range raw levels as missing ([`6394558`](https://github.com/chemelli74/aiohpprinter/commit/639455871decd3ca9310ca0a6eea587e646b8cc1))
+
+
 ## v3.2.0 (2026-11-07)
 
 ### Features
