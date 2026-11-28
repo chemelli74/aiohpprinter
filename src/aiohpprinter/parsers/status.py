@@ -7,10 +7,10 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from aiohpprinter.models import HpPrinterStatus
+from aiohpprinter.models import _DEVICE_STATUSES, HpPrinterStatus
 from aiohpprinter.xml import get_path
 
-from .common import first, first_text, text
+from .common import as_list, first, first_text, text
 
 if TYPE_CHECKING:
     from typing import Any
@@ -24,7 +24,15 @@ def parse_status(document: dict[str, Any]) -> HpPrinterStatus:
     A printer may report more than one `Status` entry (for example one per
     active job); the first one carries the overall `StatusCategory`.
     """
-    status = first(get_path(document, _ROOT_PATH))
+    entries = as_list(get_path(document, _ROOT_PATH))
+    status = next(
+        (
+            entry
+            for entry in entries
+            if (text(entry, "StatusCategory") or "").lower() in _DEVICE_STATUSES
+        ),
+        first(entries),
+    )
 
     device_status = text(status, "StatusCategory")
 

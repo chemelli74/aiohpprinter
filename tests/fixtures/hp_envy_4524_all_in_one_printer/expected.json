@@ -20,7 +20,7 @@
     "shutdown_delay": null
   },
   "status": {
-    "device_status": "genuinehp",
+    "device_status": "inpowersave",
     "message": null
   },
   "consumables": {
